@@ -1,0 +1,132 @@
+<style type="text/css">
+    footer {
+        margin-top: 2em;
+        background-color: #FFF;
+    }
+
+    footer .title,
+    footer .wrapper.content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 65%;
+    }
+
+    footer .title {
+        display: block;
+        padding: 1em;
+        color: #666;
+    }
+
+    footer .wrapper.content {
+        display: flex;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer .wrapper.content .quick-links {
+        display: flex;
+        width: 70%;
+        flex-direction: row;
+        justify-content: flex-start;
+        /* background-color: #555; */
+    }
+
+    footer .wrapper.content .quick-links .link-group {
+        min-width: 8em;
+        /* background-color: rgb(82, 125, 255); */
+    }
+
+    footer .wrapper.content .quick-links .group-name {
+        color: #444;
+    }
+
+    footer .wrapper.content .quick-links ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .wrapper.content .quick-links ul li {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+
+    footer .wrapper.content .quick-links ul li a {
+        display: block;
+        padding: 12px;
+        color: #555;
+    }
+
+    footer .wrapper.content .quick-links ul li a:hover {
+        color: var(--pcolor);
+    }
+
+    footer .copyright-info {
+        padding: 12px;
+    }
+
+    @media screen and (max-width: 767px) {
+
+        footer .title,
+        footer .wrapper.content {
+            width: 90%;
+        }
+
+        footer .wrapper.content {
+            flex-direction: column-reverse;
+            /* justify-content: space-between; */
+        }
+
+        footer .wrapper.content .quick-links,
+        footer .wrapper.content .contact-info {
+            width: 100%;
+        }
+
+        footer .wrapper.content .contact-info .social-links {
+            justify-content: flex-start;
+        }
+    }
+</style>
+
+<footer>
+    <!-- Title -->
+    <div class="title" data-aos="fade-up" data-aos-delay="60">
+        <h1>DevelopAR</h1>
+    </div>
+
+    <!-- Container -->
+    <div class="wrapper content" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Quick links -->
+        <div class="quick-links">
+            <div class="common-links link-group">
+                <h4 class="group-name">&nbsp;</h4>
+
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a href="/career">Career</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </div>
+            <div class="policy-links link-group">
+                <h4 class="group-name">&nbsp;</h4>
+
+                <ul>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms and conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <%- include('_footer_contact_info'); %>
+    </div>
+
+    <!-- Copyright note -->
+    <div class="copyright-info text-center">
+        <p><small>Copyright &copy; 2020 Developar</small></p>
+    </div>
+</footer>

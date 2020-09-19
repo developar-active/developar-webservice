@@ -1,0 +1,300 @@
+<% 
+    const pricingPlans = [
+       {
+          id: 'static',
+          name: 'Static',
+          anim_duration: 200,
+          min_price: 8000,
+          techstack: [
+             {
+                name: 'HTML',
+                source: 'https://developarcdn.vercel.app/images/icons/html-logo.png'
+             },
+             {
+                name: 'JavaScript',
+                source: 'https://developarcdn.vercel.app/images/icons/js-logo.png'
+             },
+             {
+                name: 'Wordpress',
+                source: 'https://developarcdn.vercel.app/images/icons/wordpress-logo.png'
+             }
+          ],
+          facilities: [
+             'Delivered in Week',
+             'Changes can\'t be made after delivery',
+             'Mobile Friendly Web Site',
+             'Developar Support System'
+          ]
+       },
+       {
+          id: 'dynamic',
+          name: 'Dynamic',
+          anim_duration: 300,
+          min_price: 12000,
+          techstack: [
+             {
+                name: 'php',
+                source: 'https://developarcdn.vercel.app/images/icons/php-logo.png'
+             },
+             {
+                name: 'VueJS',
+                source: 'https://developarcdn.vercel.app/images/icons/vue-logo.png'
+             },
+             {
+                name: 'Firebase',
+                source: 'https://developarcdn.vercel.app/images/icons/firebase-logo.png'
+             }
+          ],
+          facilities: [
+             'Delivered in 25 days',
+             'Managing deploys',
+             'Built with admin controls',
+             'Developar Support System'
+          ]
+       }, 
+       {
+          id: 'e-commerce',
+          name: 'e-commerce', 
+          anim_duration: 400,
+          min_price: 18000,
+          techstack: [
+             {
+                name: 'React Library',
+                source: 'https://developarcdn.vercel.app/images/icons/react-logo.png'
+             },
+             {
+                name: 'NodeJS',
+                source: 'https://developarcdn.vercel.app/images/icons/nodejs-logo.png'
+             },
+             {
+                name: 'MongoDB',
+                source: 'https://developarcdn.vercel.app/images/icons/mongodb-logo.png'
+             }
+          ],
+          facilities: [
+             'Delivered in 25 days',
+             'Built using modern tech stack',
+             'Mobile Friendly Web Site',
+             'Developar Support System'
+          ]
+       },
+       {
+          id: 'mobile-app',
+          name: 'Mobile App',
+          anim_duration: 500,
+          min_price: 18000,
+          techstack: [
+             {
+                name: 'React Native',
+                source: 'https://developarcdn.vercel.app/images/icons/react-logo.png'
+             },
+             {
+                name: 'Ionic Framework',
+                source: 'https://developarcdn.vercel.app/images/icons/ionic-logo.png'
+             },
+             {
+                name: 'Firebase',
+                source: 'https://developarcdn.vercel.app/images/icons/firebase-logo.png'
+             }
+          ],
+          facilities: [
+             'Delivered in 25 days',
+             'Built using modern tech stack',
+             'With admin support',
+             'Developar Support System'
+          ]
+       },
+       {
+          id: 'digital-marketing',
+          name: 'Digital marketing',
+          anim_duration: 600,
+          min_price: 15000,
+          techstack: [
+             {
+                name: 'Google Ads',
+                source: 'https://developarcdn.vercel.app/images/icons/google-ad-logo.png'
+             },
+             {
+                name: 'Gmail',
+                source: 'https://developarcdn.vercel.app/images/icons/gmail-logo.png'
+             },
+             {
+                name: 'Twitter',
+                source: 'https://developarcdn.vercel.app/images/icons/twitter-logo.png'
+             }
+          ],
+          facilities: [
+             'Delivered in 25 days',
+             'Built using modern tech stack',
+             'Mobile Friendly Web Site',
+             'Developar Support System'
+          ]
+       },
+       {
+          id: 'maintenance',
+          name: 'Maintenance',
+          anim_duration: 700,
+          techstack: [
+             {
+                name: 'Git',
+                source: 'https://developarcdn.vercel.app/images/icons/git-logo.png'
+             },
+             {
+                name: 'Bugzilla',
+                source: 'https://developarcdn.vercel.app/images/icons/bugzilla-logo.png'
+             },
+             {
+                name: 'Jira',
+                source: 'https://developarcdn.vercel.app/images/icons/jira-logo.png'
+             }
+          ],
+          facilities: [
+             'Yearly / Monthly maintenance',
+             'Budget friendly',
+             'Developar Support System'
+          ]
+       }
+    ];
+%>
+
+<style type="text/css">
+   main section#pricing .content .container {
+      display: grid;
+      justify-content: center;
+      padding: 2em 0;
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+
+   main section#pricing .content .container .plan {
+      min-height: 20em;
+      min-width: 16em;
+      margin: 8px;
+   }
+
+   main section#pricing .content .container .plan .tech-stack {
+      display: flex;
+      padding: 8px;
+      flex-direction: row;
+      justify-content: center;
+   }
+
+   main section#pricing .content .container .plan .tech-stack .item {
+      padding: 12px;
+      margin-left: 5px;
+      margin-right: 5px;
+      border-radius: 50px;
+      transition: transform 0.15s ease;
+   }
+
+   main section#pricing .content .container .plan .tech-stack .item:hover {
+      transform: scale(1.15);
+   }
+
+   main section#pricing .content .container .plan .tech-stack .item img {
+      width: 30px;
+      filter: grayscale(1);
+      vertical-align: middle;
+      transition: filter 0.15s linear;
+   }
+
+   main section#pricing .content .container .plan .tech-stack .item:hover img {
+      filter: grayscale(0);
+   }
+
+   main section#pricing .content .container .plan .facility {
+      padding: 8px;
+   }
+
+   main section#pricing .content .container .plan .facility p {
+      padding: 5px;
+      margin: 0;
+   }
+
+   @media screen and (max-width: 767px) {
+      main section#pricing .content .container {
+         grid-template-columns: 1fr;
+      }
+
+      @media (orientation: landscape) {
+         main section#pricing .scalable {
+            padding: 0;
+         }
+
+         main section#pricing .content .container {
+            grid-template-columns: 1fr 1fr;
+         }
+
+         main section#pricing .content .container .plan {
+            min-width: 16em;
+         }
+      }
+   }
+
+   @media screen and (min-width: 768px) {
+      main section#pricing .content .container {
+         grid-template-columns: 1fr 1fr;
+      }
+   }
+
+   @media screen and (min-width: 1024px) {
+      main section#pricing .content .container {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+   }
+</style>
+
+<%- include('partials/_header', { raised: true }) %>
+
+<main>
+   <section id="pricing">
+
+      <div class="content scalable">
+         <header>
+            <h1>Pricing&nbsp;<span class="text-blur">plans</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+         </header>
+
+         <div class="container">
+            <% for (const plan of pricingPlans) { %>
+            <div class="plan card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="<%= plan.anim_duration || 100 %>">
+               <div class="card-body">
+                  <div class="card-header text-center">
+                     <header>
+                        <h2><%= plan.name %></h2>
+                     </header>
+
+                     <% if (plan.min_price) { %>
+                     <div class="price">
+                        <h3>&#8377;<%= plan.min_price %> <span class="text-blur">onwards</span></h3>
+                     </div>
+                     <% } %>
+                  </div>
+
+                  <div class="card-content">
+                     <div class="tech-stack">
+                        <% for (const techinstance of plan.techstack || []) { %>
+                        <div class="item" title="<%= techinstance.name %>">
+                           <img src="<%= techinstance.source %>" alt="<%= techinstance.name %>" />
+                        </div>
+                        <% } %>
+                     </div>
+
+                     <div class="facility">
+                        <% for (const facility of plan.facilities || []) { %>
+                        <p><%= facility %></p>
+                        <% } %>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="card-action">
+                  <a href="/order/<%= plan.id %>">Place an order</a>
+               </div>
+            </div>
+            <% } %>
+         </div>
+      </div>
+   </section>
+</main>
+
+<%- include('partials/_footer') %>

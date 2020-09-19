@@ -1,0 +1,240 @@
+<style type="text/css">
+   header#topbar {
+       position: fixed;
+       left: 0;
+       right: 0;
+       top: 0;
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       align-items: center;
+       padding: 8px;
+       background-color: transparent;
+       z-index: 100;
+       transition: background-color 0.08s linear;
+   }
+
+   header#topbar:not([area-expanded]) {
+       --pcolor: #FFF;
+   }
+
+   header#topbar .title h2 {
+       color: #FFF;
+       font-size: 2.5em;
+       transition: font-size 0.2s ease, color 0.1s linear;
+   }
+
+   header#topbar .container.links ul {
+       margin: 0;
+       padding: 0;
+   }
+
+   header#topbar .container.links ul li {
+       display: inline-block;
+       border-radius: 6px;
+   }
+
+   header#topbar .container.links ul li:first-child {
+       border-radius: 6px;
+   }
+
+   header#topbar .container.links ul li a {
+       display: block;
+       padding: 8px 12px;
+       color: #DDD;
+       border-radius: inherit;
+       font-size: 1.15em;
+       transition: font-size 0.2s ease, background-color 0.15s linear;
+   }
+
+   header#topbar:not(.raised) .container.links ul li:hover a {
+       background-color: rgba(255, 255, 255, 0.3);
+   }
+
+   header#topbar:not(.raised) .container.links ul li.active a {
+       color: #FFF;
+   }
+
+   header#topbar.raised {
+       --pcolor: rgb(82, 125, 255);
+       background-color: rgba(255, 255, 255, 0.9);
+       backdrop-filter: blur(8px);
+       -webkit-backdrop-filter: blur(12px);
+       box-shadow: 0 0 6px #DDD;
+   }
+
+   header#topbar.raised:not([area-expanded]) .title h2 {
+       color: #333;
+       font-size: 2em;
+   }
+
+   header#topbar.raised .container.links ul li a {
+       color: #BBB;
+       font-size: 1em;
+   }
+
+   header#topbar .container.links ul li:hover a {
+       background-color: rgb(241, 241, 241);
+   }
+
+   header#topbar.raised .container.links ul li.active a {
+       color: #333;
+   }
+
+   /* For Smartphone */
+   @media screen and (max-width: 767px) {
+       header#topbar {
+           top: 0;
+           height: 8vh;
+           justify-content: flex-start;
+           flex-direction: column;
+           transition: background-color 0.2s linear,
+               height 0.35s ease,
+               bottom 0.35s ease,
+               color 0.2s linear;
+       }
+
+       header#topbar .title {
+           display: flex;
+           position: absolute;
+           top: 0;
+           padding: 8px;
+           height: 8vh;
+           width: 100%;
+           flex-direction: row;
+           align-items: center;
+           justify-content: space-around;
+       }
+
+       header#topbar .title .menu-toggle button {
+           height: 100%;
+       }
+
+       header#topbar .title .menu-toggle button {
+           margin: auto;
+           transform: rotate(0deg);
+           transition: transform 0.4s ease;
+       }
+
+       header#topbar .container.links ul li a {
+           font-size: 1.2rem;
+       }
+
+       header#topbar .container.links {
+           display: none;
+       }
+
+       header#topbar[area-expanded] {
+           height: 100vh;
+           bottom: 0;
+           background-color: rgba(0, 0, 0, 0.8);
+           backdrop-filter: blur(8px);
+           -webkit-backdrop-filter: blur(8px);
+           color: #FFF;
+       }
+
+       header#topbar[area-expanded] .title .menu-toggle button {
+           transform: rotate(180deg);
+       }
+
+       header#topbar[area-expanded] .container.links {
+           display: flex;
+           height: 100%;
+           flex-direction: column;
+           justify-content: center;
+       }
+
+       header#topbar[area-expanded] .container.links ul li {
+           display: block;
+           text-align: center;
+           font-size: 1.2rem;
+       }
+
+       header#topbar[area-expanded] .container.links ul li.active a {
+           color: #FFF;
+       }
+
+       header#topbar[area-expanded] .container.links ul li:hover a {
+           background-color: transparent;
+           color: #CCC;
+       }
+
+       header#topbar[area-expanded] .container.links ul li a {
+           padding: 1.5em 8px;
+           color: #888;
+           transition: color 0.2s linear;
+       }
+
+       header#topbar[area-expanded] .container.links ul li {
+           animation-name: scale-in-down;
+       }
+
+       header#topbar[area-expanded] .container.links ul li:nth-child(1) {
+           animation-duration: 500ms;
+       }
+
+       header#topbar[area-expanded] .container.links ul li:nth-child(2) {
+           animation-duration: 580ms;
+       }
+
+       header#topbar[area-expanded] .container.links ul li:nth-child(3) {
+           animation-duration: 680ms;
+       }
+
+       header#topbar[area-expanded] .container.links ul li:nth-child(4) {
+           animation-duration: 780ms;
+       }
+
+       header#topbar[area-expanded] .container.links ul li:nth-child(5) {
+           animation-duration: 880ms;
+       }
+
+       header#topbar[area-expanded] .container.links ul li:nth-child(6) {
+           animation-duration: 980ms;
+       }
+
+       header#topbar[area-expanded] .container.links ul li:nth-child(7) {
+           animation-duration: 1020ms;
+       }
+
+       @media (orientation: landscape) {
+           header#topbar[area-expanded] .container.links ul li a {
+               padding: 1em;
+           }
+       }
+   }
+
+   /* For tablets and desktop */
+   @media screen and (min-width: 768px) {
+       header#topbar .title .menu-toggle {
+           display: none;
+       }
+   }
+</style>
+
+<header id="topbar" class="<%= (raised)? 'raised': 'no-raised' %>">
+   <div class="title container">
+      <h2>
+         <a href="/" class="no-effect" title="developar.in">
+            <span>Develop</span><span class="text-primary">AR</span>
+         </a>
+      </h2>
+      <div class="menu-toggle">
+         <button title="Expand menu" class="icon block" onclick="toggleHeaderNavigation()">
+            <i data-feather="chevron-down"></i>
+         </button>
+      </div>
+   </div>
+   <div class="links container">
+      <ul>
+         <% for (const link of links) { %>
+         <li class="<%= (link.route === PAGE_ROUTE)? 'active': 'no-active' %>">
+            <a title="<%= link.label %>" href="<%= link.route %>">
+               <%= link.label %>
+            </a>
+         </li>
+         <% } %>
+      </ul>
+   </div>
+</header>

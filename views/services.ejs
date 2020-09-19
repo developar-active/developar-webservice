@@ -1,0 +1,131 @@
+<% 
+   const sericeCards = [
+      {
+          thumb: 'https://developarcdn.vercel.app/images/clients-requirements-5000x5000-354kb.png',
+          title: 'Client\'s Requirements',
+          desc: 'Our team first analyze client\'s requirements then the team start original work'
+       },
+       {
+          thumb: 'https://developarcdn.vercel.app/images/ui-service-2-4375x4375-237kb.jpg',
+          title: 'User Interface',
+          desc: 'The team will make the best user interface according to website by choosing amazing pictures and media'
+       },
+       {
+          thumb: 'https://developarcdn.vercel.app/images/smart-echnology-service-1932x900-30kb.png',
+          title: 'Smart Technology',
+          desc: 'Our team creates, a website or software as per user requirements with the help of best technology required'
+       },
+       {
+          thumb: 'https://developarcdn.vercel.app/images/seobilty-service-2092x2092-58kb.png',
+          title: 'SEObility',
+          desc: 'It\'s our responsibility to grow your business or website in the wide area by help of best SEO developers'
+       },
+       {
+          thumb: 'https://developarcdn.vercel.app/images/delivery-1200x1200-84kb.png',
+          title: 'Delivery On Time',
+          desc: 'Team will make the web site or software in the already scheduled time as per client satisfaction'
+       },
+       {
+          thumb: 'https://developarcdn.vercel.app/images/for-easy%20maintenance-2501x2501-72kb.png',
+          title: 'Easy Maintenance',
+          desc: 'After product delivery we will not become stranger to you, we are always with you to customize your product'
+       }
+   ];
+%>
+
+<style>
+   main section#services .content .container {
+      display: flex;
+      padding: 2em 0;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      flex-direction: row;
+   }
+
+   main section#services .content .container .service {
+      padding: 10px;
+      max-width: 24em;
+      border-radius: 12px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: transparent;
+      cursor: default;
+      transition: box-shadow 180ms linear, transform 200ms ease;
+   }
+
+   main section#services .content .container .service:hover {
+      border-color: #EEE;
+      transform: translateY(-3px);
+      box-shadow: 1px 1px 16px #EEE;
+   }
+
+   main section#services .content .container .service .thumb {
+      min-height: 20em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   main section#services .content .container .service .thumb img {
+      width: 350px;
+   }
+
+   @media screen and (max-width: 767px) {
+      main section#services .content .container .service {
+         padding: 1.2em 12px;
+      }
+
+      @media (orientation: landscape) {
+         main section#services .content .container {
+            display: grid;
+            padding: 0;
+            grid-template-columns: 1fr 1fr;
+         }
+
+         main section#services .content .container .service {
+            padding: 8px;
+            margin-left: 8px;
+            margin-right: 8px;
+         }
+
+         main section#services .content .container .service .thumb {
+            min-height: 14em;
+         }
+
+         main section#services .content .container .service .thumb img {
+            width: 230px;
+         }
+      }
+   }
+</style>
+
+<%- include('partials/_header', { raised: true }) %>
+
+<main>
+   <section id="services">
+      <div class="content scalable">
+         <header>
+            <h1><span class="text-blur">Core</span>&nbsp;<span>Services</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+         </header>
+
+         <div class="container">
+
+            <% for (const card of sericeCards) { %>
+            <div class="service" data-aos="fade-up" data-aos-delay="120" data-aos-duration="4500">
+               <div class="thumb">
+                  <img src="<%= card.thumb %>" height="auto" alt="<%= card.title %>" />
+               </div>
+               <div class="about">
+                  <h3><%= card.title %></h3>
+                  <p><%= card.desc %></p>
+               </div>
+            </div>
+            <% } %>
+
+         </div>
+      </div>
+   </section>
+</main>
+
+<%- include('partials/_footer') %>

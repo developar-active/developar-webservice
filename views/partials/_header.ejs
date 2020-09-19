@@ -1,0 +1,12 @@
+<%
+    const links = [
+        { label: 'Home', route: '/' },
+        { label: 'Services', route: '/services' },
+        { label: 'Pricing', route: '/pricing' },
+        { label: 'Contact', route: '/contact' },
+        { label: 'About', route: '/about' }
+    ];
+%>
+
+<!-- @render-header -->
+<%- include('_render_header', { raised, links }); %>

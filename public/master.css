@@ -1,0 +1,404 @@
+main > section > .scalable {
+    padding: 2em 0;
+    width: 80%;
+    margin: auto;
+}
+@media screen and (max-width: 767px) {
+    main > section .scalable > header {
+        text-align: center;
+    }
+}
+
+/* --- Utils --- */
+
+.text-primary {
+    color: var(--pcolor);
+}
+.text-red {
+    color: var(--red);
+}
+.text-blue {
+    color: var(--blue)
+}
+.text-purple {
+    color: var(--purple);
+}
+.text-green {
+    color: var(--green);
+}
+
+.stroke-primary {
+    stroke: var(--pcolor);
+}
+.stroke-red {
+    stroke: var(--red);
+}
+.stroke-blue {
+    stroke: var(--blue)
+}
+.stroke-purple {
+    stroke: var(--purple);
+}
+.stroke-green {
+    stroke: var(--green);
+}
+
+.bg-primary {
+    background-color: var(--pcolor);
+}
+.bg-red {
+    background-color: var(--red);
+}
+.bg-blue {
+    background-color: var(--blue)
+}
+.bg-purple {
+    background-color: var(--purple);
+}
+.bg-green {
+    background-color: var(--green);
+}
+
+.text-white {
+    color: #FFF;
+}
+.stroke-white {
+    stroke: #FFF;
+}
+.text-bold {
+    font-weight: bold;
+}
+.text-blur {
+    color: #666;
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-small {
+    font-size: 18px;
+}
+a.no-effect {
+    color: inherit;
+    font-size: inherit;
+}
+
+
+@keyframes alert-blink-anim {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.chip {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2px;
+    margin-right: 2px;
+    min-width: 2em;
+    width: fit-content;
+    min-height: 2em;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 25px;
+    background-color: #EEE;
+    color: #666;
+    transition: background-color 0.2s linear;
+}
+.chip.primary {
+    background-color: var(--pcolor);
+    color: var(--pcolor-fr);
+}
+.chip.primary:hover {
+    background-color: var(--pcolor-dark);
+}
+
+.chip.red {
+    background-color: var(--red);
+    color: var(--red-fr);
+}
+.chip.red:hover {
+    background-color: var(--red-dark);
+}
+
+.chip.purple {
+    background-color: var(--purple);
+    color: var(--purple-fr);
+}
+.chip.purple:hover {
+    background-color: var(--purple-dark);
+}
+
+.chip.deeppurple {
+    background-color: var(--deeppurple);
+    color: var(--deeppurple-fr);
+}
+.chip.deeppurple:hover {
+    background-color: var(--deeppurple-dark);
+}
+
+.chip.teal {
+    background-color: var(--teal);
+    color: var(--teal-fr);
+}
+.chip.teal:hover {
+    background-color: var(--teal-dark);
+}
+
+.chip.green {
+    background-color: var(--green);
+    color: var(--green-fr);
+}
+.chip.green:hover {
+    background-color: var(--green-dark);
+}
+
+.chip.indigo {
+    background-color: var(--indigo);
+    color: var(--indigo-fr);
+}
+.chip.indigo:hover {
+    background-color: var(--indigo-dark);
+}
+.chip:hover {
+    box-shadow: 0 0 12px #EEE;
+}
+
+.alert {
+    display: block;
+    min-width: fit-content;
+    padding: 8px 12px;
+    border-radius: 6px;
+    line-height: 1.25em;
+    user-select: none;
+    background-color: #DDD;
+    color: #555;
+    transition: transform 0.15s ease;
+}
+.alert.autoblink {
+    animation-name: alert-blink-anim;
+    animation-duration: 0.8s;
+    animation-delay: 0.8s;
+    animation-timing-function: ease;
+}
+.alert:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px #CCC;
+}
+.alert.red {
+    background-color: var(--red);
+    color: #FFF;
+}
+.alert.blue {
+    background-color: var(--blue);
+    color: #FFF;
+}
+.alert.purple {
+    background-color: var(--purple);
+    color: #FFF;
+}
+.alert.green {
+    background-color: var(--green);
+    color: #FFF;
+}
+.alert.dark {
+    background-color: #444;
+    color: #FFF;
+}
+
+.tabpanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 12px 0;
+    list-style-type: none;
+}
+.tabpanel .tab {
+    margin-left: 6px;
+    margin-right: 6px;
+    text-align: center;
+    min-width: 4em;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 25px;
+    transition: background-color 0.1s linear;
+    color: #666;
+}
+.tabpanel .tab.active {
+    background-color: var(--pcolor);
+    color: var(--pcolor-fr);
+}
+.tabpanel .tab.active:hover {
+    background-color: var(--pcolor-dark);
+}
+.tabpanel .tab:hover {
+    background-color: #EEE;
+}
+@media screen and (max-width: 767px) {
+    .tabpanel {
+        flex-wrap: wrap;
+    }
+    .tabpanel .tab {
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid #EEE;
+}
+.card .card-body .card-header {
+    padding: 8px;
+    border-radius: 6px;
+    background-color: rgb(247, 247, 247);
+    transition: background-color 0.15s linear, color 0.15s linear;
+}
+.card .card-body {
+    padding: 8px;
+}
+.card .card-action {
+    text-align: center;
+}
+.card .card-action, 
+.card .card-action a{
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+.card .card-action a {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    width: 100%;
+    padding: 12px 0;
+    display: block;
+    background-color: var(--pcolor);
+    color: #FFF;
+    transition: background-color 0.15s linear;
+}
+.card .card-action a:hover {
+    background-color: var(--pcolor-dark);
+    color: #FFF;
+}
+
+/* Form utils */
+.control-wrapper {
+    padding: 10px 0;
+}
+.control-wrapper label {
+    display: block;
+    padding: 5px 6px;
+    font-size: 0.8em;
+    color: #666;
+}
+.scalable-x {
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.margin-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex {
+    display: flex;
+}
+.flex.col {
+    flex-direction: column;
+}
+.flex.space-between {
+    justify-content: space-between;
+}
+.flex.space-evenly {
+    justify-content: space-evenly;
+}
+.flex.space-around {
+    justify-content: space-around;
+}
+
+.flex.col.center {
+    align-items: center;
+}
+.flex.col.middle {
+    justify-content: center;
+}
+
+.flex.row {
+    flex-direction: row;
+}
+.flex.row.center {
+    justify-content: center;
+}
+.flex.row.middle {
+    align-items: center;
+}
+
+.x-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes highlight-anim {
+    from {
+        transform: scale(1);
+        background-color: initial;
+    }
+    50% {
+        transform: scale(1.05);
+        background-color: #EEE;
+    }
+    to {
+        transform: scale(1);
+        background-color: initial;
+    }
+}
+.scrolled-highlight {
+    border: 2px dotted #AAA;
+    animation-name: highlight-anim;
+    animation-duration: 0.8s;
+    animation-delay: 0.5s;
+}
+
+@media screen and (max-width: 767px) {
+    .mobile-hide {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 768px) {
+    .tablet-hide {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .desktop-hide {
+        display: none !important;
+    }
+}

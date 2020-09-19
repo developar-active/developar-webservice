@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+   <meta name="theme-color" content="#FFFFFF" />
+
+   <link rel="shortcut icon" href="https://developarcdn.web.app/logo/favicon.png" type="image/x-icon" />
+   <link rel="apple-touch-icon" href="https://developarcdn.web.app/logo/favicon.png" sizes="144x144" />
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" type="text/css" />
+   <script defer src="https://unpkg.com/aos@next/dist/aos.js" type="application/javascript"></script>
+   <script async src="https://unpkg.com/feather-icons" type="application/javascript"></script>
+
+   <style type="text/css">
+      /*--- Load Questrial fonts ---*/
+      /* vietnamese */
+      @font-face {
+         font-family: 'Questrial';
+         font-style: normal;
+         font-weight: 400;
+         font-display: swap;
+         src: local('Questrial Regular'), local('Questrial-Regular'), url(https://fonts.gstatic.com/s/questrial/v11/QdVUSTchPBm7nuUeVf70sSFlq20.woff2) format('woff2');
+         unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+
+      /* latin-ext */
+      @font-face {
+         font-family: 'Questrial';
+         font-style: normal;
+         font-weight: 400;
+         font-display: swap;
+         src: local('Questrial Regular'), local('Questrial-Regular'), url(https://fonts.gstatic.com/s/questrial/v11/QdVUSTchPBm7nuUeVf70sCFlq20.woff2) format('woff2');
+         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+
+      /* latin */
+      @font-face {
+         font-family: 'Questrial';
+         font-style: normal;
+         font-weight: 400;
+         font-display: swap;
+         src: local('Questrial Regular'), local('Questrial-Regular'), url(https://fonts.gstatic.com/s/questrial/v11/QdVUSTchPBm7nuUeVf70viFl.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      /*--- Load nunito fonts ---*/
+      /* cyrillic-ext */
+      @font-face {
+         font-family: 'Nunito';
+         font-style: normal;
+         font-weight: 400;
+         font-display: swap;
+         src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIOOaBXso.woff2) format('woff2');
+         unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+      }
+
+      /* cyrillic */
+      @font-face {
+         font-family: 'Nunito';
+         font-style: normal;
+         font-weight: 400;
+         font-display: swap;
+         src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIMeaBXso.woff2) format('woff2');
+         unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+
+      /* vietnamese */
+      @font-face {
+         font-family: 'Nunito';
+         font-style: normal;
+         font-weight: 400;
+         font-display: swap;
+         src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIOuaBXso.woff2) format('woff2');
+         unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+
+      /* latin-ext */
+      @font-face {
+         font-family: 'Nunito';
+         font-style: normal;
+         font-weight: 400;
+         font-display: swap;
+         src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIO-aBXso.woff2) format('woff2');
+         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+
+      /* latin */
+      @font-face {
+         font-family: 'Nunito';
+         font-style: normal;
+         font-weight: 400;
+         font-display: swap;
+         src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofINeaB.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      :root {
+         /* Color selection */
+         --pcolor: rgb(82, 125, 255);
+         --pcolor-dark: rgb(35, 82, 224);
+         --pcolor-light: rgb(126, 158, 255);
+         --pcolor-fr: #FFF;
+
+         --red: #F44336;
+         --red-dark: #aa2e25;
+         --red-light: #f6685e;
+         --red-fr: #FFF;
+
+         --blue: #2196f3;
+         --blue-dark: #1769aa;
+         --blue-light: #4dabf5;
+         --blue-fr: #FFF;
+
+         --purple: #9c27b0;
+         --purple-dark: #6d1b7b;
+         --purple-light: #af52bf;
+         --purple-fr: #FFF;
+
+         --deeppurple: #673ab7;
+         --deeppurple-dark: #482880;
+         --deeppurple-light: #8561c5;
+         --deeppurple-fr: #FFF;
+
+         --teal: #009688;
+         --teal-dark: #00695f;
+         --teal-light: #33ab9f;
+         --teak-fr: #FFF;
+
+         --green: #4caf50;
+         --green-dark: #357a38;
+         --green-light: #6fbf73;
+         --green-fr: #222;
+
+         --indigo: #3f51b5;
+         --indigo-dark: #2c387e;
+         --indigo-light: #6573c3;
+         --indigo-fr: #FFF;
+
+         --cyan: #00bcd4;
+         --cyan-dark: #008394;
+         --cyan-light: #33c9dc;
+         --cyan-fr: #222;
+
+         --yellow: #ffeb3b;
+         --yellow-dark: #b2a429;
+         --yellow-light: #ffef62;
+         --yellow-fr: #222;
+
+         --amber: #ffc107;
+         --amber-dark: #b28704;
+         --amber-light: #ffcd38;
+         --amber-fr: #FFF;
+
+         --orange: #ff9800;
+         --orange-dark: #b26a00;
+         --orange-light: #ffac33;
+         --orange-fr: #222;
+
+         --deeporange: #ff5722;
+         --deeporange-dark: #b23c17;
+         --deeporange-light: #ff784e;
+         --deeporange-fr: #FFF;
+
+         --pink: #e91e63;
+         --pink-dark: #a31545;
+         --pink-light: #ed4b82;
+         --pink-fr: #FFF;
+
+         /* Animation manual */
+         --anim-duration: 0.7s;
+
+         /* Font style */
+         --pfont: 'Questrial', Verdana, sans-serif;
+         --sfont: 'Nunito', sans-serif, arial;
+      }
+
+      @keyframes fade-in-up {
+         from {
+            opacity: 0;
+            transform: translateY(90px);
+         }
+
+         to {
+            opacity: 1;
+            transform: translateY(0);
+         }
+      }
+
+      @keyframes fade-in-down {
+         from {
+            opacity: 0;
+            transform: translateY(-90px);
+         }
+
+         to {
+            opacity: 1;
+            transform: translateY(0);
+         }
+      }
+
+      @keyframes scale-in-down {
+         from {
+            opacity: 0;
+            transform: translateY(-90px) scale(1.8);
+         }
+
+         to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+         }
+      }
+
+      .anim.fade-in-up {
+         animation-name: fade-in-up;
+         animation-duration: var(--anim-duration);
+      }
+
+      .anim.fade-in-down {
+         animation-name: fade-in-down;
+         animation-duration: var(--anim-duration);
+      }
+
+      .anim.scale-in-up {
+         animation-name: scale-in-down;
+         animation-duration: var(--anim-duration);
+      }
+
+      html {
+         scroll-behavior: smooth;
+         scroll-padding-top: 5em;
+      }
+
+      body {
+         margin: 0;
+         padding: 0;
+         font-family: var(--pfont);
+      }
+
+      hr {
+         display: block;
+         height: 1px;
+         border: 0;
+         width: 100%;
+         border-top: 1px solid #CCC;
+         padding: 0;
+      }
+
+      a {
+         color: var(--pcolor);
+         text-decoration: none;
+      }
+
+      h1 {
+         font-size: 3em;
+         padding: 10px 8px;
+         line-height: 1.1em;
+      }
+
+      h2 {
+         padding: 6px 8px;
+         font-size: 2.4em;
+         line-height: 1.35em;
+      }
+
+      h3 {
+         padding: 4px 8px;
+         font-size: 1.65em;
+         line-height: 1.4em;
+      }
+
+      h4 {
+         padding: 4px 8px;
+         font-size: 1.4em;
+         line-height: 1.3em;
+      }
+
+      h5 {
+         padding: 3px 8px;
+         font-size: 1.2em;
+         line-height: 1.2em;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+         margin: 0;
+         font-weight: normal;
+         letter-spacing: 0.5px;
+      }
+
+      p {
+         margin: 0;
+         padding: 8px;
+         font-family: var(--sfont);
+         color: #555;
+      }
+
+      a[type='button'] {
+         display: flex;
+         width: fit-content;
+         flex-direction: row;
+         align-items: center;
+         justify-content: center;
+         min-width: 7em;
+         min-height: 2em;
+         padding-left: 10px;
+         padding-right: 10px;
+         font-size: 16px;
+         border-radius: 6px;
+         background-color: #FFF;
+         color: var(--pcolor);
+         transition: background-color 0.15s ease;
+      }
+
+      a[type=button].icon-button {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+      }
+
+      a[type=button].icon-button .ic {
+         padding-left: 2px;
+         padding-right: 2px;
+      }
+
+      a[type=button].icon-button .ic svg {
+         width: 18px;
+         height: 18px;
+         vertical-align: middle;
+      }
+
+      a[type=button].icon-button .label {
+         padding-left: 2px;
+         padding-right: 2px;
+      }
+
+      a[type='button'].outline {
+         border-width: 1px;
+         border-style: solid;
+         border-color: var(--pcolor);
+         transition: background-color 0.1s linear, color 0.15s linear;
+      }
+
+      a[type='button'].outline:hover {
+         background-color: var(--pcolor);
+         color: var(--pcolor-fr);
+      }
+
+      a[type='button'].filled {
+         background-color: var(--pcolor);
+         color: #FFF;
+      }
+
+      a[type='button'].filled:hover {
+         background-color: var(--pcolor-dark);
+         box-shadow: 1px 1px 12px #DDD;
+      }
+
+      a[type='button'].text {
+         background-color: transparent;
+         color: var(--pcolor);
+      }
+
+      a[type='button'].icon {
+         background-color: transparent;
+      }
+
+      a[type='button'].icon svg {
+         stroke: var(--pcolor);
+      }
+
+      a[type='button'].icon.white svg {
+         stroke: #FFF;
+      }
+
+      a[type='button'].text-white {
+         background-color: transparent;
+         color: #FFF;
+      }
+
+      button {
+         margin: 4px;
+         min-width: 8em;
+         min-height: 2.4em;
+         font-family: var(--sfont);
+         border: none;
+         outline: none;
+         border-radius: 8px;
+         background-image: linear-gradient(rgb(82, 125, 255), rgb(61, 106, 240));
+         color: #FFF;
+      }
+
+      button.icon {
+         width: fit-content;
+         min-width: fit-content;
+         min-height: fit-content;
+         background-image: none;
+         border-radius: 6px;
+         background-color: transparent;
+      }
+
+      button.icon svg {
+         vertical-align: middle;
+         stroke: var(--pcolor);
+      }
+
+      button.block {
+         display: block;
+         min-width: 100% !important;
+      }
+
+      a,
+      button,
+      img {
+         outline: none;
+         -webkit-tap-highlight-color: transparent;
+         -webkit-user-select: none;
+         -webkit-user-drag: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+      }
+
+      button::-moz-focus-inner,
+      a::-moz-focus-inner {
+         border: 0;
+      }
+
+      a.icon-link .label {
+         padding: 0 1px;
+      }
+
+      a.icon-link .ic {
+         padding: 0 1px;
+      }
+
+      a.icon-link .ic svg {
+         width: 20px;
+         height: 20px;
+         vertical-align: middle;
+      }
+
+      input[type=text],
+      input[type=email],
+      input[type=password],
+      textarea {
+         padding: 8px 10px;
+         min-width: 14em;
+         font-size: 1em;
+         outline: none;
+         border-width: 2px;
+         border-style: solid;
+         border-color: transparent;
+         background-color: #EEE;
+         border-radius: 8px;
+         font-family: var(--pfont);
+         transition: background-color 0.15s linear, border-color 0.25s ease;
+      }
+
+      input[type=text]:focus,
+      input[type=email]:focus,
+      input[type=password]:focus,
+      textarea:focus {
+         background-color: transparent;
+         border-color: var(--pcolor);
+      }
+
+      @media screen and (max-width: 767px) {
+         h1 {
+            font-size: 2.4em;
+         }
+      }
+
+      main {
+         /* Adjust with fixed header */
+         margin-top: 4.6em;
+      }
+      main.x-margin {
+         margin-top: 12em;
+      }
+   </style>
+   <link rel="stylesheet" href="/master.css" />
+   <script async src="/app.js"></script>
+
+   <% if (PAGE_ROUTE === '/') { %>
+   <title>Developar - A web development company</title>
+   <% } else { %>
+   <title><%= PAGE_NAME %> • Developar</title>
+   <% } %>
+</head>
+
+<body>
+   <%- body %>
+</body>
+
+</html>

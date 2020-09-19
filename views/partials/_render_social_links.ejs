@@ -1,0 +1,13 @@
+<% if (links && links.length > 0) { %>
+<div class="contacts">
+   <ul>
+      <% for (const link of links) { %>
+      <li>
+         <a href="<%= link.url %>" title="<%= link.name %>">
+            <i data-feather="<%= link.icon %>"></i>
+         </a>
+      </li>
+      <% } %>
+   </ul>
+</div>
+<% } %>

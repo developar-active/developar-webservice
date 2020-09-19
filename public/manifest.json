@@ -1,0 +1,8 @@
+{
+   "name": "DevelopAR",
+   "short_name": "Developar",
+   "orientation": "portrait",
+   "display": "standalone",
+   "background_color": "#FFFFFF",
+   "theme_color": "#527DFF"
+}

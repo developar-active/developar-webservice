@@ -1,0 +1,69 @@
+{
+   "pioneers": {
+      "type": "PRIMARY",
+      "name": "Pioneers",
+
+      "members": [
+         {
+            "name": "Aakash Sisodiya",
+            "role": "Develoopar / MD",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum minus numquam impedit magni!",
+            "avatar": "http://developar.in/assets/img/team/Aakash.jpeg",
+            "social": [
+               { "name": "Instagram", "url": "#", "icon": "instagram" },
+               { "name": "Facebook", "url": "#", "icon": "facebook" },
+               { "name": "Twitter", "url": "#", "icon": "twitter" }
+            ]
+         },
+         {
+            "name": "Rajat Sharma",
+            "role": "Develoopar / MD",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum minus numquam impedit magni!",
+            "avatar": "http://developar.in/assets/img/team/Rajat.jpg",
+            "social": [
+               { "name": "Instagram", "url": "#", "icon": "instagram" },
+               { "name": "Facebook", "url": "#", "icon": "facebook" },
+               { "name": "Twitter", "url": "#", "icon": "twitter" }
+            ]
+         }
+      ]
+   },
+
+   "developers": {
+      "type": "SECONDARY",
+      "name": "Developers",
+
+      "members": [
+         {
+            "name": "John Doe",
+            "role": "Android Developer",
+            "avatar": "http://developar.in/assets/img/team/jay.jpg",
+            "social": [
+               { "name": "Instagram", "url": "#", "icon": "instagram" },
+               { "name": "Facebook", "url": "#", "icon": "facebook" },
+               { "name": "Twitter", "url": "#", "icon": "twitter" }
+            ]
+         },
+         {
+            "name": "John Doe",
+            "role": "Android Developer",
+            "avatar": "http://developar.in/assets/img/team/jay.jpg",
+            "social": [
+               { "name": "Instagram", "url": "#", "icon": "instagram" },
+               { "name": "Facebook", "url": "#", "icon": "facebook" },
+               { "name": "Twitter", "url": "#", "icon": "twitter" }
+            ]
+         },
+         {
+            "name": "John Doe",
+            "role": "Android Developer",
+            "avatar": "http://developar.in/assets/img/team/jay.jpg",
+            "social": [
+               { "name": "Instagram", "url": "#", "icon": "instagram" },
+               { "name": "Facebook", "url": "#", "icon": "facebook" },
+               { "name": "Twitter", "url": "#", "icon": "twitter" }
+            ]
+         }
+      ]
+   }
+}

@@ -1,0 +1,303 @@
+<style type="text/css">
+   main section#about #about-us {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 24em;
+   }
+   main section#about #about-us .note {
+      width: 50%;
+   }
+   @media screen and (max-width: 767px) {
+      main section#about #about-us .note {
+         width: 90%;
+      }
+   }
+
+   main section#about #our-background {
+      padding-top: 2em;
+      background-color: #EEE;
+   }
+
+   main section#about #our-background .content {
+      display: grid;
+      margin: auto;
+      width: 65%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+   }
+   main section#about #our-background .content .image img {
+      width: 60%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   @media screen and (max-width: 767px) {
+      main section#about #our-background .content {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   
+   main section#about #our-principles {
+      padding-top: 2em;
+      padding-bottom: 2em;
+   }
+   main section#about #our-principles .content .principles {
+      display: grid;
+      padding: 1.5em 1em;
+      grid-column-gap: 1em;
+      grid-template-columns: 1fr 1fr 1fr;
+      cursor: default;
+   }
+   main section#about #our-principles .content .principles .principle {
+      border-color: transparent;
+   }
+   main section#about #our-principles .content .principles .principle .thumb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 12em;
+   }
+   main section#about #our-principles .content .principles .principle .thumb img {
+      vertical-align: middle;
+      width: 12em;
+   }
+   main section#about #our-principles .content .principles .principle .caption {
+      min-height: 2.5em;
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+   }
+   @media screen and (max-width: 767px) {
+      main section#about #our-principles .content .principles {
+         grid-template-columns: 1fr;
+      }
+      main section#about #our-principles .content .principles .principle {
+         width: 80%;
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 8px;
+         margin-bottom: 8px;
+         border-radius: 8px;
+         border: 1px solid #DDD;
+      }
+   }
+
+   main section#about #inspiration-notes {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding-left: 4em;
+      padding-right: 4em;
+      padding-top: 4em;
+      padding-bottom: 4em;
+      background-color: var(--green);
+   }
+   main section#about #inspiration-notes .note {
+      width: 24em;
+   }
+   main section#about #inspiration-notes .note h3,
+   main section#about #inspiration-notes .note p {
+      color: var(--pcolor-fr);
+   }
+   @media screen and (max-width: 767px) {
+      main section#about #inspiration-notes {
+         padding-left: 1em;
+         padding-right: 1em;
+         padding-top: 2em;
+         padding-bottom: 2em;
+         flex-direction: column;
+      }
+      main section#about #inspiration-notes .note {
+         padding-top: 12px;
+         padding-bottom: 12px;
+      }
+   }
+
+   main section#about #creative-quote {
+      position: relative;
+   }
+   main section#about #creative-quote .thumb img {
+      width: 100%;
+   }
+   main section#about #creative-quote .caption {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      right: 0em;
+      top: 0em;
+      bottom: 0;
+      padding: 1.4em;
+      max-width: 32em;
+      background-color: rgba(255, 255, 255, 0.6);
+   }
+   @media screen and (max-width: 767px) {
+      main section#about #creative-quote {
+         height: 16em;
+      }
+      main section#about #creative-quote .caption {
+         padding: 12px;
+      }
+      main section#about #creative-quote .thumb {
+         height: 100%;
+      }
+      main section#about #creative-quote .thumb img {
+         height: inherit;
+      }
+   }
+
+   main section#about #team-ref {
+      position: relative;
+      background-image: url(https://developarcdn.vercel.app/images/our-team-work-1861x407-44kb.jpg);
+      background-position-y: 50%;
+   }
+   main section#about #team-ref .content {
+      padding-top: 2.8em;
+      padding-bottom: 2.8em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.75);
+      color: #FFF;
+      background-origin: border-box;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+   }
+   main section#about #team-ref .content a {
+      color: var(--pcolor-light);
+   }
+   main section#about #team-ref .content a:hover {
+      text-decoration: underline;
+   }
+   main section#about #team-ref .content svg {
+      width: 1em;
+      height: 1em;
+      vertical-align: middle;
+   }
+   @media screen and (max-width: 767px) {
+      main section#about #team-ref .content {
+         padding-left: 12px;
+         padding-right: 12px;
+      }
+   }
+</style>
+
+<%- include('partials/_header', { raised: true }) %>
+
+<main>
+   <section id="about">
+
+      <!-- About us -->
+      <div id="about-us">
+         <div class="note">
+            <h1 data-aos="fade-up" data-aos-delay="60" data-aos-duration="300">About <span class="text-blur">Developar</span></h1>
+            <p data-aos="fade-up" data-aos-delay="60" data-aos-duration="400">
+               The DevelopAR’s expertise is its commitment to offer
+               custom-made web design for every client, from small
+               business websites to giant e-commerce websites. By
+               meeting the growing technological and design needs
+               of its various clients at reasonable prices, DevelopAR
+               has grown to become one of the largest IT & Development
+               companies in the India.
+            </p>
+         </div>
+      </div>
+
+      <div id="our-background" data-aos="fade-up" data-aos-delay="60" data-aos-duration="500">
+         <header class="text-center">
+            <h2><span class="text-blur">Our</span> Background</h2>
+         </header>
+
+         <div class="content">
+            <div class="image" data-aos="fade-up" data-aos-delay="60">
+               <img src="/assets/our-development.png" alt="" />
+            </div>
+            <div class="detail">
+               <p>
+                  Hiring people with different cultures and points of view
+                  helps us make best decisions, build better web, software, etc
+                  products and create better experiences for our clients.
+
+                  <p>
+                     <a type="button" class="filled">Join Developar</a>
+                  </p>
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div id="our-principles" data-aos="fade-up" data-aos-delay="80" data-aos-duration="550">
+         <header class="text-center">
+            <h2><span class="text-blur">Our</span> Principles</h2>
+         </header>
+
+         <div class="content scalable">
+            <div class="principles">
+               <div class="principle" data-aos="fade-up" data-aos-delay="90" data-aos-duration="580">
+                  <div class="thumb">
+                     <img src="https://developarcdn.vercel.app/images/equality-1200x1200-39kb.png" alt="Give an opportunity to everyone" />
+                  </div>
+                  <div class="caption text-center">
+                     <p>Give an opportunity to everyone</p>
+                  </div>
+               </div>
+
+               <div class="principle" data-aos="fade-up" data-aos-delay="90" data-aos-duration="800">
+                  <div class="thumb">
+                     <img src="https://developarcdn.vercel.app/images/relationships-2000x2000-36kb.png" alt="Expand Connectivity & Enhancing relationships" />
+                  </div>
+                  <div class="caption text-center">
+                     <p>Expand Connectivity & Enhancing relationships</p>
+                  </div>
+               </div>
+
+               <div class="principle" data-aos="fade-up" data-aos-delay="90" data-aos-duration="900">
+                  <div class="thumb">
+                     <img src="https://developarcdn.vercel.app/images/feedback-service-1200x1200-64kb.png" alt="Privacy & Protection" />
+                  </div>
+                  <div class="caption text-center">
+                     <p>Privacy & Protection</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="inspiration-notes">
+         <div class="note" data-aos="fade-up" data-aos-delay="90" data-aos-duration="550">
+            <h3>Our Mission</h3>
+            <p>DevelopAR is dedicated to the empowerment of humans and the efforts that India has to get creative and productive websites and software.</p>
+         </div>
+         <div class="note"  data-aos="fade-up" data-aos-delay="90" data-aos-duration="750">
+            <h3>Our Philosophy</h3>
+            <p>Intending to become one of the most ethical companies in the world, DevelopAR continues to train its employees and understand their needs, not only as long as the employee works, but also after the retiring, DevelopAR will be grateful to them.</p>
+         </div>
+      </div>
+
+      <div id="creative-quote" data-aos="fade-up" data-aos-delay="90" data-aos-duration="500">
+         <div class="thumb">
+            <img src="https://developarcdn.vercel.app/images/expand-creativity-1861x797-39kb.jpg" alt="Expand our creativity" />
+         </div>
+         <div class="caption" data-aos="fade-up" data-aos-delay="90" data-aos-duration="750">
+            <h1>Expand our creativity</h1>
+            <p>DevelopAR has not employed only educated people but also has preferred to appoint skilled people and has not employed only experienced people but also has preferred to designate vibrant people. That is why developar has a creative and knowledgeable family-like team.</p>
+         </div>
+      </div>
+
+      <div id="team-ref" data-aos="fade-up" data-aos-delay="90" data-aos-duration="650">
+         <div class="content">
+            <h3>We're building more useful things</h3>
+            <br />
+            <a href="/team">Meet the team behind developar <i data-feather="arrow-right"></i></a>
+         </div>
+      </div>
+   </section>
+</main>
+
+<%- include('partials/_footer') %>

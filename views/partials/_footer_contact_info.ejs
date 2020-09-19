@@ -1,0 +1,72 @@
+<% 
+   const links = [
+      {
+         name: "@instagram/developer.in",
+         url: "https://www.instagram.com/developar.in",
+         icon: "instagram"
+      },
+      {
+         name: "@github/developar-lab",
+         url: "https://github.com/developar-lab",
+         icon: "github"
+      },
+      {
+         name: "@facebook/developar.in",
+         url: "https://www.facebook.com/developar.in",
+         icon: "facebook"
+      },
+      {
+         name: "@twitter/ar_develop",
+         url: "https://twitter.com/AR_Develop",
+         icon: "twitter"
+      }
+   ];
+%>
+
+<style type="text/css">
+   footer .contact-info {
+      width: 30%;
+   }
+
+   footer .contact-info .social-links {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: flex-end;
+   }
+
+   footer .contact-info .social-links .social-icon {
+      display: block;
+      padding: 12px;
+      margin: 0 2px;
+      border-radius: 50px;
+      transition: background-color 120ms linear;
+   }
+
+   footer .contact-info .social-links .social-icon svg {
+      width: 21px;
+      height: 21px;
+      vertical-align: middle;
+      transition: stroke 120ms linear;
+   }
+
+   footer .contact-info .social-links .social-icon:hover {
+      background-color: var(--pcolor);
+   }
+
+   footer .contact-info .social-links .social-icon:hover svg {
+      stroke: #FFF;
+   }
+</style>
+
+<div class="contact-info">
+   <h5 class="tablet-hide">Follow us on</h5>
+
+   <div class="social-links">
+      <% for (const link of links) { %>
+      <a title="<%= link.name %>" target="new" href="<%= link.url %>" class="social-icon">
+         <i data-feather="<%= link.icon %>"></i>
+      </a>
+      <% } %>
+   </div>
+</div>

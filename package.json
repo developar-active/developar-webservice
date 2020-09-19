@@ -1,0 +1,32 @@
+{
+  "name": "developar",
+  "version": "1.0.0",
+  "description": "Developar's Web service",
+  "main": "index.js",
+  "preferGlobal": false,
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "developar",
+    "developar-web"
+  ],
+  "author": {
+    "name": "Developar Team",
+    "email": "main.developar@gmail.com",
+    "url": "http://developar.in"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-ejs": "^4.3.0",
+    "koa-router": "^9.4.0",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}

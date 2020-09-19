@@ -1,0 +1,29 @@
+<style type="text/css">
+   #upper-vector-background {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      overflow: hidden;
+      background-image: url(https://developarcdn.vercel.app/vectors/curve-bg.svg);
+      background-repeat: no-repeat;
+      pointer-events: none;
+      z-index: -1;
+   }
+
+   @media screen and (max-width: 767px) {
+      #upper-vector-background {
+         background-size: cover;
+      }
+   }
+
+   @media (orientation: landscape) {
+      #upper-vector-background {
+         height: 110%;
+      }
+   }
+</style>
+
+<div id="upper-vector-background" class="<%= className %>" data-aos="fade-down"></div>

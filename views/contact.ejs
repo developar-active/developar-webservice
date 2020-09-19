@@ -1,0 +1,107 @@
+<style type="text/css">
+   main section#contact {
+      display: flex;
+      padding-top: 2em;
+      height: 80vh;
+      justify-content: center;
+   }
+
+   main section#contact .content {
+      padding: 1em 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 45%;
+      height: 29em;
+      border-radius: 12px;
+      box-shadow: 0 0 8px #CCC;
+      background-color: #FFF;
+   }
+
+   main section#contact .content form {
+      padding-top: 1.6em;
+   }
+
+   @media screen and (max-width: 767px) {
+      main section#contact {
+         height: 85vh;
+      }
+
+      main section#contact .content {
+         padding: 0;
+         width: 90%;
+         border-top-right-radius: 0;
+         border-bottom-left-radius: 0;
+         border-top-left-radius: 26px;
+         border-bottom-right-radius: 26px;
+      }
+
+      @media (orientation: landscape) {
+         main section#contact {
+            height: 100vh;
+         }
+
+         main section#contact .content {
+            height: 100%;
+            width: 65%;
+         }
+      }
+   }
+</style>
+
+<%- include('./partials/_header', { raised: false, PAGE_ROUTE }); %>
+
+<%- include('partials/_curve_bg', { className: 'contact' }) %>
+
+<main>
+   <section id="contact">
+      <div class="wrapper content" data-aos="fade-up">
+         <header class="text-center">
+            <h1>Contact Us</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+         </header>
+
+         <form method="POST" name="contact" enctype="multipart/form-data">
+            <div class="control-wrapper">
+               <input 
+                  type="text" 
+                  name="fullname" 
+                  id="fullname" 
+                  placeholder="Fullname" 
+                  title="Fullname" 
+                  tabindex="1"
+                  required />
+            </div>
+
+            <div class="control-wrapper">
+               <input 
+                  type="email" 
+                  name="email" 
+                  id="email" 
+                  placeholder="Email address" 
+                  title="Email address"
+                  tabindex="2" 
+                  required />
+            </div>
+
+            <div class="control-wrapper">
+               <textarea 
+                  name="message" 
+                  id="message" 
+                  placeholder="Your message" 
+                  title="Your message" 
+                  tabindex="3"
+                  rows="3" 
+                  required></textarea>
+            </div>
+
+            <div class="control-wrapper text-center">
+               <button type="submit" tabindex="4">Send</button>
+            </div>
+         </form>
+      </div>
+   </section>
+</main>
+
+<%- include('partials/_footer') %>
