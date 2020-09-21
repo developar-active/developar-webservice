@@ -12,6 +12,7 @@ const Koa = require('koa');
 const KoaRouter = require('koa-router');
 const serve = require('koa-static');
 const render = require('koa-ejs');
+const fs = require('fs');
 
 // Initiate
 const app = new Koa(); // Koa instance
@@ -23,7 +24,7 @@ app
    .use(router.routes())
    .use(router.allowedMethods()) // Router
 
-app.use(serve(path.join(__dirname, 'public'))); // Config static assets
+app.use(serve(path.join(__dirname, 'static'))); // Config static assets
 
 render(app, {  // EJS Template rendering
    root: path.join(__dirname, 'views'),
@@ -44,6 +45,24 @@ router.get('/', async ctx => {
       PAGE_NAME, 
       PAGE_ROUTE: ctx.url
    })
+})
+
+/**
+ * Client script file
+ * @route GET /app.js
+ */
+router.get('/app.js', async ctx => {
+   let content;
+   try {
+      content = fs.readFileSync(path.join(__dirname, 'static/app.js'), 'utf8');
+   } catch (err) {
+      ctx.status = 400;
+      return ctx.body = "Can't get /app.js";
+   }
+
+   ctx.res.setHeader('Content-Type', 'application/javascript');
+
+   return ctx.body = content;
 })
 
 /**
