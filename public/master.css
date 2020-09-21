@@ -119,6 +119,11 @@ a.no-effect {
     border-radius: 25px;
     background-color: #EEE;
     color: #666;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     transition: background-color 0.2s linear;
 }
 .chip.primary {
@@ -304,6 +309,70 @@ a.no-effect {
     color: #FFF;
 }
 
+/* Hero area utility */
+.hero {
+    width: 100%;
+}
+.hero.note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22em;
+    flex-direction: column;
+}
+.hero.full-image {
+    position: relative;
+}
+.hero.full-image .image img {
+    width: 100%;
+}
+.hero.full-image .detail {
+    position: absolute;
+    padding: 1em 12px;
+    top: 50%;
+    right: 20%;
+    left: 20%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.hero.note .content {
+    width: 50%;
+}
+.hero.dual-module {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.hero.dual-module .image img {
+    width: 100%;
+}
+.hero.dual-module .detail {
+    display: flex;
+    padding: 3em;
+    flex-direction: column;
+    justify-content: center;
+}
+@media screen and (max-width: 767px) {
+    .hero.full-image .image img {
+        
+    }
+    .hero.full-image .detail {
+        width: 80%;
+        padding: 8px 12px;
+        top: 5%;
+        bottom: 5%;
+        transform: translateY(0);
+        right: 10%;
+        left: 10%;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+    .hero.note .content {
+        width: 90%;
+    }
+    .hero.dual-module {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Form utils */
 .control-wrapper {
     padding: 10px 0;
@@ -319,6 +388,10 @@ a.no-effect {
     padding-bottom: auto;
     padding-left: 8px;
     padding-right: 8px;
+}
+.scalable-y {
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .margin-center {

@@ -61,10 +61,61 @@ router.get('/services', async ctx => {
 
 router.get('/pricing', async ctx => {
    const PAGE_NAME = 'Pricing';
+   let plans;
+   plans = require('./values/plans.json');
+
+   if (typeof plans === 'object' && !Array.isArray(plans)) {
+      plans = Object.values(plans);
+   }
 
    return await ctx.render('pricing', {
       PAGE_NAME, 
-      PAGE_ROUTE: ctx.url
+      PAGE_ROUTE: ctx.url,
+      plans
+   })
+})
+
+/**
+ * Order Page
+ * @route GET /order/:planId
+ */
+router.get('/order/:planId', async ctx => {
+   const { planId } = ctx.params;
+   const plans = require('./values/plans.json');
+   let PAGE_NAME;
+   let index;
+   let plan;
+
+   switch((planId || '').toLowerCase()) {
+      case 'static-website':
+         index = 'static';
+         break;
+      case 'dynamic-website':
+         index = 'dynamic';
+         break;
+      case 'ecommerce':
+         index = 'eCommerce';
+         break;
+      case 'mobile-app':
+         index = 'mobileApp';
+         break;
+      case 'digital-marketing':
+         index = 'digitalMarketing';
+         break;
+      case 'maintenance':
+         index = 'maintenance';
+         break;
+      default:
+         return ctx.redirect('/pricing');
+   }
+
+   plan = plans[index] || null;
+   PAGE_NAME = `${plan.name} Order`;
+
+   return await ctx.render('order', {
+      PAGE_NAME,
+      PAGE_ROUTE: ctx.url,
+      plan
    })
 })
 
@@ -76,6 +127,19 @@ router.get('/contact', async ctx => {
    const PAGE_NAME = 'Contact';
 
    return await ctx.render('contact', { 
+      PAGE_NAME, 
+      PAGE_ROUTE: ctx.url
+   })
+})
+
+/**
+ * Career page
+ * @route GET /career
+ */
+router.get('/career', async ctx => {
+   const PAGE_NAME = 'Career';
+
+   return await ctx.render('career', { 
       PAGE_NAME, 
       PAGE_ROUTE: ctx.url
    })
@@ -113,8 +177,8 @@ router.get('/team/:role?', async ctx => {
       case 'developers':
          index = 'developers';
          break;
-      case 'digmarketing':
-         index = 'digmarketing';
+      case 'dm':
+         index = 'designMarketing';
          break;
    }
 

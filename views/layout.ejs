@@ -9,7 +9,7 @@
    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
    <meta name="theme-color" content="#FFFFFF" />
 
-   <link rel="shortcut icon" href="https://developarcdn.web.app/logo/favicon.png" type="image/x-icon" />
+   <link rel="shortcut icon" href="https://developarcdn.vercel.app/logo/favicon.png" type="image/x-icon" />
    <link rel="apple-touch-icon" href="https://developarcdn.web.app/logo/favicon.png" sizes="144x144" />
    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" type="text/css" />
    <script defer src="https://unpkg.com/aos@next/dist/aos.js" type="application/javascript"></script>
@@ -17,85 +17,103 @@
 
    <style type="text/css">
       /*--- Load Questrial fonts ---*/
+
       /* vietnamese */
       @font-face {
-         font-family: 'Questrial';
+         font-family: "Questrial";
          font-style: normal;
          font-weight: 400;
          font-display: swap;
-         src: local('Questrial Regular'), local('Questrial-Regular'), url(https://fonts.gstatic.com/s/questrial/v11/QdVUSTchPBm7nuUeVf70sSFlq20.woff2) format('woff2');
-         unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+         src: local("Questrial Regular"), local("Questrial-Regular"),
+            url(https://fonts.gstatic.com/s/questrial/v11/QdVUSTchPBm7nuUeVf70sSFlq20.woff2) format("woff2");
+         unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+            U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
       }
 
       /* latin-ext */
       @font-face {
-         font-family: 'Questrial';
+         font-family: "Questrial";
          font-style: normal;
          font-weight: 400;
          font-display: swap;
-         src: local('Questrial Regular'), local('Questrial-Regular'), url(https://fonts.gstatic.com/s/questrial/v11/QdVUSTchPBm7nuUeVf70sCFlq20.woff2) format('woff2');
-         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+         src: local("Questrial Regular"), local("Questrial-Regular"),
+            url(https://fonts.gstatic.com/s/questrial/v11/QdVUSTchPBm7nuUeVf70sCFlq20.woff2) format("woff2");
+         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+            U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
       }
 
       /* latin */
       @font-face {
-         font-family: 'Questrial';
+         font-family: "Questrial";
          font-style: normal;
          font-weight: 400;
          font-display: swap;
-         src: local('Questrial Regular'), local('Questrial-Regular'), url(https://fonts.gstatic.com/s/questrial/v11/QdVUSTchPBm7nuUeVf70viFl.woff2) format('woff2');
-         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         src: local("Questrial Regular"), local("Questrial-Regular"),
+            url(https://fonts.gstatic.com/s/questrial/v11/QdVUSTchPBm7nuUeVf70viFl.woff2) format("woff2");
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+            U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+            U+2212, U+2215, U+FEFF, U+FFFD;
       }
 
       /*--- Load nunito fonts ---*/
       /* cyrillic-ext */
       @font-face {
-         font-family: 'Nunito';
+         font-family: "Nunito";
          font-style: normal;
          font-weight: 400;
          font-display: swap;
-         src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIOOaBXso.woff2) format('woff2');
-         unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+         src: local("Nunito Regular"), local("Nunito-Regular"),
+            url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIOOaBXso.woff2) format("woff2");
+         unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+            U+A640-A69F, U+FE2E-FE2F;
       }
 
       /* cyrillic */
       @font-face {
-         font-family: 'Nunito';
+         font-family: "Nunito";
          font-style: normal;
          font-weight: 400;
          font-display: swap;
-         src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIMeaBXso.woff2) format('woff2');
+         src: local("Nunito Regular"), local("Nunito-Regular"),
+            url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIMeaBXso.woff2) format("woff2");
          unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
       }
 
       /* vietnamese */
       @font-face {
-         font-family: 'Nunito';
+         font-family: "Nunito";
          font-style: normal;
          font-weight: 400;
          font-display: swap;
-         src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIOuaBXso.woff2) format('woff2');
-         unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+         src: local("Nunito Regular"), local("Nunito-Regular"),
+            url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIOuaBXso.woff2) format("woff2");
+         unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+            U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
       }
 
       /* latin-ext */
       @font-face {
-         font-family: 'Nunito';
+         font-family: "Nunito";
          font-style: normal;
          font-weight: 400;
          font-display: swap;
-         src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIO-aBXso.woff2) format('woff2');
-         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+         src: local("Nunito Regular"), local("Nunito-Regular"),
+            url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofIO-aBXso.woff2) format("woff2");
+         unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+            U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
       }
 
       /* latin */
       @font-face {
-         font-family: 'Nunito';
+         font-family: "Nunito";
          font-style: normal;
          font-weight: 400;
          font-display: swap;
-         src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofINeaB.woff2) format('woff2');
-         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         src: local("Nunito Regular"), local("Nunito-Regular"),
+            url(https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofINeaB.woff2) format("woff2");
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+            U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+            U+2212, U+2215, U+FEFF, U+FFFD;
       }
 
       :root {
@@ -103,32 +121,32 @@
          --pcolor: rgb(82, 125, 255);
          --pcolor-dark: rgb(35, 82, 224);
          --pcolor-light: rgb(126, 158, 255);
-         --pcolor-fr: #FFF;
+         --pcolor-fr: #fff;
 
-         --red: #F44336;
+         --red: #f44336;
          --red-dark: #aa2e25;
          --red-light: #f6685e;
-         --red-fr: #FFF;
+         --red-fr: #fff;
 
          --blue: #2196f3;
          --blue-dark: #1769aa;
          --blue-light: #4dabf5;
-         --blue-fr: #FFF;
+         --blue-fr: #fff;
 
          --purple: #9c27b0;
          --purple-dark: #6d1b7b;
          --purple-light: #af52bf;
-         --purple-fr: #FFF;
+         --purple-fr: #fff;
 
          --deeppurple: #673ab7;
          --deeppurple-dark: #482880;
          --deeppurple-light: #8561c5;
-         --deeppurple-fr: #FFF;
+         --deeppurple-fr: #fff;
 
          --teal: #009688;
          --teal-dark: #00695f;
          --teal-light: #33ab9f;
-         --teak-fr: #FFF;
+         --teal-fr: #fff;
 
          --green: #4caf50;
          --green-dark: #357a38;
@@ -138,7 +156,7 @@
          --indigo: #3f51b5;
          --indigo-dark: #2c387e;
          --indigo-light: #6573c3;
-         --indigo-fr: #FFF;
+         --indigo-fr: #fff;
 
          --cyan: #00bcd4;
          --cyan-dark: #008394;
@@ -153,7 +171,7 @@
          --amber: #ffc107;
          --amber-dark: #b28704;
          --amber-light: #ffcd38;
-         --amber-fr: #FFF;
+         --amber-fr: #fff;
 
          --orange: #ff9800;
          --orange-dark: #b26a00;
@@ -163,19 +181,19 @@
          --deeporange: #ff5722;
          --deeporange-dark: #b23c17;
          --deeporange-light: #ff784e;
-         --deeporange-fr: #FFF;
+         --deeporange-fr: #fff;
 
          --pink: #e91e63;
          --pink-dark: #a31545;
          --pink-light: #ed4b82;
-         --pink-fr: #FFF;
+         --pink-fr: #fff;
 
          /* Animation manual */
          --anim-duration: 0.7s;
 
          /* Font style */
-         --pfont: 'Questrial', Verdana, sans-serif;
-         --sfont: 'Nunito', sans-serif, arial;
+         --pfont: "Questrial", Verdana, sans-serif;
+         --sfont: "Nunito", sans-serif, arial;
       }
 
       @keyframes fade-in-up {
@@ -245,7 +263,7 @@
          height: 1px;
          border: 0;
          width: 100%;
-         border-top: 1px solid #CCC;
+         border-top: 1px solid #ccc;
          padding: 0;
       }
 
@@ -301,7 +319,7 @@
          color: #555;
       }
 
-      a[type='button'] {
+      a[type="button"] {
          display: flex;
          width: fit-content;
          flex-direction: row;
@@ -313,75 +331,86 @@
          padding-right: 10px;
          font-size: 16px;
          border-radius: 6px;
-         background-color: #FFF;
+         background-color: #fff;
          color: var(--pcolor);
          transition: background-color 0.15s ease;
       }
 
-      a[type=button].icon-button {
+      a[type="button"].icon-button {
          display: flex;
          flex-direction: row;
          align-items: center;
       }
 
-      a[type=button].icon-button .ic {
+      a[type="button"].icon-button .ic {
          padding-left: 2px;
          padding-right: 2px;
       }
 
-      a[type=button].icon-button .ic svg {
+      a[type="button"].icon-button .ic svg {
          width: 18px;
          height: 18px;
          vertical-align: middle;
       }
 
-      a[type=button].icon-button .label {
+      a[type="button"].icon-button .label {
          padding-left: 2px;
          padding-right: 2px;
       }
 
-      a[type='button'].outline {
+      a[type="button"].outline,
+      button.outline {
          border-width: 1px;
          border-style: solid;
          border-color: var(--pcolor);
+         background-color: transparent;
+         color: var(--pcolor);
          transition: background-color 0.1s linear, color 0.15s linear;
       }
 
-      a[type='button'].outline:hover {
+      a[type="button"].outline:hover {
          background-color: var(--pcolor);
          color: var(--pcolor-fr);
       }
 
-      a[type='button'].filled {
+      a[type="button"].filled {
          background-color: var(--pcolor);
-         color: #FFF;
+         color: #fff;
       }
 
-      a[type='button'].filled:hover {
+      a[type="button"].filled:hover {
          background-color: var(--pcolor-dark);
-         box-shadow: 1px 1px 12px #DDD;
+         box-shadow: 1px 1px 12px #ddd;
       }
 
-      a[type='button'].text {
+      a[type="button"].text {
          background-color: transparent;
          color: var(--pcolor);
       }
 
-      a[type='button'].icon {
+      a[type="button"].icon {
          background-color: transparent;
       }
 
-      a[type='button'].icon svg {
+      a[type="button"].icon svg {
          stroke: var(--pcolor);
       }
 
-      a[type='button'].icon.white svg {
-         stroke: #FFF;
+      a[type="button"].icon.white svg {
+         stroke: #fff;
       }
 
-      a[type='button'].text-white {
+      a[type="button"].text-white {
          background-color: transparent;
-         color: #FFF;
+         color: #fff;
+      }
+
+      a.hoverable:hover {
+         text-decoration: underline;
+      }
+
+      a.focused:focus {
+         text-decoration: underline;
       }
 
       button {
@@ -392,8 +421,23 @@
          border: none;
          outline: none;
          border-radius: 8px;
-         background-image: linear-gradient(rgb(82, 125, 255), rgb(61, 106, 240));
-         color: #FFF;
+         background-color: transparent;
+         color: var(--pcolor);
+      }
+
+      button.primary {
+         background-color: var(--pcolor);
+         color: var(--pcolor-fr);
+         transition: background-color 0.15s linear;
+      }
+
+      button.primary:hover {
+         background-color: var(--pcolor-dark);
+      }
+
+      button.success {
+         background-color: var(--green);
+         color: var(--green-fr);
       }
 
       button.icon {
@@ -446,9 +490,10 @@
          vertical-align: middle;
       }
 
-      input[type=text],
-      input[type=email],
-      input[type=password],
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"],
       textarea {
          padding: 8px 10px;
          min-width: 14em;
@@ -457,18 +502,91 @@
          border-width: 2px;
          border-style: solid;
          border-color: transparent;
-         background-color: #EEE;
+         background-color: #eee;
          border-radius: 8px;
          font-family: var(--pfont);
          transition: background-color 0.15s linear, border-color 0.25s ease;
       }
 
-      input[type=text]:focus,
-      input[type=email]:focus,
-      input[type=password]:focus,
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="password"]:focus,
+      input[type="tel"]:focus,
       textarea:focus {
          background-color: transparent;
          border-color: var(--pcolor);
+      }
+
+      input[type="checkbox"] {
+         position: relative;
+         margin: 0 2px;
+         display: inline-block;
+         padding: 6px;
+         background-color: transparent;
+         border-width: 1px;
+         border-style: solid;
+         border-color: #ccc;
+         border-radius: 4px;
+         outline: none;
+         vertical-align: middle;
+         -webkit-appearance: none;
+         transition: background-color 0.1s linear;
+      }
+
+      input[type="checkbox"]:active,
+      input[type="checkbox"]:checked:active {
+         background-color: #eee;
+      }
+
+      input[type="checkbox"]:checked {
+         color: var(--pcolor-fr);
+         background-color: var(--pcolor);
+         border-color: var(--pcolor);
+      }
+
+      input[type="checkbox"]:checked:after {
+         position: absolute;
+         content: "\2714";
+         top: -1px;
+         left: 1.5px;
+         font-size: 10px;
+         font-weight: lighter;
+         color: var(--pcolor-fr);
+      }
+
+      select {
+         padding: 8px 10px;
+         min-width: 15.5em;
+         font-size: 1em;
+         border-width: 2px;
+         border-style: solid;
+         border-color: transparent;
+         border-radius: 8px;
+         background-color: #eee;
+         color: #555;
+         outline: none;
+         font-family: var(--pfont);
+      }
+
+      select:focus {
+         border-color: var(--pcolor);
+         background-color: transparent;
+      }
+
+      label {
+         display: block;
+         font-weight: 600;
+         padding: 6px 4px;
+         font-size: 14px;
+         font-family: var(--pfont);
+         user-select: none;
+      }
+
+      label.inline {
+         display: inline-block;
+         padding: 0;
+         font-size: inherit;
+         font-weight: inherit;
       }
 
       @media screen and (max-width: 767px) {
@@ -477,10 +595,35 @@
          }
       }
 
-      main {
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+         width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+         background-color: #fff;
+         border-left: 1px solid #eee;
+      }
+
+      ::-webkit-scrollbar-thumb {
+         background-color: #ccc;
+         border-radius: 25px;
+         transition: background-color 0.25s linear;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+         background-color: #bbb;
+      }
+
+      ::-webkit-scrollbar-thumb:active {
+         background-color: var(--pcolor);
+      }
+
+      main:not(.no-margin) {
          /* Adjust with fixed header */
          margin-top: 4.6em;
       }
+
       main.x-margin {
          margin-top: 12em;
       }

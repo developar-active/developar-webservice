@@ -6,24 +6,24 @@
       "members": [
          {
             "name": "Aakash Sisodiya",
-            "role": "Develoopar / MD",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum minus numquam impedit magni!",
+            "role": "Founder & Managing Director",
+            "about": "Aakash is the founder and owner of DevelopAR and the founder and owner of the parent company AR. A person with an ambitious and inspiring personality.",
             "avatar": "http://developar.in/assets/img/team/Aakash.jpeg",
             "social": [
-               { "name": "Instagram", "url": "#", "icon": "instagram" },
-               { "name": "Facebook", "url": "#", "icon": "facebook" },
-               { "name": "Twitter", "url": "#", "icon": "twitter" }
+               { "name": "@instagram/sakam_vyom", "url": "https://instagram.com/sakam_vyom", "icon": "instagram" },
+               { "name": "@github/SisodiyaAakash", "url": "https://github.com/SisodiyaAakash", "icon": "github" },
+               { "name": "@twitter/aakash_sakam", "url": "https://twitter.com/aakash_sakam", "icon": "twitter" }
             ]
          },
          {
             "name": "Rajat Sharma",
-            "role": "Develoopar / MD",
-            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum minus numquam impedit magni!",
+            "role": "Co-founder & Managing Director",
+            "about": "Rajat is the co-founder and co-owner of DevelopAR. A person who speaks not much and gives importance to work. A man with a delightful and attractive personality.",
             "avatar": "http://developar.in/assets/img/team/Rajat.jpg",
             "social": [
-               { "name": "Instagram", "url": "#", "icon": "instagram" },
-               { "name": "Facebook", "url": "#", "icon": "facebook" },
-               { "name": "Twitter", "url": "#", "icon": "twitter" }
+               { "name": "@instagram/energetic.coder", "url": "https://www.instagram.com/energetic.coder", "icon": "instagram" },
+               { "name": "@github/rajatprototype", "url": "https://github.com/rajatprototype", "icon": "github" },
+               { "name": "@twitter/rajat04500210", "url": "https://mobile.twitter.com/rajat04500210", "icon": "twitter" }
             ]
          }
       ]
@@ -35,8 +35,8 @@
 
       "members": [
          {
-            "name": "John Doe",
-            "role": "Android Developer",
+            "name": "Shreyansh Thoriya",
+            "role": "Web & Flutter developer",
             "avatar": "http://developar.in/assets/img/team/jay.jpg",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
@@ -45,9 +45,9 @@
             ]
          },
          {
-            "name": "John Doe",
-            "role": "Android Developer",
-            "avatar": "http://developar.in/assets/img/team/jay.jpg",
+            "name": "Veer Patel",
+            "role": "Backend technologies",
+            "avatar": "https://randomuser.me/api/portraits/men/40.jpg",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
                { "name": "Facebook", "url": "#", "icon": "facebook" },
@@ -55,9 +55,86 @@
             ]
          },
          {
-            "name": "John Doe",
-            "role": "Android Developer",
-            "avatar": "http://developar.in/assets/img/team/jay.jpg",
+            "name": "Preksha Chaudhary",
+            "role": "Frontend & CMS",
+            "avatar": "https://randomuser.me/api/portraits/women/86.jpg",
+            "social": [
+               { "name": "Instagram", "url": "#", "icon": "instagram" },
+               { "name": "Facebook", "url": "#", "icon": "facebook" },
+               { "name": "Twitter", "url": "#", "icon": "twitter" }
+            ]
+         },
+         {
+            "name": "Deepmala Gidhwani",
+            "role": "Web developer",
+            "avatar": "https://randomuser.me/api/portraits/women/21.jpg",
+            "social": [
+               { "name": "Instagram", "url": "#", "icon": "instagram" },
+               { "name": "Facebook", "url": "#", "icon": "facebook" },
+               { "name": "Twitter", "url": "#", "icon": "twitter" }
+            ]
+         },
+         {
+            "name": "Aakash Sisodiya",
+            "role": "Web & App developer",
+            "avatar": "http://developar.in/assets/img/team/Aakash.jpeg",
+            "social": [
+               { "name": "Instagram", "url": "#", "icon": "instagram" },
+               { "name": "Facebook", "url": "#", "icon": "facebook" },
+               { "name": "Twitter", "url": "#", "icon": "twitter" }
+            ]
+         },
+         {
+            "name": "Rajat Sharma",
+            "role": "Fullstack developer",
+            "avatar": "http://developar.in/assets/img/team/Rajat.jpg",
+            "social": [
+               { "name": "Instagram", "url": "#", "icon": "instagram" },
+               { "name": "Facebook", "url": "#", "icon": "facebook" },
+               { "name": "Twitter", "url": "#", "icon": "twitter" }
+            ]
+         }
+      ]
+   },
+   "designMarketing": {
+      "type": "SECONDARY",
+      "name": "Design & Marketing",
+
+      "members": [
+         {
+            "name": "Bhavin Chauhan",
+            "role": "Graphic Designer",
+            "avatar": "https://randomuser.me/api/portraits/men/27.jpg",
+            "social": [
+               { "name": "Instagram", "url": "#", "icon": "instagram" },
+               { "name": "Facebook", "url": "#", "icon": "facebook" },
+               { "name": "Twitter", "url": "#", "icon": "twitter" }
+            ]
+         },
+         {
+            "name": "Manoj Khatri",
+            "role": "SEO & Advertisement",
+            "avatar": "https://randomuser.me/api/portraits/men/27.jpg",
+            "social": [
+               { "name": "Instagram", "url": "#", "icon": "instagram" },
+               { "name": "Facebook", "url": "#", "icon": "facebook" },
+               { "name": "Twitter", "url": "#", "icon": "twitter" }
+            ]
+         },
+         {
+            "name": "Jay Thakkar",
+            "role": "UX / UI Designer",
+            "avatar": "https://randomuser.me/api/portraits/men/27.jpg",
+            "social": [
+               { "name": "Instagram", "url": "#", "icon": "instagram" },
+               { "name": "Facebook", "url": "#", "icon": "facebook" },
+               { "name": "Twitter", "url": "#", "icon": "twitter" }
+            ]
+         },
+         {
+            "name": "Anniruddhsinh Solanki",
+            "role": "Graphic Designer",
+            "avatar": "https://randomuser.me/api/portraits/men/73.jpg",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
                { "name": "Facebook", "url": "#", "icon": "facebook" },

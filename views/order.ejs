@@ -1,0 +1,320 @@
+<style type="text/css">
+   main #order {
+      padding-top: 2em;
+      padding-bottom: 2em;
+      width: 65%;
+      margin: auto;
+   }
+
+   main #order .order-detail {
+      position: relative;
+   }
+
+   main #order .form-wrapper {
+      padding-top: 12px;
+   }
+
+   main #order .terms li {
+      font-family: var(--sfont);
+      line-height: 1.6em;
+   }
+
+   main #order .landing-bar-image {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateY(-50%);
+   }
+
+   main #order .landing-bar-image img {
+      opacity: 0.5;
+   }
+
+   main #order .featured-plans {
+      padding-top: 2em;
+      padding-bottom: 2em;
+   }
+
+   main #order .featured-plans .plans {
+      display: flex;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      flex-direction: row;
+   }
+
+   main #order .featured-plans .plans .plan {
+      display: grid;
+      grid-template-rows: 4.5em auto 3em;
+      flex: 1;
+      margin-left: 8px;
+      margin-right: 8px;
+      min-height: 16em;
+      border: 1px solid #DDD;
+      border-radius: 8px;
+   }
+
+   main #order .featured-plans .plans .plan header {
+      padding-top: 1em;
+      padding-bottom: 1em;
+      text-align: center;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      background-color: rgb(247, 247, 247);
+   }
+
+   main #order .featured-plans .plans .plan .features {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      list-style-image: url('https://developarcdn.vercel.app/vectors/check-icon-dark.svg');
+   }
+
+   main #order .featured-plans .plans .plan .features .feature {
+      padding: 4px 12px;
+      font-family: var(--sfont);
+   }
+
+   main #order .featured-plans .plans .plan .price {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--pcolor);
+      color: var(--pcolor-fr);
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+   }
+
+   @media screen and (max-width: 767px) {
+      main #order {
+         width: 90%;
+      }
+      main #order .landing-bar-image {
+         display: none;
+      }
+      main #order .featured-plans .plans {
+         flex-direction: column;
+      }
+      main #order .featured-plans .plans .plan {
+         margin-top: 8px;
+         margin-bottom: 8px;
+      }
+   }
+</style>
+
+<%- include('partials/_header', { raised: true }) %>
+
+<main>
+   <section id="order">
+      <div class="order-detail">
+         <header>
+            <h1><a href="/pricing" class="text-blur" title="See pricing lists"><small>Plans</small></a>&nbsp;/&nbsp;<%= plan.name %></h1>
+            <p><%- plan.about %></p>
+
+            <% if (plan.min_price) { %>
+               <div class="chip primary">₹<span data-bind="price"><%= plan.min_price %></span>&nbsp;Onwards</div>
+            <% } %>
+         </header>
+
+         <br />
+
+         <% if (plan.facilities.length > 0) { %>
+
+         <div id="terms">
+            <h4>Terms</h4>
+            <ul class="terms">
+               <% for (const term of plan.facilities) { %>
+                  <li><%= term %></li>
+               <% } %>
+            </ul>
+         </div>
+
+         <% } %>
+
+         <!-- <hr /> -->
+
+         <div class="form-wrapper">
+            <h5>Tell us bit about you</h5>
+
+            <form method="POST" name="order-form" role="form" id="form">
+               <p>
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" placeholder="John Doe" title="Your Full name" tabindex="1"
+                     autocomplete="name" required />
+               </p>
+
+               <p>
+                  <label for="email">Email address <span class="text-blur">(optional)</span></label>
+                  <input type="email" name="email" id="email" placeholder="john@example.com" title="Your Email address"
+                     tabindex="2" autocomplete="email" />
+               </p>
+
+               <p>
+                  <label for="phone">Phone</label>
+                  <input type="tel" name="phone" id="phone" placeholder="+1 12345 67890" title="Your Phone number"
+                     tabindex="3" autocomplete="tel" required />
+               </p>
+
+               <p>
+                  <label for="category">Category</label>
+                  <input type="text" name="category" id="category" list="order-category" placeholder="Architecture"
+                     title="Category of your service" tabindex="4" autocomplete="off" required />
+
+                  <datalist id="order-category">
+                     <option value="Architectural Designer">Architectural Designer</option>
+                     <option value="Art">Art</option>
+                     <option value="Artist">Artist</option>
+                     <option value="Author">Author</option>
+                     <option value="Blogger">Blogger</option>
+                     <option value="Chef">Chef</option>
+                     <option value="Coach">Coach</option>
+                     <option value="Comedian">Comedian</option>
+                     <option value="Concert Tour">Concert Tour</option>
+                     <option value="Dancer">Dancer</option>
+                     <option value="Digital Creator">Digital Creator</option>
+                     <option value="DJ">DJ</option>
+                     <option value="Editor">Editor</option>
+                     <option value="Entrepreneur">Entrepreneur</option>
+                     <option value="Fashion Designer">Fashion Designer</option>
+                     <option value="Fashion Model">Fashion Model</option>
+                     <option value="Film Character">Film Character</option>
+                     <option value="Film Director">Film Director</option>
+                     <option value="Fitness Model">Fitness Model</option>
+                     <option value="Fitness Trainer">Fitness Trainer</option>
+                     <option value="Gamer">Gamer</option>
+                     <option value="Gaming Video Creator">Gaming Video Creator</option>
+                     <option value="Government Officials">Government Officials</option>
+                     <option value="Graphic Designer">Graphic Designer</option>
+                     <option value="Health / Beauty">Health / Beauty</option>
+                     <option value="Interior Designer">Interior Designer</option>
+                     <option value="Journalist">Journalist</option>
+                     <option value="Motivational Speaker">Motivational Speaker</option>
+                     <option value="Musician">Musician</option>
+                     <option value="Musician / Band">Musician / Band</option>
+                     <option value="News Personality">News Personality</option>
+                     <option value="Personal Blog">Personal Blog</option>
+                     <option value="Photographer">Photographer</option>
+                     <option value="Photography Studio">Photography Studio</option>
+                     <option value="Political Candidate">Political Candidate</option>
+                     <option value="Producer">Producer</option>
+                     <option value="Product / Service">Product / Service</option>
+                     <option value="Scientist">Scientist</option>
+                     <option value="Shopping & Retail">Shopping & Retail</option>
+                     <option value="Sports Person">Sports Person</option>
+                     <option value="Supermarket / Convenience Store">Supermarket / Convenience Store</option>
+                     <option value="Web / Software Developer">Web / Software Developer</option>
+                     <option value="Writer">Writer</option>
+                  </datalist>
+               </p>
+
+               <p>
+                  <label for="plan">Plan</label>
+                  <select name="plan" id="plan" tabindex="5">
+                     <% if (plan.featured && plan.featured.length > 0) { %>
+                     <% for (const fplan of plan.featured) { %>
+                     <option data-price-value="<%= fplan.min_price%>" data-plan-value="<%= fplan.name %>"
+                        value="<%= fplan.name %>"><%= fplan.name %> (₹<%= fplan.min_price %> onwards)</option>
+                     <% } %>
+                     <% } else if (plan.min_price) { %>
+                     <option value="Basic">Basic (₹<%= plan.min_price %> onwards)</option>
+                     <% } else { %>
+                     <option value="Basic">Basic</option>
+                     <% } %>
+                  </select>
+
+                  <% if (plan.featured && plan.featured.length > 0 ) { %>
+               <p><small><a class="hoverable focused" href="#featured-plans" tabindex="6">See featured plans</a></small>
+               </p>
+               <% } %>
+               </p>
+
+               <p>
+                  <label for="desc">Describe</label>
+                  <textarea name="desc" id="desc" rows="7" placeholder="I need website for my shop"
+                     title="Describe your perspective" tabindex="7" required></textarea>
+               </p>
+
+               <p>
+                  <input type="checkbox" id="agree-terms" title="Agree our terms and conditions" tabindex="8"
+                     required />
+                  <label class="inline" for="agree-terms">
+                     <small>Agree to our <a href="/terms" target="_blank" tabindex="9">Terms and conditions</a></small>
+                  </label>
+               </p>
+
+               <p>
+                  <button type="submit" class="primary" tabindex="10">Send</button>
+               </p>
+            </form>
+
+         </div>
+
+         <% if (plan.thumb) { %>
+         <div class="landing-bar-image">
+            <img src="<%= plan.thumb.source %>" alt="<%= plan.name %>" width="<%= plan.thumb.width %>" />
+         </div>
+         <% } %>
+
+      </div>
+
+      <% if (plan.featured && plan.featured.length > 0) { %>
+      <div class="featured-plans" id="featured-plans">
+         <header>
+            <h1>Featured <span class="text-blur">plans</span></h1>
+         </header>
+
+         <div class="plans">
+            <% for (const fetPlan of plan.featured) { %>
+            <div class="plan">
+               <header>
+                  <h3 class="text-bold"><%= fetPlan.name %></h3>
+               </header>
+
+               <ul class="features">
+                  <% for (const feature of fetPlan.features) { %>
+                  <li class="feature"><%= feature %></li>
+                  <% } %>
+               </ul>
+
+               <div class="price">
+                  <h5>₹<%= fetPlan.min_price %> Onwards</h5>
+               </div>
+            </div>
+            <% } %>
+         </div>
+      </div>
+      <% } %>
+   </section>
+</main>
+
+<script type="application/javascript">
+   document.getElementById('plan').addEventListener('change', (ev) => {
+      const target = ev.target;
+      const key = ev.target.value;
+      let newPrice;
+      let optionTarget;
+
+      // Finding selected option element
+      for (const option of target.children) {
+         const price = option.dataset.priceValue;
+         const name = option.dataset.planValue;
+
+         // Compare selected key 
+         if (name === key) {
+            optionTarget = option;
+            newPrice = optionTarget.dataset.priceValue;
+            break;
+         }
+      }
+
+      if (optionTarget) {
+         // Bind selected price
+         const bindingNodes = document.querySelectorAll(`[data-bind='price']`);
+
+         if (bindingNodes.length > 0 && newPrice != undefined) {
+            bindingNodes.forEach(node => node.textContent = newPrice);
+         }
+      }
+
+
+   })
+</script>

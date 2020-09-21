@@ -7,3 +7,4 @@ temp/
 *.cache
 
 package-lock.json
+.vercel

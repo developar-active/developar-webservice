@@ -20,6 +20,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "@vercel/static-build": "^0.17.8",
     "koa": "^2.13.0",
     "koa-ejs": "^4.3.0",
     "koa-router": "^9.4.0",

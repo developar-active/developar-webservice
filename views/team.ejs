@@ -2,10 +2,11 @@
    const memberRoles = [
       { label: 'Pioneers', route: '/team' },
       { label: 'Developers', route: '/team/developers' },
-      { label: 'Digital Marketing', route: '/team/digmarketing' }
+      { label: 'Design & Marketing', route: '/team/dm' }
    ];
 
    let animDuration = 300;
+   let animDelay = 40;
 %>
 
 <style type="text/css">
@@ -17,6 +18,7 @@
       padding-top: 2em;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
    }
 
    main section#team .member-sector .members .member {
@@ -28,11 +30,11 @@
       justify-content: center;
       padding-top: 8px;
       padding-bottom: 8px;
-      width: 10em;
+      width: 13em;
    }
    main section#team .member-sector .members .member .avatar img {
-      width: 11em;
-      height: 11em;
+      width: 10em;
+      height: 10em;
       border-radius: 50%;
       transition: box-shadow 0.2s linear;
    }
@@ -151,7 +153,6 @@
 
    @media screen and (max-width: 767px) {
       main section#team .member-sector .members {
-         flex-direction: column;
          width: 100%;
          align-items: center;
       }
@@ -163,6 +164,17 @@
       main section#team .member-sector .members.primary .member .contacts ul {
          flex-direction: row;
       }
+
+      @media (orientation: landscape) {
+         main section#team .member-sector .members {
+            flex-direction: row;
+         }
+         main section#team .member-sector .members .member {
+            width: 12em;
+            margin-left: 12px;
+            margin-right: 12px;
+         }
+      }
    }
 </style>
 
@@ -173,8 +185,8 @@
 
       <div class="member-sector" data-member-role="pioneers">
          <header class="text-center">
-            <h2><%= collection.name %></h2>
-            <p>A good team is like a strong foundation of a house, <br />that's why even a storm or rain can't shake a house, <br />Just like that our team is the foundation for us.</p>
+            <!-- <h2><%= collection.name %></h2> -->
+            <p><small>A good team is like a strong foundation of a house, <br />that's why even a storm or rain can't shake a house, <br />Just like that our team is the foundation for us.</small></p>
          </header>
          
          <div class="tabpanel">
@@ -214,13 +226,13 @@
             <div class="members">
 
                <% for (const member of collection.members) { %>
-               <div class="member" data-aos="fade-up" data-aos-delay="80" data-aos-duration="<%= animDuration += 150 %>">
+               <div class="member" data-aos="fade-up" data-aos-delay="<%= animDelay += 5 %>" data-aos-duration="<%= animDuration += 80 %>">
                   <div class="avatar">
-                     <img src="<%= member.avatar %>" alt="" />
+                     <img src="<%= member.avatar %>" alt="<%= member.name %>" />
                   </div>
                   <div class="detail">
                      <div class="name">
-                        <h4><%= member.name %></h4>
+                        <h5><%= member.name %></h5>
                      </div>
                      <div class="role text-blur"><small><%= member.role %></small></div>
 
