@@ -9,6 +9,85 @@ main > section > .scalable {
     }
 }
 
+.use-red {
+    --pcolor: var(--red);
+    --pcolor-dark: var(--red-dark);
+    --pcolor-light: var(--red-light);
+    --pcolor-fr: var(--red-fr);
+}
+.use-blue {
+    --pcolor: var(--blue);
+    --pcolor-dark: var(--blue-dark);
+    --pcolor-light: var(--blue-light);
+    --pcolor-fr: var(--blue-fr);
+}
+.use-purple {
+    --pcolor: var(--purple);
+    --pcolor-dark: var(--purple-dark);
+    --pcolor-light: var(--purple-light);
+    --pcolor-fr: var(--purple-fr);
+}
+.use-deeppurple {
+    --pcolor: var(--deeppurple);
+    --pcolor-dark: var(--deeppurple-dark);
+    --pcolor-light: var(--deeppurple-light);
+    --pcolor-fr: var(--deeppurple-fr);
+}
+.use-teal {
+    --pcolor: var(--teal);
+    --pcolor-dark: var(--teal-dark);
+    --pcolor-light: var(--teal-light);
+    --pcolor-fr: var(--teal-fr);
+}
+.use-green {
+    --pcolor: var(--green);
+    --pcolor-dark: var(--green-dark);
+    --pcolor-light: var(--green-light);
+    --pcolor-fr: var(--green-fr);
+}
+.use-indigo {
+    --pcolor: var(--indigo);
+    --pcolor-dark: var(--indigo-dark);
+    --pcolor-light: var(--indigo-light);
+    --pcolor-fr: var(--indigo-fr);
+}
+.use-cyan {
+    --pcolor: var(--cyan);
+    --pcolor-dark: var(--cyan-dark);
+    --pcolor-light: var(--cyan-light);
+    --pcolor-fr: var(--cyan-fr);
+}
+.use-yellow {
+    --pcolor: var(--yellow);
+    --pcolor-dark: var(--yellow-dark);
+    --pcolor-light: var(--yellow-light);
+    --pcolor-fr: var(--yellow-fr);
+}
+.use-amber {
+    --pcolor: var(--amber);
+    --pcolor-dark: var(--amber-dark);
+    --pcolor-light: var(--amber-light);
+    --pcolor-fr: var(--amber-fr);
+}
+.use-orange {
+    --pcolor: var(--orange);
+    --pcolor-dark: var(--orange-dark);
+    --pcolor-light: var(--orange-light);
+    --pcolor-fr: var(--orange-fr);
+}
+.use-deeporange {
+    --pcolor: var(--deeporange);
+    --pcolor-dark: var(--deeporange-dark);
+    --pcolor-light: var(--deeporange-light);
+    --pcolor-fr: var(--deeporange-fr);
+}
+.use-pink {
+    --pcolor: var(--pink);
+    --pcolor-dark: var(--pink-dark);
+    --pcolor-light: var(--pink-light);
+    --pcolor-fr: var(--pink-fr);
+}
+
 /* --- Utils --- */
 
 .text-primary {
@@ -399,6 +478,78 @@ a.no-effect {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+.collapsible {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    margin: 8px;
+    overflow-anchor: none;
+    border-radius: 8px;
+}
+.collapsible[open] {
+    height: fit-content;
+    box-shadow: 0 0 14px #EEE;
+}
+
+.collapsible .toggler {
+    display: flex;
+    flex-direction: row;
+    height: 3em;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
+    /* border: 1px solid #DDD; */
+    box-shadow: 0 0 14px #EEE;
+    padding-right: 1em;
+    border-radius: inherit;
+    transition: background-color 80ms linear, border-radius 120ms ease, color 60ms linear;
+}
+
+.collapsible .toggler .action svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+.collapsible[open] .toggler {
+    background-color: var(--pcolor-light);
+    color: var(--pcolor-fr);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.collapsible .toggler .action.auto-rotate {
+    transition: transform 320ms ease;
+}
+.collapsible[open] .toggler .action.auto-rotate {
+    transform: rotate(180deg);
+}
+.collapsible[open] .toggler .action svg {
+    stroke: var(--pcolor-fr);
+}
+
+.collapsible .content {
+    box-sizing: border-box;
+    height: 0;
+    overflow: hidden;
+    transform: scale(0.9);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    transition: transform 350ms ease, height 350ms ease;
+}
+.collapsible .content.colored {
+    background-color: var(--pcolor);
+    color: var(--pcolor-fr);
+}
+.collapsible .content.colored p {
+    color: var(--pcolor-fr);
+}
+.collapsible[open] .content {
+    transform: scale(1);
+    height: auto;
+}
+
 
 .flex {
     display: flex;

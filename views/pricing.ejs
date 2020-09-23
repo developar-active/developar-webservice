@@ -86,56 +86,56 @@
 
 <%- include('partials/_header', { raised: true }) %>
 
-<main>
-   <section id="pricing">
+   <main>
+      <section id="pricing">
 
-      <div class="content scalable">
-         <header>
-            <h1>Pricing&nbsp;<span class="text-blur">plans</span></h1>
-            <p>Price is what you pay. Value is what you get.</p>
-         </header>
+         <div class="content scalable">
+            <header>
+               <h1>Pricing&nbsp;<span class="text-blur">plans</span></h1>
+               <p>Price is what you pay. Value is what you get.</p>
+            </header>
 
-         <div class="container">
-            <% for (const plan of plans) { %>
-            <div class="plan card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="<%= plan.anim_duration || 100 %>">
-               <div class="card-body">
-                  <div class="card-header text-center">
-                     <header>
-                        <h3><%= plan.name %></h3>
-                     </header>
+            <div class="container">
+               <% for (const plan of plans) { %>
+               <div class="plan card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="<%= plan.anim_duration || 100 %>">
+                  <div class="card-body">
+                     <div class="card-header text-center">
+                        <header>
+                           <h3><%= plan.name %></h3>
+                        </header>
 
-                     <% if (plan.min_price) { %>
-                     <div class="price">
-                        <h4>&#8377;<%= plan.min_price %><%= (plan.monthly_charge && plan.monthly_charge == true)? '/month': '' %> <span class="text-blur">onwards</span></h4>
-                     </div>
-                     <% } %>
-                  </div>
-
-                  <div class="card-content">
-                     <div class="tech-stack">
-                        <% for (const techinstance of plan.techstack || []) { %>
-                        <div class="item" title="<%= techinstance.name %>">
-                           <img src="<%= techinstance.source %>" alt="<%= techinstance.name %>" />
+                        <% if (plan.min_price) { %>
+                        <div class="price">
+                           <h4>&#8377;<%= plan.min_price %><%= (plan.monthly_charge && plan.monthly_charge == true)? '/month': '' %> <span class="text-blur">onwards</span></h4>
                         </div>
                         <% } %>
                      </div>
 
-                     <div class="facility">
-                        <% for (const facility of plan.facilities || []) { %>
-                        <p><%= facility %></p>
-                        <% } %>
+                     <div class="card-content">
+                        <div class="tech-stack">
+                           <% for (const techinstance of plan.techstack || []) { %>
+                           <div class="item" title="<%= techinstance.name %>">
+                              <img src="<%= techinstance.source %>" alt="<%= techinstance.name %>" />
+                           </div>
+                           <% } %>
+                        </div>
+
+                        <div class="facility">
+                           <% for (const facility of plan.facilities || []) { %>
+                           <p><%= facility %></p>
+                           <% } %>
+                        </div>
                      </div>
                   </div>
-               </div>
 
-               <div class="card-action">
-                  <a href="/order/<%= plan.id %>">Place an order</a>
+                  <div class="card-action">
+                     <a href="/order/<%= plan.id %>">Place an order</a>
+                  </div>
                </div>
+               <% } %>
             </div>
-            <% } %>
          </div>
-      </div>
-   </section>
-</main>
+      </section>
+   </main>
 
 <%- include('partials/_footer') %>

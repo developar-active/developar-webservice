@@ -51,11 +51,27 @@ function autoScrollToInternalHashTarget() {
    }
 }
 
+function useCollapsibleDropdowns () {
+    const nodelist = document.getElementsByClassName('collapsible');
+
+    for (const node of nodelist) {
+        const toggler = node.querySelector('.toggler[data-collapse-target]') || null;
+
+        if (toggler) {
+            toggler.addEventListener('click', () => {
+                node.toggleAttribute('open');
+            });
+        }
+    }
+}
+
 window.onload = () => {
 
    autoScrollToInternalHashTarget();
 
    reserveHeaderReisedEvent();
+
+   useCollapsibleDropdowns();
 
    if ('AOS' in window) {
        // @ts-ignore

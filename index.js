@@ -165,6 +165,19 @@ router.get('/career', async ctx => {
 })
 
 /**
+ * Jobs page
+ * @route GET /career/jobs
+ */
+router.get('/career/jobs', async ctx => {
+   const PAGE_NAME = 'Jobs';
+
+   return await ctx.render('jobs', { 
+      PAGE_NAME, 
+      PAGE_ROUTE: ctx.url
+   })
+})
+
+/**
  * About page
  * @route GET /about
  */
