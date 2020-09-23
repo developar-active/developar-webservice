@@ -1,0 +1,12 @@
+<%
+    const links = [
+        { label: 'About', route: '/about' },
+        { label: 'Team', route: '/team' },
+        { label: 'Showcases', route: '/showcases' },
+        { label: 'Career', route: '/career' },
+        { label: 'Contact', route: '/contact' }
+    ];
+%>
+
+<!-- @render-header -->
+<%- include('_render_header', { raised, links }); %>
