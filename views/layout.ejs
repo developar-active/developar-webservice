@@ -306,11 +306,18 @@
          line-height: 1.2em;
       }
 
+      h6 {
+         padding: 2px 8px;
+         font-size: 1em;
+         line-height: 1.1em;
+      }
+
       h1,
       h2,
       h3,
       h4,
-      h5 {
+      h5, 
+      h6 {
          margin: 0;
          font-weight: normal;
          letter-spacing: 0.5px;
@@ -335,6 +342,7 @@
          padding-right: 10px;
          font-size: 16px;
          border-radius: 6px;
+         font-family: var(--pfont);
          background-color: #fff;
          color: var(--pcolor);
          transition: background-color 0.15s ease;
@@ -422,7 +430,7 @@
          margin: 4px;
          min-width: 8em;
          min-height: 2.4em;
-         font-family: var(--sfont);
+         font-family: var(--pfont);
          border: none;
          outline: none;
          border-radius: 8px;
@@ -507,7 +515,7 @@
          border-width: 2px;
          border-style: solid;
          border-color: transparent;
-         background-color: #eee;
+         background-color: rgb(241, 241, 241);
          border-radius: 8px;
          font-family: var(--pfont);
          transition: background-color 0.15s linear, border-color 0.25s ease;

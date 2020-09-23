@@ -24,15 +24,9 @@
 %>
 
 <style type="text/css">
-   footer .contact-info {
-      width: 30%;
-   }
-
    footer .contact-info .social-links {
       display: flex;
-      width: 100%;
       flex-direction: row;
-      justify-content: flex-end;
    }
 
    footer .contact-info .social-links .social-icon {
@@ -64,9 +58,9 @@
 
    <div class="social-links">
       <% for (const link of links) { %>
-      <a title="<%= link.name %>" target="new" href="<%= link.url %>" class="social-icon">
-         <i data-feather="<%= link.icon %>"></i>
-      </a>
+         <a title="<%= link.name %>" target="new" href="<%= link.url %>" class="social-icon">
+            <i data-feather="<%= link.icon %>"></i>
+         </a>
       <% } %>
    </div>
 </div>

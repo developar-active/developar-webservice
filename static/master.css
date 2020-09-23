@@ -306,6 +306,23 @@ a.no-effect {
     color: #FFF;
 }
 
+.combo-input {
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+}
+.combo-input .controller {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.combo-input .trigger {
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none;
+}
+
 .tabpanel {
     display: flex;
     flex-direction: row;
