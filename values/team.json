@@ -8,7 +8,7 @@
             "name": "Aakash Sisodiya",
             "role": "Founder & Managing Director",
             "about": "Aakash is the founder and owner of DevelopAR and the founder and owner of the parent company AR. A person with an ambitious and inspiring personality.",
-            "avatar": "http://developar.in/assets/img/team/Aakash.jpeg",
+            "avatar": "https://developarcdn.vercel.app/images/team/aakash-sisodiya.jpg",
             "social": [
                { "name": "@instagram/sakam_vyom", "url": "https://instagram.com/sakam_vyom", "icon": "instagram" },
                { "name": "@github/SisodiyaAakash", "url": "https://github.com/SisodiyaAakash", "icon": "github" },
@@ -19,7 +19,7 @@
             "name": "Rajat Sharma",
             "role": "Co-founder & Managing Director",
             "about": "Rajat is the co-founder and co-owner of DevelopAR. A person who speaks not much and gives importance to work. A man with a delightful and attractive personality.",
-            "avatar": "http://developar.in/assets/img/team/Rajat.jpg",
+            "avatar": "https://developarcdn.vercel.app/images/team/rajat-sharma.jpg",
             "social": [
                { "name": "@instagram/energetic.coder", "url": "https://www.instagram.com/energetic.coder", "icon": "instagram" },
                { "name": "@github/rajatprototype", "url": "https://github.com/rajatprototype", "icon": "github" },
@@ -37,7 +37,7 @@
          {
             "name": "Shreyansh Thoriya",
             "role": "Web & Flutter developer",
-            "avatar": "http://developar.in/assets/img/team/jay.jpg",
+            "avatar": "https://developarcdn.vercel.app/images/team/shreyansh-thoria.jpg",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
                { "name": "Facebook", "url": "#", "icon": "facebook" },
@@ -47,7 +47,7 @@
          {
             "name": "Veer Patel",
             "role": "Backend technologies",
-            "avatar": "https://randomuser.me/api/portraits/men/40.jpg",
+            "avatar": "https://developarcdn.vercel.app/images/team/veer-patel.jpg",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
                { "name": "Facebook", "url": "#", "icon": "facebook" },
@@ -57,7 +57,7 @@
          {
             "name": "Preksha Chaudhary",
             "role": "Frontend & CMS",
-            "avatar": "https://randomuser.me/api/portraits/women/86.jpg",
+            "avatar": "https://ionicframework.com/img/team/no-photo.png",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
                { "name": "Facebook", "url": "#", "icon": "facebook" },
@@ -67,7 +67,7 @@
          {
             "name": "Deepmala Gidhwani",
             "role": "Web developer",
-            "avatar": "https://randomuser.me/api/portraits/women/21.jpg",
+            "avatar": "https://ionicframework.com/img/team/no-photo.png",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
                { "name": "Facebook", "url": "#", "icon": "facebook" },
@@ -77,7 +77,7 @@
          {
             "name": "Aakash Sisodiya",
             "role": "Web & App developer",
-            "avatar": "http://developar.in/assets/img/team/Aakash.jpeg",
+            "avatar": "https://developarcdn.vercel.app/images/team/aakash-sisodiya.jpg",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
                { "name": "Facebook", "url": "#", "icon": "facebook" },
@@ -87,7 +87,7 @@
          {
             "name": "Rajat Sharma",
             "role": "Fullstack developer",
-            "avatar": "http://developar.in/assets/img/team/Rajat.jpg",
+            "avatar": "https://developarcdn.vercel.app/images/team/rajat-sharma.jpg",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
                { "name": "Facebook", "url": "#", "icon": "facebook" },
@@ -104,7 +104,7 @@
          {
             "name": "Bhavin Chauhan",
             "role": "Graphic Designer",
-            "avatar": "https://randomuser.me/api/portraits/men/27.jpg",
+            "avatar": "https://developarcdn.vercel.app/images/team/bhavin-chauhan.jpg",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
                { "name": "Facebook", "url": "#", "icon": "facebook" },
@@ -114,7 +114,7 @@
          {
             "name": "Manoj Khatri",
             "role": "SEO & Advertisement",
-            "avatar": "https://randomuser.me/api/portraits/men/27.jpg",
+            "avatar": "https://ionicframework.com/img/team/no-photo.png",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
                { "name": "Facebook", "url": "#", "icon": "facebook" },
@@ -124,7 +124,7 @@
          {
             "name": "Jay Thakkar",
             "role": "UX / UI Designer",
-            "avatar": "https://randomuser.me/api/portraits/men/27.jpg",
+            "avatar": "https://developarcdn.vercel.app/images/team/jay-thakkar.jpg",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
                { "name": "Facebook", "url": "#", "icon": "facebook" },
@@ -134,7 +134,7 @@
          {
             "name": "Anniruddhsinh Solanki",
             "role": "Graphic Designer",
-            "avatar": "https://randomuser.me/api/portraits/men/73.jpg",
+            "avatar": "https://developarcdn.vercel.app/images/team/anniruddhsinh-solanki.jpg",
             "social": [
                { "name": "Instagram", "url": "#", "icon": "instagram" },
                { "name": "Facebook", "url": "#", "icon": "facebook" },
