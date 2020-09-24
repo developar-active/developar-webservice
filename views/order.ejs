@@ -1,35 +1,4 @@
 <style type="text/css">
-   main #order {
-      padding-top: 2em;
-      padding-bottom: 2em;
-      width: 65%;
-      margin: auto;
-   }
-
-   main #order .order-detail {
-      position: relative;
-   }
-
-   main #order .form-wrapper {
-      padding-top: 12px;
-   }
-
-   main #order .terms li {
-      font-family: var(--sfont);
-      line-height: 1.6em;
-   }
-
-   main #order .landing-bar-image {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translateY(-50%);
-   }
-
-   main #order .landing-bar-image img {
-      opacity: 0.5;
-   }
-
    main #order .featured-plans {
       padding-top: 2em;
       padding-bottom: 2em;
@@ -85,15 +54,10 @@
    }
 
    @media screen and (max-width: 767px) {
-      main #order {
-         width: 90%;
-      }
-      main #order .landing-bar-image {
-         display: none;
-      }
       main #order .featured-plans .plans {
          flex-direction: column;
       }
+
       main #order .featured-plans .plans .plan {
          margin-top: 8px;
          margin-bottom: 8px;
@@ -104,8 +68,8 @@
 <%- include('partials/_header', { raised: true }) %>
 
 <main>
-   <section id="order">
-      <div class="order-detail">
+   <section id="order" class="detailed-form">
+      <div class="container order-detail">
          <header>
             <h1><a href="/pricing" class="text-blur" title="See pricing lists"><small>Plans</small></a>&nbsp;/&nbsp;<%= plan.name %></h1>
             <p><%- plan.about %></p>
@@ -118,16 +82,14 @@
          <br />
 
          <% if (plan.facilities.length > 0) { %>
-
-         <div id="terms">
-            <h4>Terms</h4>
-            <ul class="terms">
-               <% for (const term of plan.facilities) { %>
-                  <li><%= term %></li>
-               <% } %>
-            </ul>
-         </div>
-
+            <div id="terms">
+               <h4>Terms</h4>
+               <ul class="terms">
+                  <% for (const term of plan.facilities) { %>
+                     <li><%= term %></li>
+                  <% } %>
+               </ul>
+            </div>
          <% } %>
 
          <!-- <hr /> -->
@@ -138,26 +100,54 @@
             <form method="POST" name="order-form" role="form" id="form">
                <p>
                   <label for="name">Name</label>
-                  <input type="text" name="name" id="name" placeholder="John Doe" title="Your Full name" tabindex="1"
-                     autocomplete="name" required />
+                  <input 
+                     type="text" 
+                     name="name" 
+                     id="name" 
+                     placeholder="John Doe" 
+                     title="Your Full name" 
+                     tabindex="1"
+                     autocomplete="name" 
+                     required />
                </p>
 
                <p>
                   <label for="email">Email address <span class="text-blur">(optional)</span></label>
-                  <input type="email" name="email" id="email" placeholder="john@example.com" title="Your Email address"
-                     tabindex="2" autocomplete="email" />
+                  <input 
+                     type="email" 
+                     name="email" 
+                     id="email" 
+                     placeholder="john@example.com" 
+                     title="Your Email address"
+                     tabindex="2" 
+                     autocomplete="email" />
                </p>
 
                <p>
                   <label for="phone">Phone</label>
-                  <input type="tel" name="phone" id="phone" placeholder="+1 12345 67890" title="Your Phone number"
-                     tabindex="3" autocomplete="tel" required />
+                  <input 
+                     type="tel" 
+                     name="phone" 
+                     id="phone" 
+                     placeholder="+1 12345 67890" 
+                     title="Your Phone number"
+                     tabindex="3" 
+                     autocomplete="tel" 
+                     required />
                </p>
 
                <p>
                   <label for="category">Category</label>
-                  <input type="text" name="category" id="category" list="order-category" placeholder="Architecture"
-                     title="Category of your service" tabindex="4" autocomplete="off" required />
+                  <input 
+                     type="text" 
+                     name="category" 
+                     id="category" 
+                     list="order-category" 
+                     placeholder="Architecture"
+                     title="Category of your service" 
+                     tabindex="4" 
+                     autocomplete="off" 
+                     required />
 
                   <datalist id="order-category">
                      <option value="Architectural Designer">Architectural Designer</option>
@@ -210,31 +200,44 @@
                   <label for="plan">Plan</label>
                   <select name="plan" id="plan" tabindex="5">
                      <% if (plan.featured && plan.featured.length > 0) { %>
-                     <% for (const fplan of plan.featured) { %>
-                     <option data-price-value="<%= fplan.min_price%>" data-plan-value="<%= fplan.name %>"
-                        value="<%= fplan.name %>"><%= fplan.name %> (₹<%= fplan.min_price %> onwards)</option>
-                     <% } %>
+                        <% for (const fplan of plan.featured) { %>
+                           <option 
+                              data-price-value="<%= fplan.min_price%>" 
+                              data-plan-value="<%= fplan.name %>"
+                              value="<%= fplan.name %>">
+                              <%= fplan.name %> (₹<%= fplan.min_price %> onwards)
+                           </option>
+                        <% } %>
                      <% } else if (plan.min_price) { %>
-                     <option value="Basic">Basic (₹<%= plan.min_price %> onwards)</option>
+                        <option value="Basic">Basic (₹<%= plan.min_price %> onwards)</option>
                      <% } else { %>
-                     <option value="Basic">Basic</option>
+                        <option value="Basic">Basic</option>
                      <% } %>
                   </select>
 
                   <% if (plan.featured && plan.featured.length > 0 ) { %>
-               <p><small><a class="hoverable focused" href="#featured-plans" tabindex="6">See featured plans</a></small>
-               </p>
-               <% } %>
+                     <p><small><a class="hoverable focused" href="#featured-plans" tabindex="6">See featured plans</a></small></p>
+                  <% } %>
                </p>
 
                <p>
                   <label for="desc">Describe</label>
-                  <textarea name="desc" id="desc" rows="7" placeholder="I need website for my shop"
-                     title="Describe your perspective" tabindex="7" required></textarea>
+                  <textarea 
+                     name="desc" 
+                     id="desc" 
+                     rows="7" 
+                     placeholder="I need website for my shop"
+                     title="Describe your perspective" 
+                     tabindex="7" 
+                     required></textarea>
                </p>
 
                <p>
-                  <input type="checkbox" id="agree-terms" title="Agree our terms and conditions" tabindex="8"
+                  <input 
+                     type="checkbox" 
+                     id="agree-terms" 
+                     title="Agree our terms and conditions" 
+                     tabindex="8"
                      required />
                   <label class="inline" for="agree-terms">
                      <small>Agree to our <a href="/terms" target="_blank" tabindex="9">Terms and conditions</a></small>
@@ -250,38 +253,41 @@
 
          <% if (plan.thumb) { %>
          <div class="landing-bar-image">
-            <img src="<%= plan.thumb.source %>" alt="<%= plan.name %>" width="<%= plan.thumb.width %>" />
+            <img 
+               src="<%= plan.thumb.source %>" 
+               alt="<%= plan.name %>" 
+               width="<%= plan.thumb.width %>" />
          </div>
          <% } %>
 
       </div>
 
       <% if (plan.featured && plan.featured.length > 0) { %>
-      <div class="featured-plans" id="featured-plans">
-         <header>
-            <h1>Featured <span class="text-blur">plans</span></h1>
-         </header>
+         <div class="featured-plans" id="featured-plans">
+            <header>
+               <h1>Featured <span class="text-blur">plans</span></h1>
+            </header>
 
-         <div class="plans">
-            <% for (const fetPlan of plan.featured) { %>
-            <div class="plan">
-               <header>
-                  <h3 class="text-bold"><%= fetPlan.name %></h3>
-               </header>
+            <div class="plans">
+               <% for (const fetPlan of plan.featured) { %>
+                  <div class="plan">
+                     <header>
+                        <h3 class="text-bold"><%= fetPlan.name %></h3>
+                     </header>
 
-               <ul class="features">
-                  <% for (const feature of fetPlan.features) { %>
-                  <li class="feature"><%= feature %></li>
-                  <% } %>
-               </ul>
+                     <ul class="features">
+                        <% for (const feature of fetPlan.features) { %>
+                           <li class="feature"><%= feature %></li>
+                        <% } %>
+                     </ul>
 
-               <div class="price">
-                  <h5>₹<%= fetPlan.min_price %> Onwards</h5>
-               </div>
+                     <div class="price">
+                        <h5>₹<%= fetPlan.min_price %> Onwards</h5>
+                     </div>
+                  </div>
+               <% } %>
             </div>
-            <% } %>
          </div>
-      </div>
       <% } %>
    </section>
 </main>
@@ -314,7 +320,5 @@
             bindingNodes.forEach(node => node.textContent = newPrice);
          }
       }
-
-
    })
 </script>
