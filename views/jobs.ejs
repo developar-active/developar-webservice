@@ -1,103 +1,6 @@
-<% 
-   const jobs = [
-      {
-         "name": "Mobile application developer",
-         "id": "mobile-app-dev",
-         "theme_color": "primary",
-         "opened": true,
-         "qualification": [
-            "Android or iOS Development skills",
-            "Familier with Java / Kotlin / Swift / React Native / Vue Native development",
-            "Good knowledge with OOP concepts",
-            "Understanding of Google's material design guidelines (for Android development) / Apple's Human interface guidelines (for iOS development)",
-            "Some product portfolio",
-            "Experience with third-party libraries & frameworks and APIs"
-         ]
-      },
-      {
-         "name": "Web developer",
-         "id": "web-dev",
-         "theme_color": "green",
-         "opened": true,
-         "qualification": [
-            "Quality skills in JavaScript, HTML, CSS",
-            "Proficient in My SQL",
-            "Ability to thrive in a fast-paced environment",
-            "Solid ability in both written and verbal communication",
-            "Knowledge of programming language and technical terminology",
-            "Able to develop ideas and processes and clearly express them",
-            "Able to solve complex problems"
-         ]
-      },
-      {
-         "name": "Software developer",
-         "id": "software-dev",
-         "theme_color": "red",
-         "qualification": [
-            "Windows / Mac development skills",
-            "Quality skills of the SDLC",
-            "Java / Python / C++ / Scala / Swift development skills",
-            "Familiar with OOP concepts",
-            "Some product portfolio",
-            "Ability to managing database"
-         ]
-      },
-      {
-         "name": "Information technology vendor manager",
-         "id": "tech-vendor-manager",
-         "theme_color": "blue",
-         "qualification": [
-            "Developing and sustaining long-standing relationships with clients.",
-            "Meeting with suitable clients to assess their products, inquire about their services",
-            "Continually monitoring sales trends to determine which products are more popular",
-            "Conducting interviews with new client to understand & increase product quality"
-         ]
-      },
-      {
-         "name": "Content Writer",
-         "id": "content-writer",
-         "theme_color": "teal",
-         "qualification": [
-            "Quality skills of Communications, Marketing, English, Journalism, Writing",
-            "Good at SEO content writing and Keyword planning",
-            "Some good articles portfolio",
-            "The ability to work in a fast-paced environment",
-            "The ability to handle multiple projects concurrently"
-         ]
-      },
-      {
-         "name": "Analyst",
-         "id": "analyst",
-         "theme_color": "yellow",
-         "qualification": [
-            "Quality skills to understand the needs of the product",
-            "Translate the requirement to real-time project",
-            "Monitoring the projects",
-            "Inspect software or web"
-         ]
-      },
-      {
-         "name": "Quality Tester",
-         "id": "quality-tester",
-         "theme_color": "deeppurple",
-         "qualification": [
-            "Analyzing users stories and/use cases/requirements for validity and feasibility",
-            "Collaborate closely with other team members and departments",
-            "Execute all levels of testing (System, Integration, and Regression)",
-            "Design and develop automation scripts when needed",
-            "Detect and track products defects and inconsistencies",
-            "Provide timely solutions",
-            "Apply quality engineering principals throughout the product lifecycle",
-            "Provide support and documentation"
-         ]
-      }
-   ];
-%>
-
 <style type="text/css">
    main #jobs .categories {
       display: flex;
-      /* padding: 1em; */
       min-height: 18em;
       flex-direction: column;
       justify-content: flex-end;
@@ -111,8 +14,6 @@
    main #jobs .categories .posts {
       display: grid;
       padding: 0 1em;
-      /* padding-left: 1.5em;
-      padding-right: 1.5em; */
       grid-column-gap: 1.5em;
       grid-row-gap: 1.5em;
       grid-template-columns: repeat(2, 1fr);
@@ -123,7 +24,6 @@
       width: 100%;
    }
    main #jobs .categories .posts .job[open] .content {
-      /* min-height: 20em; */
       overflow: auto;
    }
    
@@ -166,8 +66,7 @@
 
                   <div>
                      <p class="text-right">
-
-                        <a href="#" type="button">Apply now</a>
+                        <a href="/career/jobs/<%= post.id %>" type="button">Apply now</a>
                      </p>
                   </div>
                </div>
