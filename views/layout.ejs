@@ -567,6 +567,14 @@
          color: var(--pcolor-fr);
       }
 
+      button[disabled],
+      input[type='submit'][disabled],
+      input[type='reset'][disabled] {
+         background-color: #EEE;
+         color: #888;
+         pointer-events: none;
+      }
+
       select {
          padding: 8px 10px;
          min-width: 15.5em;
