@@ -1,3 +1,5 @@
+<% let anim_duration = 0; %>
+
 <style type="text/css">
    main #jobs .categories {
       display: flex;
@@ -34,7 +36,7 @@
    }
 </style>
 
-<%- include('partials/_header', { raised: true }) %>
+<%- include('../partials/_header', { raised: true }) %>
 
 <main>
    <section id="jobs">
@@ -49,7 +51,10 @@
          <div class="posts">
 
             <% for (const post of jobs) { %>
-            <div class="job collapsible use-<%= post.theme_color || 'primary' %>" <%= post.opened && 'open' %>>
+            <%
+               anim_duration += 200;
+            %>
+            <div class="job collapsible use-<%= post.theme_color || 'primary' %>" <%= post.opened && 'open' %> data-aos="fade-up" data-aos-delay="60" data-aos-duration="<%= anim_duration %>">
                <div data-collapse-target="mobile-app-developer-job" class="toggler">
                   <div class="label"><%= post.name %></div>
                   <div class="action auto-rotate"><i data-feather="chevron-down"></i></div>
@@ -65,7 +70,7 @@
                   </ul>
 
                   <div>
-                     <p class="text-right">
+                     <p>
                         <a href="/career/jobs/<%= post.id %>" type="button">Apply now</a>
                      </p>
                   </div>
@@ -77,4 +82,4 @@
    </section>
 </main>
 
-<%- include('partials/_footer') %>
+<%- include('../partials/_footer') %>
