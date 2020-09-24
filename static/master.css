@@ -493,6 +493,36 @@ a.no-effect {
     margin-right: auto;
 }
 
+.detailed-form {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 65%;
+    margin: auto;
+}
+.detailed-form .container {
+    position: relative;
+}
+.detailed-form .container .form-wrapper {
+    padding-top: 12px;
+}
+.detailed-form .container .landing-bar-image {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateY(-50%);
+}
+.detailed-form .container .landing-bar-image img {
+    opacity: 0.4;
+}
+@media screen and (max-width: 767px) {
+    .detailed-form {
+        width: 90%;
+    }
+    .detailed-form .container .landing-bar-image {
+        display: none;
+    }
+}
+
 
 .collapsible {
     position: relative;
@@ -518,7 +548,6 @@ a.no-effect {
     box-shadow: 0 0 14px #EEE;
     padding-right: 1em;
     border-radius: inherit;
-    /* transition: background-color 60ms linear, border-radius 120ms ease, color 60ms linear; */
 }
 
 .collapsible .toggler .action svg {
@@ -544,7 +573,6 @@ a.no-effect {
 .collapsible[open] .toggler .action svg {
     stroke: var(--pcolor-fr);
 }
-
 .collapsible .content {
     box-sizing: border-box;
     height: 0;
