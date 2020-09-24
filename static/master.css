@@ -448,9 +448,6 @@ a.no-effect {
     justify-content: center;
 }
 @media screen and (max-width: 767px) {
-    .hero.full-image .image img {
-        
-    }
     .hero.full-image .detail {
         width: 80%;
         padding: 8px 12px;
@@ -518,11 +515,10 @@ a.no-effect {
     justify-content: space-between;
     align-items: center;
     padding-left: 1em;
-    /* border: 1px solid #DDD; */
     box-shadow: 0 0 14px #EEE;
     padding-right: 1em;
     border-radius: inherit;
-    transition: background-color 80ms linear, border-radius 120ms ease, color 60ms linear;
+    /* transition: background-color 60ms linear, border-radius 120ms ease, color 60ms linear; */
 }
 
 .collapsible .toggler .action svg {
@@ -539,6 +535,9 @@ a.no-effect {
 .collapsible .toggler .action.auto-rotate {
     transition: transform 320ms ease;
 }
+.collapsible[open] .label {
+    visibility: hidden;
+}
 .collapsible[open] .toggler .action.auto-rotate {
     transform: rotate(180deg);
 }
@@ -550,10 +549,8 @@ a.no-effect {
     box-sizing: border-box;
     height: 0;
     overflow: hidden;
-    transform: scale(0.9);
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
-    transition: transform 350ms ease, height 350ms ease;
 }
 .collapsible .content.colored {
     background-color: var(--pcolor);
@@ -563,7 +560,6 @@ a.no-effect {
     color: var(--pcolor-fr);
 }
 .collapsible[open] .content {
-    transform: scale(1);
     height: auto;
 }
 

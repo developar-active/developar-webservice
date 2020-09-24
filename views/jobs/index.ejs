@@ -10,7 +10,6 @@
 
    main #jobs .categories > header {
       padding: 1em;
-      background-color: #EEE;
    }
 
    main #jobs .categories .posts {
@@ -27,6 +26,11 @@
    }
    main #jobs .categories .posts .job[open] .content {
       overflow: auto;
+   }
+
+   main #jobs .categories .posts .job[open] .apply-job-button {
+      background-color: var(--pcolor-light);
+      color: var(--pcolor-fr);
    }
    
    @media screen and (max-width: 767px) {
@@ -71,7 +75,7 @@
 
                   <div>
                      <p>
-                        <a href="/career/jobs/<%= post.id %>" type="button">Apply now</a>
+                        <a href="/career/jobs/<%= post.id %>" class="apply-job-button" type="button">Apply now</a>
                      </p>
                   </div>
                </div>
