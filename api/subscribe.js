@@ -1,9 +1,6 @@
 const KoaRouter = require('koa-router');
 const router = new KoaRouter();
-const json = require('koa-json');
 const Subscriber = require('../models/Subscriber');
-
-router.use(json());
 
 /**
  * New email subscription route
