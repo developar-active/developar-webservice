@@ -23,3 +23,15 @@
       </div>
    </form>
 </div>
+
+<script type="application/javascript">
+   document.forms['newsletter-form'].addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = event.target.email.value;
+
+      subscribeEmail(email)
+      .then(function () {
+         event.target.reset();
+      });
+   });
+</script>
