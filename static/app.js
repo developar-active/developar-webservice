@@ -60,14 +60,14 @@ function useCollapsibleDropdowns() {
         const toggler = node.querySelector('.toggler[data-collapse-target]') || null;
 
         if (toggler) {
-            toggler.addEventListener('click', () => {
+            toggler.addEventListener('click', function () {
                 node.toggleAttribute('open');
             });
         }
     }
 }
 
-window.onload = () => {
+window.onload = function() {
 
     autoScrollToInternalHashTarget();
 
