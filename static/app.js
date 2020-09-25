@@ -1,3 +1,73 @@
+/**
+ * Make API Request 
+ * @param {string} method - Method name
+ * @param {string} pathname - Pathname
+ * @param {object} data - Payload
+ * @return {Promise<XMLHttpRequest | any>}
+ */
+function makeAPIRequest (method = 'GET', pathname = '/test', data = {}) {
+    return new Promise(function (resolve, reject) {
+        const request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                let body;
+
+                try {
+                    if (this.responseText.length > 0) {
+                        body = JSON.parse(this.responseText);
+                    }
+                } catch (err) {
+                    return reject(err);
+                }
+                Reflect.set(request, 'body', body);
+
+                return resolve(request);
+            }
+        }
+    
+        request.open(method, `/api${pathname}`, true);
+    
+        request.setRequestHeader('Content-Type', 'application/json');
+    
+        if (method !== 'GET') {
+            request.send(JSON.stringify(data));
+        }
+        else {
+            request.send();
+        }    
+    })
+}
+
+/**
+ * Subscribe email
+ * @param {string} email - Email
+ * @return {Promise<string>}
+ */
+function subscribeEmail (email) {
+    return new Promise(function (resolve, reject) {
+        let message;
+        let payload;
+        let theme = 'green';
+    
+        if (typeof email == 'string' && email.length > 0) {
+            payload = { email };
+    
+            makeAPIRequest('POST', '/subscribe', payload)
+            .then(res => {
+                message = res.body.message;
+                resolve(message);
+            })
+            .catch(err => {
+                theme = 'red';
+                message = "Something went wrong";
+                reject(message);
+            })
+            .finally(() => new Toast(message, { theme }));
+        }
+    })
+}
+
 function toggleHeaderNavigation() {
     const target = document.querySelector('header#topbar');
     const attr = 'area-expanded';
@@ -67,7 +137,65 @@ function useCollapsibleDropdowns() {
     }
 }
 
-window.onload = function() {
+/**
+ * Toast utility
+ * @param {string} message - Message
+ * @param {{action?: {label: string, callback: any}, theme?: string}} options - Options
+ * @param {number} duration - Duration
+ */
+function Toast(message, options = {}, duration = 2500) {
+    const canvas = document.body;
+    const rootElement = document.createElement('div');
+    const messageElement = document.createElement('div');
+
+    // With theme class
+    rootElement.classList.add('toast', options.theme || 'default');
+
+    messageElement.classList.add('message');
+    messageElement.textContent = message;
+
+    // Append messageElement
+    rootElement.appendChild(messageElement);
+
+    if (options.hasOwnProperty('action') && typeof options.action == 'object') {
+        const action = options.action;
+        const actionContainer = document.createElement('div');
+        const actionElement = document.createElement('a');
+
+        actionContainer.classList.add('action');
+
+        // Must be white text
+        actionElement.classList.add('text-primary-light');
+
+        if (action.label) {
+            actionElement.textContent = action.label || '';
+        }
+
+        if (action.callback) {
+            // Assign click event
+            actionElement.addEventListener('click', function(event) {
+                rootElement.remove();
+                action.callback(event);
+            });
+        }
+
+        actionContainer.appendChild(actionElement);
+
+        rootElement.appendChild(actionContainer);
+    }
+
+    // Mount rootElement
+    canvas.appendChild(rootElement);
+
+    // Complete lifecycle
+    setTimeout(function () {
+        if (rootElement) {
+            rootElement.remove();
+        }
+    }, duration);
+}
+
+window.onload = function () {
 
     autoScrollToInternalHashTarget();
 
