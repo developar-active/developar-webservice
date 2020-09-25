@@ -1,5 +1,15 @@
 const { Schema, model } = require('mongoose');
 
+/**
+ * Subscriber Instance
+ * @typedef {Object} SubscriberInstance
+ * @property {string} [_id] - Id
+ * @property {string} email - Email
+ * @property {string} [userAgent] - User Agent
+ * @property {string} [createdAt] - Created timestamp
+ * @property {string} [updatedAt] - Updated timestamp
+ */
+
 const SubscriberSchema = new Schema({
 	email: {
 		type: String,

@@ -1,5 +1,16 @@
 const { Schema, model } = require('mongoose');
 
+/**
+ * Contact Instance
+ * @typedef {Object} ContactInstance
+ * @property {string} [_id] - Id
+ * @property {string} name - Name
+ * @property {string} email - Email
+ * @property {string} message - Message
+ * @property {string} [createdAt] - Created timestamp
+ * @property {string} [updatedAt] - Updated timestamp
+ */
+
 const ContactSchema = new Schema({
 	name: {
 		type: String,
