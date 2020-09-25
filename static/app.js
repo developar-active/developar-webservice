@@ -40,32 +40,38 @@ function makeAPIRequest (method = 'GET', pathname = '/test', data = {}) {
 }
 
 /**
- * Subscribe email
- * @param {string} email - Email
- * @return {Promise<string>}
+ * Post data object
+ * @param {string} pathname - Pathname
+ * @param {object} payload - Payload
+ * @returns {Promise<string>}
  */
-function subscribeEmail (email) {
+function submitPayload (pathname = '/test', payload = {}) {
     return new Promise(function (resolve, reject) {
         let message;
-        let payload;
-        let theme = 'green';
-    
-        if (typeof email == 'string' && email.length > 0) {
-            payload = { email };
-    
-            makeAPIRequest('POST', '/subscribe', payload)
-            .then(res => {
-                message = res.body.message;
-                resolve(message);
-            })
-            .catch(err => {
+        let theme = 'primary';
+
+        makeAPIRequest('POST', pathname, payload)
+        .then(function (res) {
+            message = res.body.message;
+
+            if (res.status == 200 || res.status == 201) {
+                theme = 'green';
+            } 
+            else {
                 theme = 'red';
-                message = "Something went wrong";
                 reject(message);
-            })
-            .finally(() => new Toast(message, { theme }));
-        }
-    })
+            }
+            resolve(message);
+        })
+        .catch(function () {
+            theme = 'red';
+            message = 'Something went wrong';
+            reject(message);
+        })
+        .finally(function () {
+            new Toast(message, { theme });
+        })
+    });
 }
 
 function toggleHeaderNavigation() {
@@ -143,7 +149,7 @@ function useCollapsibleDropdowns() {
  * @param {{action?: {label: string, callback: any}, theme?: string}} options - Options
  * @param {number} duration - Duration
  */
-function Toast(message, options = {}, duration = 2500) {
+function Toast(message, options = {}, duration = 3500) {
     const canvas = document.body;
     const rootElement = document.createElement('div');
     const messageElement = document.createElement('div');
