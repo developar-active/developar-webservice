@@ -9,7 +9,9 @@ const Subscriber = require('../models/Subscriber');
 router.post('/', async ctx => {
 	const { email } = ctx.request.body;
 	const userAgent = ctx.request.header['user-agent'] || undefined;
-	let payload = {};
+
+	/** @type {import('../models/Subscriber').SubscriberInstance} */
+	let payload;
 
 	// Undefined email
 	if (!email) {
