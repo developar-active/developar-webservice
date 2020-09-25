@@ -93,6 +93,12 @@ main > section > .scalable {
 .text-primary {
     color: var(--pcolor);
 }
+.text-primary-light {
+    color: var(--pcolor-light);
+}
+.text-primary-dark {
+    color: var(--pcolor-dark);
+}
 .text-red {
     color: var(--red);
 }
@@ -181,6 +187,60 @@ a.no-effect {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.toast {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 14em;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: fixed;
+    min-height: 2.5em;
+    bottom: 2em;
+    right: 4em;
+    border-radius: 8px;
+    box-shadow: 0 0 12px #EEE;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+}
+.toast.red {
+    background-color: var(--red);
+}
+.toast.red .action a {
+    color: var(--red-fr);
+}
+.toast.green {
+    background-color: var(--green);
+}
+.toast.green .action a {
+    color: var(--green-fr);
+}
+.toast.blue {
+    background-color: var(--blue);
+}
+.toast.blue .action a {
+    color: var(--blue-fr);
+}
+.toast.primary {
+    background-color: var(--pcolor);
+}
+.toast.primary .action a {
+    color: var(--pcolor-fr);
+}
+
+.toast .message {
+    max-width: 16rem;
+}
+.toast .message,
+.toast .action {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.toast .action a {
+    display: block;
 }
 
 .chip {
