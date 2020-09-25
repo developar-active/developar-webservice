@@ -1,3 +1,4 @@
+"use strict"
 /**
  * Load env variables for local development
  * @local
@@ -12,17 +13,39 @@ const fs = require('fs');
 const Koa = require('koa');
 const serve = require('koa-static');
 const render = require('koa-ejs');
+const bodyParser = require('koa-bodyparser');
 const router = require('./routes'); // Koa router
+const api = require('./api');
+const mongoose = require('mongoose');
 
 // Initiate
 const app = new Koa(); // Koa instance
 
 const PORT = process.env.PORT || 4000; // Server PORT
 
+// DB Connection
+mongoose.connect(
+   process.env.MONGO_URL, 
+   {
+      useCreateIndex: true,
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+   },
+   (err) => {
+      if (err) {
+         throw(err);
+      }
+   }
+);
+
+app.use(bodyParser());
+
 // Setups
 app
-   .use(router.routes())
-   .use(router.allowedMethods()) // Router
+.use(router.routes())
+.use(router.allowedMethods()); // Router
+
+router.use('/api', api.routes(), api.allowedMethods()); // Use API routes
 
 app.use(serve(path.join(__dirname, 'static'))); // Config static assets
 
