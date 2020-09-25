@@ -7,6 +7,7 @@ const { Schema, model } = require('mongoose');
  * @property {string} name - Name
  * @property {string} email - Email
  * @property {string} message - Message
+ * @property {string} [userAgent] - User Agent
  * @property {string} [createdAt] - Created timestamp
  * @property {string} [updatedAt] - Updated timestamp
  */
@@ -24,6 +25,10 @@ const ContactSchema = new Schema({
 	message: {
 		type: String,
 		required: true
+	},
+	userAgent: {
+		type: String,
+		required: false
 	}
 },
 {
