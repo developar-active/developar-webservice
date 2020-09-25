@@ -5,6 +5,8 @@ temp/
 .env
 *.log
 *.cache
+*.http
+*.rest
 
 package-lock.json
 .vercel
