@@ -242,6 +242,13 @@ a.no-effect {
 .toast .action a {
     display: block;
 }
+@media screen and (max-width: 767px) {
+    .toast {
+        left: 2em;
+        right: 2em;
+        width: auto;
+    }
+}
 
 .chip {
     display: flex;
