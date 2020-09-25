@@ -18,7 +18,8 @@
             id="subscribe-email-input" 
             class="controller" 
             placeholder="developar@example.com"
-            autocomplete="email" />
+            autocomplete="email"
+            required />
          <button class="primary trigger" type="submit">Subscribe</button>
       </div>
    </form>
@@ -29,7 +30,7 @@
       event.preventDefault();
       const email = event.target.email.value;
 
-      subscribeEmail(email)
+      submitPayload('/subscribe', { email })
       .then(function () {
          event.target.reset();
       });
