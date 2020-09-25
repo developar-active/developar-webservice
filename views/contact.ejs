@@ -62,12 +62,12 @@
             <p>Lorem ipsum dolor sit amet.</p>
          </header>
 
-         <form method="POST" name="contact" enctype="multipart/form-data">
+         <form name="contact-form">
             <div class="control-wrapper">
                <input 
                   type="text" 
-                  name="fullname" 
-                  id="fullname" 
+                  name="name" 
+                  id="name" 
                   placeholder="Fullname" 
                   title="Fullname" 
                   tabindex="1"
@@ -103,5 +103,27 @@
       </div>
    </section>
 </main>
+
+<script type="application/javascript">
+   document.forms['contact-form'].addEventListener('submit', function(event) {
+      event.preventDefault();
+      const form = event.target;
+
+      const name = form.name.value;
+      const email = form.email.value;
+      const message = (form.message.value || '').trim();
+
+      const payload = {
+         name,
+         email,
+         message
+      };
+
+      submitPayload('/contact', payload)
+      .then (function() {
+         form.reset();
+      });
+   });
+</script>
 
 <%- include('partials/_footer') %>
