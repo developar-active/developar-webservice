@@ -1,10 +1,14 @@
 const KoaRouter = require('koa-router');
 const CareerRouter = require('./career');
+const OrderRouter = require('./order');
 
 const router = new KoaRouter();
 
 // Use /career route
 router.use('/career', CareerRouter.routes(), CareerRouter.allowedMethods());
+
+// Use /order route
+router.use('/order', OrderRouter.routes(), OrderRouter.allowedMethods());
 
 /**
  * Home page
@@ -45,50 +49,6 @@ router.get('/pricing', async ctx => {
       PAGE_NAME, 
       PAGE_ROUTE: ctx.url,
       plans
-   })
-})
-
-/**
- * Order Page
- * @route GET /order/:planId
- */
-router.get('/order/:planId', async ctx => {
-   const { planId } = ctx.params;
-   const plans = require('../values/plans.json');
-   let PAGE_NAME;
-   let index;
-   let plan;
-
-   switch((planId || '').toLowerCase()) {
-      case 'static-website':
-         index = 'static';
-         break;
-      case 'dynamic-website':
-         index = 'dynamic';
-         break;
-      case 'ecommerce':
-         index = 'eCommerce';
-         break;
-      case 'mobile-app':
-         index = 'mobileApp';
-         break;
-      case 'digital-marketing':
-         index = 'digitalMarketing';
-         break;
-      case 'maintenance':
-         index = 'maintenance';
-         break;
-      default:
-         return ctx.redirect('/pricing');
-   }
-
-   plan = plans[index] || null;
-   PAGE_NAME = `${plan.name} Order`;
-
-   return await ctx.render('order', {
-      PAGE_NAME,
-      PAGE_ROUTE: ctx.url,
-      plan
    })
 })
 
