@@ -330,7 +330,7 @@
 
       submitPayload('/order', payload)
       .then(function() {
-         event.target.reset();
+         form.reset();
          localStorage.setItem('ORDER_COMPLETE', 'true');
          window.location.href = '/order/success';
       })
