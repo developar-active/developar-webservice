@@ -40,8 +40,7 @@
             "avatar": "https://developarcdn.vercel.app/images/team/shreyansh-thoria.jpg",
             "social": [
                { "name": "@instagram/_shreyansh027_", "url": "https://www.instagram.com/_shreyansh027_", "icon": "instagram" },
-               { "name": "@github/shreyansh4", "url": "https://github.com/shreyansh4", "icon": "github" },
-               { "name": "Twitter", "url": "#", "icon": "twitter" }
+               { "name": "@github/shreyansh4", "url": "https://github.com/shreyansh4", "icon": "github" }
             ]
          },
          {
@@ -49,9 +48,8 @@
             "role": "Backend technologies",
             "avatar": "https://developarcdn.vercel.app/images/team/veer-patel.jpg",
             "social": [
-               { "name": "Instagram", "url": "#", "icon": "instagram" },
-               { "name": "@github/veer4221", "url": "https://github.com/veer4221", "icon": "github" },
-               { "name": "Twitter", "url": "#", "icon": "twitter" }
+               { "name": "@instagram/mr_error4221", "url": "https://www.instagram.com/mr_error4221", "icon": "instagram" },
+               { "name": "@github/veer4221", "url": "https://github.com/veer4221", "icon": "github" }
             ]
          },
          {
@@ -59,19 +57,16 @@
             "role": "Frontend & CMS",
             "avatar": "https://ionicframework.com/img/team/no-photo.png",
             "social": [
-               { "name": "Instagram", "url": "#", "icon": "instagram" },
-               { "name": "Facebook", "url": "#", "icon": "facebook" },
-               { "name": "Twitter", "url": "#", "icon": "twitter" }
+               { "name": "@instagram/prek__shaa", "url": "https://www.instagram.com/prek__shaa", "icon": "instagram" },
+               { "name": "@twitter/PrekshaChaudha", "url": "https://twitter.com/PrekshaChaudha", "icon": "twitter" }
             ]
          },
          {
             "name": "Deepmala Gidhwani",
             "role": "Web developer",
-            "avatar": "https://ionicframework.com/img/team/no-photo.png",
+            "avatar": "https://developarcdn.vercel.app/images/team/deepmala-gidhwani.jpg",
             "social": [
-               { "name": "@instagram/cute__deepu", "url": "https://www.instagram.com/cute__deepu", "icon": "instagram" },
-               { "name": "Facebook", "url": "#", "icon": "facebook" },
-               { "name": "Twitter", "url": "#", "icon": "twitter" }
+               { "name": "@instagram/cute__deepu", "url": "https://www.instagram.com/cute__deepu", "icon": "instagram" }
             ]
          },
          {
@@ -80,8 +75,8 @@
             "avatar": "https://developarcdn.vercel.app/images/team/aakash-sisodiya.jpg",
             "social": [
                { "name": "@instagram/sakam_vyom", "url": "https://www.instagram.com/sakam_vyom", "icon": "instagram" },
-               { "name": "Facebook", "url": "#", "icon": "facebook" },
-               { "name": "Twitter", "url": "#", "icon": "twitter" }
+               { "name": "@github/SisodiyaAakash", "url": "https://github.com/SisodiyaAakash", "icon": "github" },
+               { "name": "@twitter/aakash_sakam", "url": "https://twitter.com/aakash_sakam", "icon": "twitter" }
             ]
          },
          {
@@ -90,8 +85,8 @@
             "avatar": "https://developarcdn.vercel.app/images/team/rajat-sharma.jpg",
             "social": [
                { "name": "@instagram/energetic.coder", "url": "https://www.instagram.com/energetic.coder", "icon": "instagram" },
-               { "name": "Facebook", "url": "#", "icon": "facebook" },
-               { "name": "Twitter", "url": "#", "icon": "twitter" }
+               { "name": "@github/rajatprototype", "url": "https://github.com/rajatprototype", "icon": "github" },
+               { "name": "@twitter/rajat04500210", "url": "https://mobile.twitter.com/rajat04500210", "icon": "twitter" }
             ]
          }
       ]
@@ -106,9 +101,7 @@
             "role": "Graphic Designer",
             "avatar": "https://developarcdn.vercel.app/images/team/bhavin-chauhan.jpg",
             "social": [
-               { "name": "Instagram", "url": "#", "icon": "instagram" },
-               { "name": "Facebook", "url": "#", "icon": "facebook" },
-               { "name": "Twitter", "url": "#", "icon": "twitter" }
+               { "name": "@instagram/01bhavin", "url": "https://www.instagram.com/01bhavin", "icon": "instagram" }
             ]
          },
          {
@@ -116,19 +109,16 @@
             "role": "SEO & Advertisement",
             "avatar": "https://ionicframework.com/img/team/no-photo.png",
             "social": [
-               { "name": "Instagram", "url": "#", "icon": "instagram" },
-               { "name": "Facebook", "url": "#", "icon": "facebook" },
-               { "name": "@twitter/manojkhatri_", "url": "https://instagram.com/manojkhatri_", "icon": "twitter" }
+               { "name": "@instagram/manojkhatri_", "url": "https://instagram.com/manojkhatri_", "icon": "instagram" },
+               { "name": "@twitter/manojkhatri_", "url": "https://twitter.com/manojkhatri_", "icon": "twitter" }
             ]
          },
          {
             "name": "Deepmala Gidhwani",
             "role": "Graphic & UX / UI Designer",
-            "avatar": "https://ionicframework.com/img/team/no-photo.png",
+            "avatar": "https://developarcdn.vercel.app/images/team/deepmala-gidhwani.jpg",
             "social": [
-               { "name": "Instagram", "url": "#", "icon": "instagram" },
-               { "name": "Facebook", "url": "#", "icon": "facebook" },
-               { "name": "Twitter", "url": "#", "icon": "twitter" }
+               { "name": "@instagram/cute__deepu", "url": "https://www.instagram.com/cute__deepu", "icon": "instagram" }
             ]
          },
          {
@@ -136,9 +126,9 @@
             "role": "UX / UI Designer",
             "avatar": "https://developarcdn.vercel.app/images/team/jay-thakkar.jpg",
             "social": [
-               { "name": "Instagram", "url": "#", "icon": "instagram" },
-               { "name": "Facebook", "url": "#", "icon": "facebook" },
-               { "name": "Twitter", "url": "#", "icon": "twitter" }
+               { "name": "@instagram/hot_poison_", "url": "https://www.instagram.com/hot_poison_", "icon": "instagram" },
+               { "name": "@facebook/jay.thakkar.3726", "url": "https://www.facebook.com/jay.thakkar.3726", "icon": "facebook" },
+               { "name": "@twitter/jay_thakkar88", "url": "https://twitter.com/jay_thakkar88", "icon": "twitter" }
             ]
          },
          {
@@ -146,9 +136,7 @@
             "role": "Graphic Designer",
             "avatar": "https://developarcdn.vercel.app/images/team/anniruddhsinh-solanki.jpg",
             "social": [
-               { "name": "Instagram", "url": "#", "icon": "instagram" },
-               { "name": "Facebook", "url": "#", "icon": "facebook" },
-               { "name": "Twitter", "url": "#", "icon": "twitter" }
+               { "name": "@instagram/_im_anni_", "url": "https://www.instagram.com/_im_anni_", "icon": "instagram" }
             ]
          }
       ]
