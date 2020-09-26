@@ -1,0 +1,32 @@
+<style type="text/css">
+	@keyframes progress-anim {
+		from {
+			width: 0;
+		}
+
+		to {
+			width: 100%;
+		}
+	}
+
+	.page-duration {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
+
+	.page-duration .progress-duration-loader {
+		height: 10px;
+		width: 0;
+		background-color: var(--pcolor);
+		animation-name: progress-anim;
+		animation-duration: <%= duration %>;
+		animation-timing-function: linear;
+	}
+</style>
+
+<div class="page-duration use-primary">
+	<div class="progress-duration-loader"></div>
+</div>
