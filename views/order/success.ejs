@@ -1,0 +1,53 @@
+<style type="text/css">
+	main {
+		height: 80vh;
+	}
+	main section#success-order {
+		height: inherit;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	main section#success-order .hero-image img {
+		display: block;
+		width: 32em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+</style>
+
+<%- include('../partials/_page_duration_progress', { duration: '5000ms' }); %>
+
+<main id="success-order-container" hidden>
+	<section id="success-order">
+		<div class="hero-image">
+			<img src="https://developarcdn.vercel.app/images/order-success-1024x768-41kb.jpg" alt="Order success" />
+		</div>
+		<header>
+			<h2>Thanks for choosing our service.</h2>
+			<p>We will contact you for gethering your requirements.</p>
+			<p><a class="hoverable focused" tabindex="1" href="/">Back to homepage</a></p>
+		</header>
+	</section>
+</main>
+
+<script type="application/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+		const key = 'ORDER_COMPLETE';
+		const successOrder = document.getElementById('success-order-container');
+
+		function leavePage () {
+			window.location.href = '/about';
+		}
+
+		if (localStorage.getItem(key)) {
+			successOrder.removeAttribute('hidden');
+			localStorage.removeItem(key);
+			setTimeout(leavePage, 5000);
+		}
+		else {
+			leavePage();
+		}
+	})
+</script>
