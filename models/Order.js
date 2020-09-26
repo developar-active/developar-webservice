@@ -8,6 +8,7 @@ const { Schema, model } = require('mongoose');
  * @property {string} [email] - Email
  * @property {string} phone - Phone
  * @property {string} [category] - Order category
+ * @property {string} service - Order service
  * @property {string} plan - Order plan
  * @property {string} message - Order message
  * @property {string} [userAgent] - User Agent
@@ -16,6 +17,10 @@ const { Schema, model } = require('mongoose');
  */
 
 const OrderSchema = new Schema({
+	indexName: {
+		type: String,
+		required: true
+	},
 	name: {
 		type: String,
 		required: true
@@ -33,6 +38,10 @@ const OrderSchema = new Schema({
 	category: {
 		type: String,
 		default: 'Unknown'
+	},
+	service: {
+		type: String,
+		required: true
 	},
 	plan: {
 		type: String,
