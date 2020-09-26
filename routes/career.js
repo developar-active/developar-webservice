@@ -30,6 +30,15 @@ router.get('/jobs', async ctx => {
    })
 })
 
+router.get('/jobs/success', async ctx => {
+   const PAGE_NAME = 'Thanks for apply';
+
+   return ctx.render('jobs/success', {
+      PAGE_NAME,
+      PAGE_ROUTE: ctx.url
+   })
+})
+
 /**
  * Job's post detail
  * @route GET /career/jobs/:postId
@@ -55,6 +64,5 @@ router.get('/jobs/:postId', async ctx => {
       post
    })
 })
-
 
 module.exports = router;
