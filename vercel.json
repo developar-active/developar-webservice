@@ -12,7 +12,11 @@
          "dest": "index.js",
          "methods": [
             "GET",
-            "POST"
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE",
+            "OPTIONS"
          ]
       }
    ]

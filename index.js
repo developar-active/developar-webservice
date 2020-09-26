@@ -26,7 +26,7 @@ const PORT = process.env.PORT || 4000; // Server PORT
 
 // DB Connection
 mongoose.connect(
-   process.env.MONGO_URL, 
+   "mongodb+srv://rajat-prototype:test1234@webgreetsinstance.wrcaz.gcp.mongodb.net/localtest?retryWrites=true&w=majority", 
    {
       useCreateIndex: true,
       useNewUrlParser: true,
