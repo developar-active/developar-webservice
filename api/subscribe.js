@@ -41,7 +41,7 @@ router.post('/', async ctx => {
 	try {
 		await newSubscriber.save(); 
 	} catch (err) {
-		ctx.response.status = 500; // Error
+		ctx.response.status = 500; // Status 500
 		return ctx.body = {
 			message: "Error while email subscription process"
 		};

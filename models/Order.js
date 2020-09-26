@@ -4,6 +4,7 @@ const { Schema, model } = require('mongoose');
  * Order Instance
  * @typedef {Object} OrderInstance
  * @property {string} [_id] - Id
+ * @property {string} indexName - Index name
  * @property {string} name - Name
  * @property {string} [email] - Email
  * @property {string} phone - Phone

@@ -28,13 +28,13 @@ router.post('/', async ctx => {
 	} catch (err) {
 		ctx.response.status = 500; // Status 500
 		return ctx.body = {
-			message: 'Error while order submition'
+			message: 'Error while order submission'
 		}
 	}
 
 	ctx.response.status = 201; // Status 201
 	return ctx.body = {
-		message: 'Order submited'
+		message: 'Order submitted'
 	};
 })
 
