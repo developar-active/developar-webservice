@@ -2,6 +2,10 @@ const KoaRouter = require('koa-router');
 const router = new KoaRouter();
 const Contact = require('../models/Contact');
 
+/**
+ * New contact route
+ * @route POST /api/contact
+ */
 router.post('/', async ctx => {
 	const { name, email, message } = ctx.request.body;
 	const userAgent = ctx.request.header['user-agent'] || undefined;
@@ -32,7 +36,7 @@ router.post('/', async ctx => {
 	try {
 		await newContact.save();
 	} catch (err) {
-		ctx.response.status = 500; // Error
+		ctx.response.status = 500; // Status 500
 		return ctx.body = {
 			message: "Error while contact submition"
 		};
