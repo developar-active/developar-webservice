@@ -72,7 +72,7 @@
 
    @media screen and (max-width: 767px) {
       main section#services .content .container .service {
-         padding: 1.2em 12px;
+         padding: 1.2em 4px;
       }
 
       @media (orientation: landscape) {
@@ -95,6 +95,20 @@
          main section#services .content .container .service .thumb img {
             width: 230px;
          }
+      }
+   }
+
+   @media screen and (max-width: 400px) {
+      main section#services .content .container .service {
+         padding: 0;
+         margin-left: 0;
+         margin-right: 0%;
+      }
+      main section#services .content .container .service .thumb {
+         min-height: 13em;
+      }
+      main section#services .content .container .service .thumb img {
+         width: 200px;
       }
    }
 </style>

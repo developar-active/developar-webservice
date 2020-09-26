@@ -27,10 +27,10 @@
       font-size: 3.4rem;
    }
 
-   /* For smartphones and tablets */
+   /* For tablets */
    @media screen and (max-width: 1024px) {
       main section#init-step {
-         height: 70vh;
+         height: 35vh;
          flex-direction: column;
       }
 
@@ -41,6 +41,12 @@
 
       main section#init-step .wrapper.content h1 {
          font-size: 2.4em;
+      }
+   }
+
+   @media screen and (max-width: 767px) {
+      main section#init-step {
+         height: 70vh;
       }
    }
 
@@ -72,10 +78,19 @@
       font-size: 3.4rem;
    }
 
+   @media screen and (max-width: 1024px) {
+      main section#get-started {
+         height: 40vh;
+      }
+      main section#get-started .wrapper.content {
+         padding: 1em;
+      }
+   }
+
    /* For smartphones */
    @media screen and (max-width: 767px) {
       main section#get-started {
-         height: 80vh;
+         height: 90vh;
          flex-direction: column;
       }
 
@@ -86,11 +101,16 @@
 
       main section#get-started .wrapper.content {
          max-width: auto;
-         padding: 1em 3.8em;
+         padding: 1em;
       }
 
       main section#get-started .wrapper.content h1 {
          font-size: 2.4rem;
+      }
+   }
+   @media screen and (max-width: 400px) {
+      main section#get-started {
+         height: auto;
       }
    }
 
@@ -121,6 +141,15 @@
       font-size: 3.4rem;
    }
 
+   @media screen and (max-width: 1024px) {
+      main section#third-step {
+         height: 35vh;
+      }
+      main section#third-step .wrapper.content {
+         padding: 1em;
+      }
+   }
+
    /* For smartphones */
    @media screen and (max-width: 767px) {
       main section#third-step {
@@ -135,7 +164,7 @@
 
       main section#third-step .wrapper.content {
          max-width: auto;
-         padding: 1em 3.8em;
+         padding: 1em;
       }
 
       main section#third-step .wrapper.content h1 {

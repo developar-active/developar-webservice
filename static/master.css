@@ -432,6 +432,18 @@ a.no-effect {
         padding-right: 10px;
     }
 }
+@media screen and (max-width: 400px) {
+    .tabpanel .tab {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .tabpanel .tab {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+}
 
 .card {
     display: flex;
@@ -474,7 +486,7 @@ a.no-effect {
 
 /* Hero area utility */
 .hero {
-    width: 100%;
+    /* width: 100%; */
 }
 .hero.note {
     display: flex;
@@ -483,6 +495,28 @@ a.no-effect {
     height: 22em;
     flex-direction: column;
 }
+.hero.note .content {
+    width: 50%;
+}
+@media screen and (max-width: 767px) {
+    .hero.note {
+        align-items: flex-start;
+    }
+    .hero.note .content {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .hero.note .content {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 350px) {
+    .hero.note {
+        width: 90%;
+    }
+}
+
 .hero.full-image {
     position: relative;
 }
@@ -498,9 +532,6 @@ a.no-effect {
     transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.8);
 }
-.hero.note .content {
-    width: 50%;
-}
 .hero.dual-module {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -515,23 +546,28 @@ a.no-effect {
     justify-content: center;
 }
 @media screen and (max-width: 767px) {
+    .hero.full-image {
+        height: 15em;
+    }
+    .hero.full-image .image img {
+        height: 16em;
+    }
     .hero.full-image .detail {
-        width: 80%;
+        width: 85%;
         padding: 8px 12px;
-        top: 5%;
-        bottom: 5%;
+        top: 0;
+        bottom: 0;
+        height: 100%;
         transform: translateY(0);
         right: 10%;
         left: 10%;
         background-color: rgba(255, 255, 255, 0.75);
     }
-    .hero.note .content {
-        width: 90%;
-    }
     .hero.dual-module {
         grid-template-columns: 1fr;
     }
 }
+
 
 /* Form utils */
 .control-wrapper {

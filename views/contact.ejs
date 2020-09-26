@@ -23,18 +23,21 @@
       padding-top: 1.6em;
    }
 
+   @media screen and (max-width: 1024px) {
+      main section#contact .content {
+         width: 70%;
+      }
+   }
+
    @media screen and (max-width: 767px) {
       main section#contact {
-         height: 85vh;
+         height: 100vh;
       }
 
       main section#contact .content {
          padding: 0;
+         height: 70vh;
          width: 90%;
-         border-top-right-radius: 0;
-         border-bottom-left-radius: 0;
-         border-top-left-radius: 26px;
-         border-bottom-right-radius: 26px;
       }
 
       @media (orientation: landscape) {
@@ -46,6 +49,13 @@
             height: 100%;
             width: 65%;
          }
+      }
+   }
+
+   @media screen and (max-width: 400px) {
+      main section#contact .content {
+         width: 100%;
+         border-radius: 0;
       }
    }
 </style>
