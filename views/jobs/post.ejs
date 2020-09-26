@@ -69,7 +69,7 @@
             <div class="form-wrapper">
                <h5>Tell us bit about you</h5>
    
-               <form method="POST" name="order-form" role="form" id="form">
+               <form name="candidate-form" role="form" id="form">
                   <p>
                      <label for="apply-email">Email</label>
                      <input 
@@ -93,6 +93,48 @@
                         title="Your Phone no"
                         tabindex="2"
                         autocomplete="tel" />
+                  </p>
+
+                  <p hidden>
+                     <label for="name">Name</label>
+                     <input 
+                        type="text" 
+                        name="name" 
+                        id="name" 
+                        placeholder="John Doe"
+                        readonly />
+                  </p>
+
+                  <p hidden>
+                     <label for="picture_url">Picture URL</label>
+                     <input 
+                        type="url"
+                        name="picture_url"
+                        id="picture_url"
+                        placeholder="http://example.com/profile.jpg"
+                        readonly />
+                  </p>
+
+                  <p hidden>
+                     <label for="indexName">Job ID</label>
+                     <input 
+                        type="text"
+                        name="indexName"
+                        id="indexName"
+                        placeholder="Job ID"
+                        value="<%= post.id %>"
+                        readonly />
+                  </p>
+
+                  <p hidden>
+                     <label for="job">Job Name</label>
+                     <input 
+                        type="text"
+                        name="job"
+                        id="job"
+                        placeholder="Job name"
+                        value="<%= post.name %>"
+                        readonly />
                   </p>
    
                   <p>
@@ -136,12 +178,12 @@
                </form>
             </div>
 
-               <div class="landing-bar-image">
-                  <img 
-                     src="https://developarcdn.vercel.app/images/career-1474x1537-100kb.png" 
-                     alt="Developar workshop" 
-                     width="100%" />
-               </div>
+            <div class="landing-bar-image">
+               <img 
+                  src="https://developarcdn.vercel.app/images/career-1474x1537-100kb.png" 
+                  alt="Developar workshop" 
+                  width="100%" />
+            </div>
       </div>
    </section>
 </main>
@@ -158,10 +200,45 @@ function allowFormSubmission (state = true) {
    }
 }
 
+document.forms['candidate-form'].addEventListener('submit', function (event) {
+   event.preventDefault();
+   const form = event.target;
+   let payload;
+
+   const job = form.job.value;
+   const indexName = form.indexName.value;
+   const name = form.name.value;
+   const pictureURL = form.picture_url.value;
+   const email = form.email.value;
+   const phone = form.phone.value;
+   const githubUsername = form.githubUsername.value;
+   const message = form.message.value;
+
+   payload = {
+      job,
+      indexName,
+      name,
+      pictureURL,
+      email,
+      phone,
+      githubUsername,
+      message
+   };
+
+   submitPayload('/candidate', payload)
+   .then(function() {
+      form.reset();
+      localStorage.setItem('JOB_SUBMISSION', 'true');
+      window.location.href = '/career/jobs/success';
+   })
+});
+
 document.getElementById('apply-github-username').addEventListener('change', function(ev) {
    const value = ev.target.value;
    const errorMessage = document.getElementById('github-profile-unavail-error');
    const preview = document.getElementById('github-profile-preview');
+   const nameInput = document.querySelector("input[name='name']");
+   const pictureURLInput = document.querySelector("input[name='picture_url']");
 
    function hideAll () {
       if (!errorMessage.hasAttribute('hidden')) {
@@ -171,6 +248,9 @@ document.getElementById('apply-github-username').addEventListener('change', func
       if (!preview.hasAttribute('hidden')) {
          preview.setAttribute('hidden', '');
       }
+
+      nameInput.value = '';
+      pictureURLInput.value = '';
 
       allowFormSubmission(false);
    }
@@ -187,20 +267,25 @@ document.getElementById('apply-github-username').addEventListener('change', func
             try {
                profile = JSON.parse(this.responseText);
             } catch (err) {
-               alert('Something went wrong');
+               new Toast("Something went wrong", { theme: 'red' });
             }
 
             switch (status) {
                case 200:
+                  const name = profile.name || profile.login;
+                  const avatarURL = profile.avatar_url;
                   const avatar = preview.querySelector('#github-profile-avatar');
 
                   preview.title = `@github/${profile.login}`;
 
                   avatar.alt = profile.name;
-                  avatar.src = profile.avatar_url;
-                  preview.querySelector('#github-profile-name').textContent = profile.name || profile.login;
+                  avatar.src = avatarURL;
+                  preview.querySelector('#github-profile-name').textContent = name;
                   preview.querySelector('#github-profile-url').href = profile.html_url;
                   preview.removeAttribute('hidden');
+
+                  nameInput.value = name;
+                  pictureURLInput.value = avatarURL;
                   allowFormSubmission(true);
                   break;
 
