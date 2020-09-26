@@ -65,7 +65,7 @@
    }
 </style>
 
-<%- include('partials/_header', { raised: true }) %>
+<%- include('../partials/_header', { raised: true }) %>
 
 <main>
    <section id="order" class="detailed-form">
@@ -97,7 +97,7 @@
          <div class="form-wrapper">
             <h5>Tell us bit about you</h5>
 
-            <form method="POST" name="order-form" role="form" id="form">
+            <form name="order-form" role="form" id="form">
                <p>
                   <label for="name">Name</label>
                   <input 
@@ -196,6 +196,16 @@
                   </datalist>
                </p>
 
+               <p hidden>
+                  <label for="service">Service plan</label>
+                  <input type="text" name="service" id="service" value="<%= plan.name %>" readonly />
+               </p>
+
+               <p hidden>
+                  <label for="indexName">Service ID</label>
+                  <input type="text" name="indexName" id="indexName" value="<%= plan.id %>" readonly />
+               </p>
+
                <p>
                   <label for="plan">Plan</label>
                   <select name="plan" id="plan" tabindex="5">
@@ -223,8 +233,8 @@
                <p>
                   <label for="desc">Describe</label>
                   <textarea 
-                     name="desc" 
-                     id="desc" 
+                     name="message" 
+                     id="message" 
                      rows="7" 
                      placeholder="I need website for my shop"
                      title="Describe your perspective" 
@@ -293,7 +303,40 @@
 </main>
 
 <script type="application/javascript">
-   document.getElementById('plan').addEventListener('change', (ev) => {
+   document.forms['order-form'].addEventListener('submit', function (event) {
+      event.preventDefault();
+      const form = event.target;
+      let payload;
+
+      const name = form.name.value;
+      const email = form.email.value;
+      const phone = form.phone.value;
+      const category = form.category.value;
+      const service = form.service.value;
+      const indexName = form.indexName.value;
+      const plan = form.plan.value;
+      const message = form.message.value;
+
+      payload = {
+         name,
+         email,
+         phone,
+         category,
+         service,
+         indexName,
+         plan,
+         message
+      };
+
+      submitPayload('/order', payload)
+      .then(function() {
+         event.target.reset();
+         localStorage.setItem('ORDER_COMPLETE', 'true');
+         window.location.href = '/order/success';
+      })
+   });
+
+   document.getElementById('plan').addEventListener('change', function (ev) {
       const target = ev.target;
       const key = ev.target.value;
       let newPrice;
