@@ -4,6 +4,7 @@ const api = new KoaRouter();
 const SubscriberRouter = require('./subscribe');
 const ContactRouter = require('./contact');
 const OrderRouter = require('./order');
+const CandidateRouter = require('./candidate');
 
 api.use(json());
 api.use(
@@ -23,6 +24,12 @@ api.use(
 	OrderRouter.routes(),
 	OrderRouter.allowedMethods()
 ); // Use order router
+
+api.use(
+	'/candidate',
+	CandidateRouter.routes(),
+	CandidateRouter.allowedMethods()
+); // Use candidate router
 
 /**
  * Testing route
