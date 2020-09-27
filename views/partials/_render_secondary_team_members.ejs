@@ -1,0 +1,107 @@
+<%
+	let animDuration = 300;
+   let animDelay = 40;
+%>
+
+<style type="text/css">
+	.members.secondary .member {
+      display: flex;
+      margin-left: 1.8em;
+      margin-right: 1.8em;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      width: 13em;
+   }
+   .members.secondary .member .avatar img {
+      width: 10em;
+      height: 10em;
+   }
+
+   .members.secondary .member .detail {
+      padding-top: 8px;
+      text-align: center;
+   }
+
+   .members.secondary .member .detail .name,
+   .members.secondary .member .detail .role {
+      padding-top: 2px;
+      padding-bottom: 2px;
+   }
+
+   .members.secondary .member .detail .contacts ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+   }
+
+	.members.secondary .member .detail .contacts li {
+      display: inline-block;
+   }
+
+   .members.secondary .member .detail .contacts li a {
+      display: block;
+      padding: 14px 8px;
+   }
+
+	.members.secondary .member .detail .contacts li a svg {
+      width: 15px;
+      height: 15px;
+      stroke: #777;
+   }
+
+	.members.secondary .member .detail .contacts li a:hover svg {
+      stroke: var(--pcolor);
+   }
+
+	@media screen and (max-width: 767px) {
+		.members {
+         width: 100%;
+         align-items: center;
+      }
+	}
+
+</style>
+
+<div class="members secondary">
+
+	<% for (const member of members) { %>
+		<div class="member" data-aos="fade-up" data-aos-delay="<%= animDelay += 5 %>"
+			data-aos-duration="<%= animDuration += 80 %>">
+			<div class="avatar">
+				<img src="<%= member.avatar %>" alt="<%= member.name %>" title="<%= member.name %>" />
+			</div>
+			<div class="detail">
+				<div class="name">
+					<h5><%= member.name %></h5>
+				</div>
+
+				<div class="role">
+					<% if (member.resume && member.resume.length > 0) { %>
+						<a href="<%= member.resume %>" target="_blank" class="hoverable" title="See Resume">
+							<small><%= member.role %></small>
+						</a>
+					<% } else { %>
+						<small class="text-blur"><%= member.role %></small>
+					<% } %>
+				</div>
+
+				<%- include('_render_social_links', { links: member.social }); %>
+			</div>
+		</div>
+	<% } %>
+
+	<a class="member" href="/career" data-aos="fade-up" data-aos-delay="60" data-aos-duration="500">
+		<div class="avatar">
+			<img src="https://ionicframework.com/img/team/apply.jpg" alt="" />
+		</div>
+		<div class="detail">
+			<div class="name">
+				<h5>You?</h5>
+			</div>
+			<div class="role text-blur"><small>Dream Job</small></div>
+		</div>
+	</a>
+</div>

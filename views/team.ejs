@@ -4,172 +4,40 @@
       { label: 'Developers', route: '/team/developers' },
       { label: 'Design & Marketing', route: '/team/dm' }
    ];
-
-   let animDuration = 300;
-   let animDelay = 40;
 %>
 
 <style type="text/css">
-   main section#team .member-sector {
+   .member-sector {
       padding-top: 1em;
    }
 
-   main section#team .member-sector .members {
+   .members {
       padding-top: 2em;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
    }
 
-   main section#team .member-sector .members .member {
-      display: flex;
-      margin-left: 1.8em;
-      margin-right: 1.8em;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      width: 13em;
-   }
-   main section#team .member-sector .members .member .avatar img {
-      width: 10em;
-      height: 10em;
+   .members .member .avatar img {
       border-radius: 50%;
       transition: box-shadow 0.2s linear;
    }
 
-   main section#team .member-sector .members .member .detail {
-      padding-top: 8px;
-      text-align: center;
-   }
-
-   main section#team .member-sector .members .member .detail .name,
-   main section#team .member-sector .members .member .detail .role {
-      padding-top: 2px;
-      padding-bottom: 2px;
-   }
-
-   main section#team .member-sector .members .member .detail .contacts ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-   }
-
-   main section#team .member-sector .members .member .detail .contacts li {
-      display: inline-block;
-   }
-
-   main section#team .member-sector .members .member .detail .contacts li a {
-      display: block;
-      padding: 14px 8px;
-   }
-
-   main section#team .member-sector .members .member .detail .contacts li a svg {
-      width: 15px;
-      height: 15px;
-      stroke: #777;
-   }
-
-   main section#team .member-sector .members .member .detail .contacts li a svg {
-      transition: stroke 0.25s linear;
-   }
-
-   main section#team .member-sector .members .member .detail .contacts li a:hover svg {
-      stroke: var(--pcolor);
-   }
-
-   main section#team .member-sector .members .member:hover .avatar img {
+   .members .member:hover .avatar img {
       box-shadow: 0 2px 10px #CCC;
    }
 
-   main section#team .member-sector .members.primary {
-      flex-direction: column;
-      align-items: center;
-   }
-
-   main section#team .member-sector .members.primary .member {
-      display: flex;
-      margin-top: 8px;
-      margin-bottom: 8px;
-      width: 65%;
-      flex-direction: row;
-   }
-
-   main section#team .member-sector .members.primary .member:not(:last-child) {
-      border-bottom: 1px solid #DDD;
-   }
-
-
-   main section#team .member-sector .members.primary .member .avatar img {
-      width: 11.8em;
-      height: 11.8em;
-   }
-
-   main section#team .member-sector .members.primary .member:nth-child(2) {
-      flex-direction: row-reverse;
-   }
-
-   main section#team .member-sector .members.primary .member .detail {
-      padding-top: 8px;
-      padding-bottom: 8px;
-      padding-left: 1.5em;
-      text-align: left;
-   }
-
-   main section#team .member-sector .members.primary .member .contacts {
-      height: 100%;
-      padding: 8px 1em;
-   }
-
-   main section#team .member-sector .members.primary .member .contacts ul {
-      display: flex;
-      margin: 0;
-      padding: 0;
-      flex-direction: column;
-      justify-content: center;
-      list-style-type: none;
-      height: inherit;
-   }
-
-   main section#team .member-sector .members.primary .member .contacts ul li a {
-      display: block;
-      padding: 10px;
-   }
-
-   main section#team .member-sector .members.primary .member .contacts ul li a svg {
-      width: 18px;
-      height: 18px;
-   }
-
-   main section#team .role-tags ul {
-      margin: 0;
-      list-style-type: none;
-   }
-
-   main section#team .role-tags ul li {
-      display: inline-block;
+   .members .member .detail .contacts li a svg {
+      transition: stroke 0.25s linear;
    }
 
    @media screen and (max-width: 767px) {
-      main section#team .member-sector .members {
-         width: 100%;
-         align-items: center;
-      }
-      main section#team .member-sector .members.primary .member,
-      main section#team .member-sector .members.primary .member:nth-child(2) {
-         flex-direction: column;
-         width: 80%;
-      }
-      main section#team .member-sector .members.primary .member .contacts ul {
-         flex-direction: row;
-      }
-
+   
       @media (orientation: landscape) {
-         main section#team .member-sector .members {
+         .members {
             flex-direction: row;
          }
-         main section#team .member-sector .members .member {
+         .members .member {
             width: 12em;
             margin-left: 12px;
             margin-right: 12px;
@@ -177,12 +45,8 @@
       }
    }
    @media screen and (max-width: 400px) {
-      main section#team .member-sector .members {
+      .members {
          align-items: flex-start;
-      }
-      main section#team .member-sector .members.primary .member,
-      main section#team .member-sector .members.primary .member:nth-child(2) {
-         width: 80%;
       }
    }
 </style>
@@ -194,7 +58,7 @@
 
       <div class="member-sector" data-member-role="pioneers">
          <header class="text-center">
-            <!-- <h2><%= collection.name %></h2> -->
+            <h2><%= collection.name %></h2>
             <p><small>A good team is like a strong foundation of a house, <br />that's why even a storm or rain can't shake a house, <br />Just like that our team is the foundation for us.</small></p>
          </header>
          
@@ -206,62 +70,9 @@
          </div>
 
          <% if (collection.type === 'PRIMARY') { %>
-         <div class="members primary">
-
-            <% for (const member of collection.members) { %>
-            <div class="member" data-aos="fade-up" data-aos-delay="80" data-aos-duration="<%= animDuration += 150 %>">
-               <div class="avatar">
-                  <img src="<%= member.avatar %>" alt="<%= member.name %>" />
-               </div>
-
-               <div class="detail">
-                  <div class="name">
-                     <h3><%= member.name %></h3>
-                  </div>
-                  <p class="role text-blur"><small><%= member.role %></small></p>
-
-                  <% if (member.about) { %>
-                  <div class="about">
-                     <p><%= member.about %></p>
-                  </div>
-                  <% } %>
-               </div>
-
-               <%- include('partials/_render_social_links', { links: member.social }); %>
-            </div>
-            <% } %>
-         </div>
+            <%- include('partials/_render_primary_team_members', { members: collection.members }); %>
          <% } else { %>
-            <div class="members">
-
-               <% for (const member of collection.members) { %>
-               <div class="member" data-aos="fade-up" data-aos-delay="<%= animDelay += 5 %>" data-aos-duration="<%= animDuration += 80 %>">
-                  <div class="avatar">
-                     <img src="<%= member.avatar %>" alt="<%= member.name %>" />
-                  </div>
-                  <div class="detail">
-                     <div class="name">
-                        <h5><%= member.name %></h5>
-                     </div>
-                     <div class="role text-blur"><small><%= member.role %></small></div>
-
-                     <%- include('partials/_render_social_links', { links: member.social }); %>
-                  </div>
-               </div>
-               <% } %>
-
-               <a class="member" href="/career" data-aos="fade-up" data-aos-delay="60" data-aos-duration="500">
-                  <div class="avatar">
-                     <img src="https://ionicframework.com/img/team/apply.jpg" alt="" />
-                  </div>
-                  <div class="detail">
-                     <div class="name">
-                        <h5>You?</h5>
-                     </div>
-                     <div class="role text-blur"><small>Dream Job</small></div>
-                  </div>
-               </a>
-            </div>
+            <%- include('partials/_render_secondary_team_members', { members: collection.members }); %>
          <% } %>
       </div>
    </section>

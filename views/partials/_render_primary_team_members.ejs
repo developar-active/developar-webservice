@@ -1,0 +1,138 @@
+<% 
+	let animDuration = 300;
+   let animDelay = 40;
+%>
+
+<style type="text/css">
+	.members.primary {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.members.primary .member {
+		display: flex;
+		margin-top: 8px;
+		margin-bottom: 8px;
+		width: 65%;
+		flex-direction: row;
+	}
+
+	.members.primary .member:not(:last-child) {
+		border-bottom: 1px solid #DDD;
+	}
+
+	.members.primary .member .avatar img {
+		width: 11.8em;
+		height: 11.8em;
+	}
+
+	.members.primary .member:nth-child(2) {
+		flex-direction: row-reverse;
+	}
+
+	.members.primary .member .detail {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		padding-left: 1.5em;
+		text-align: left;
+	}
+
+	.members.primary .member .contacts {
+		height: 100%;
+		padding: 8px 1em;
+	}
+
+	.members.primary .member .contacts ul {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		flex-direction: column;
+		justify-content: center;
+		list-style-type: none;
+		height: inherit;
+	}
+
+	.members.primary .member .contacts ul li a {
+		display: block;
+		padding: 10px;
+	}
+
+	.members.primary .member .contacts ul li a svg {
+		width: 18px;
+		height: 18px;
+	}
+
+	@media screen and (max-width: 767px) {
+		.members.primary .member,
+		.members.primary .member:nth-child(2) {
+			flex-direction: column;
+			align-items: center;
+			width: 80%;
+		}
+
+		.members.primary .member .contacts ul {
+			flex-direction: row;
+		}
+
+		@media (orientation: landscape) {
+			.members.primary {
+				flex-direction: row;
+			}
+
+			.members.primary .member,
+			.members.primary .member:nth-child(2) {
+				width: auto;
+				justify-content: space-evenly;
+				flex: 1;
+			}
+			.members.primary .member:not(:last-child) {
+				border-bottom: none;
+			}
+			.members.primary .member .detail {
+				padding-left: auto;
+			}
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+		.members.primary .member,
+		.members.primary .member:nth-child(2) {
+			width: 80%;
+		}
+	}
+</style>
+
+<div class="members primary">
+
+	<% for (const member of members) { %>
+
+	<div class="member" data-aos="fade-up" data-aos-delay="80" data-aos-duration="<%= animDuration += 150 %>">
+		<div class="avatar">
+			<img src="<%= member.avatar %>" alt="<%= member.name %>" />
+		</div>
+
+		<div class="detail">
+			<div class="name">
+				<h3><%= member.name %></h3>
+			</div>
+
+			<p class="role">
+				<% if (member.resume && member.resume.length > 0) { %>
+				<a href="<%= member.resume %>" target="_blank" class="hoverable"
+					title="See Resume"><small><%= member.role %></small></a>
+				<% } else { %>
+				<small class="text-blur"><%= member.role %></small>
+				<% } %>
+			</p>
+
+			<% if (member.about) { %>
+			<div class="about">
+				<p><%= member.about %></p>
+			</div>
+			<% } %>
+		</div>
+
+		<%- include('_render_social_links', { links: member.social }); %>
+	</div>
+	<% } %>
+</div>
