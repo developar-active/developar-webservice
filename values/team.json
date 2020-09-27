@@ -107,15 +107,6 @@
             ]
          },
          {
-            "name": "Manoj Khatri",
-            "role": "SEO & Advertisement",
-            "avatar": "https://ionicframework.com/img/team/no-photo.png",
-            "social": [
-               { "name": "@instagram/manojkhatri_", "url": "https://instagram.com/manojkhatri_", "icon": "instagram" },
-               { "name": "@twitter/manojkhatri_", "url": "https://twitter.com/manojkhatri_", "icon": "twitter" }
-            ]
-         },
-         {
             "name": "Deepmala Gidhwani",
             "role": "Graphic & UX / UI Designer",
             "avatar": "https://developarcdn.vercel.app/images/team/deepmala-gidhwani.jpg",

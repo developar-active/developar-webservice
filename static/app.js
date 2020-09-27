@@ -6,6 +6,8 @@
  * @return {Promise<XMLHttpRequest | any>}
  */
 function makeAPIRequest (method = 'GET', pathname = '/test', data = {}) {
+    const BASE_ROUTE = "https://developar-api.herokuapp.com";
+
     return new Promise(function (resolve, reject) {
         const request = new XMLHttpRequest();
 
@@ -26,7 +28,7 @@ function makeAPIRequest (method = 'GET', pathname = '/test', data = {}) {
             }
         }
     
-        request.open(method, `/api${pathname}`, true);
+        request.open(method, `${BASE_ROUTE}${pathname}`, true);
     
         request.setRequestHeader('Content-Type', 'application/json');
     
