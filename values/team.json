@@ -38,6 +38,7 @@
             "name": "Shreyansh Thoriya",
             "role": "Web & Flutter developer",
             "avatar": "https://developarcdn.vercel.app/images/team/shreyansh-thoria.jpg",
+            "resume": "https://developarcdn.vercel.app/docs/resumes/shreyansh-thoria.pdf",
             "social": [
                { "name": "@instagram/_shreyansh027_", "url": "https://www.instagram.com/_shreyansh027_", "icon": "instagram" },
                { "name": "@github/shreyansh4", "url": "https://github.com/shreyansh4", "icon": "github" }
@@ -47,6 +48,7 @@
             "name": "Veer Patel",
             "role": "Backend technologies",
             "avatar": "https://developarcdn.vercel.app/images/team/veer-patel.jpg",
+            "resume": "https://developarcdn.vercel.app/docs/resumes/veer-patel.pdf",
             "social": [
                { "name": "@instagram/mr_error4221", "url": "https://www.instagram.com/mr_error4221", "icon": "instagram" },
                { "name": "@github/veer4221", "url": "https://github.com/veer4221", "icon": "github" }
@@ -55,7 +57,7 @@
          {
             "name": "Preksha Chaudhary",
             "role": "Frontend & CMS",
-            "avatar": "https://ionicframework.com/img/team/no-photo.png",
+            "avatar": "https://developarcdn.vercel.app/images/team/preksha-chaudhary.jpg",
             "social": [
                { "name": "@instagram/prek__shaa", "url": "https://www.instagram.com/prek__shaa", "icon": "instagram" },
                { "name": "@twitter/PrekshaChaudha", "url": "https://twitter.com/PrekshaChaudha", "icon": "twitter" }
