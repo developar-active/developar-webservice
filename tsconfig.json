@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"strict": false,
+		"outDir": "./lib",
+		"strictFunctionTypes": true,
+		"alwaysStrict": false,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"baseUrl": "./src",
+		"types": [
+			"./src/@types"
+		],
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"removeComments": true,
+		"forceConsistentCasingInFileNames": true
+	},
+	"include": [
+		"src/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"**/*.spec.ts"
+	]
+}
