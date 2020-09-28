@@ -9,9 +9,6 @@
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"baseUrl": "./src",
-		"types": [
-			"./src/@types"
-		],
 		"esModuleInterop": true,
 		"skipLibCheck": true,
 		"removeComments": true,
