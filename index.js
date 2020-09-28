@@ -13,15 +13,12 @@ const fs = require('fs');
 const Koa = require('koa');
 const serve = require('koa-static');
 const render = require('koa-ejs');
-const bodyParser = require('koa-bodyparser');
 const router = require('./routes'); // Koa router
 
 // Initiate
 const app = new Koa(); // Koa instance
 
 const PORT = process.env.PORT || 4000; // Server PORT
-
-app.use(bodyParser());
 
 // Setups
 app
