@@ -118,9 +118,9 @@
 
       :root {
          /* Color selection */
-         --pcolor: rgb(82, 125, 255);
-         --pcolor-dark: rgb(35, 82, 224);
-         --pcolor-light: rgb(126, 158, 255);
+         --pcolor: #527dff;
+         --pcolor-dark: #2352e0;
+         --pcolor-light: #7e9eff;
          --pcolor-fr: #fff;
 
          --red: #f44336;
@@ -194,6 +194,11 @@
          /* Font style */
          --pfont: "Questrial", Verdana, sans-serif;
          --sfont: "Nunito", sans-serif, arial;
+      }
+
+      ::selection {
+         background-color: var(--pcolor-light);
+         color: var(--pcolor-fr);
       }
 
       @keyframes fade-in-up {
@@ -651,8 +656,9 @@
          margin-top: 12em;
       }
    </style>
-   <link rel="stylesheet" type="text/css" href="/master.css" />
-   <script defer type="application/javascript" src="/app.mjs"></script>
+   <link rel="stylesheet" type="text/css" href="/master.css" crossorigin="anonymous" />
+   <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+   <script defer type="application/javascript" src="/app.mjs" crossorigin="anonymous"></script>
 
    <% if (PAGE_ROUTE === '/') { %>
    <title>Developar - A web development company</title>

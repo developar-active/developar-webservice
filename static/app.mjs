@@ -63,12 +63,12 @@ function submitPayload (pathname = '/test', payload = {}) {
                 theme = 'red';
                 reject(message);
             }
-            resolve(message);
+            return resolve(message);
         })
         .catch(function () {
             theme = 'red';
             message = 'Something went wrong';
-            reject(message);
+            return reject(message);
         })
         .finally(function () {
             new Toast(message, { theme });
@@ -211,7 +211,7 @@ window.onload = function () {
 
     useCollapsibleDropdowns();
 
-    if ('AOS' in window) {
+    if (window.hasOwnProperty('AOS')) {
         // @ts-ignore
         AOS.init({
             disable: false,
@@ -223,7 +223,7 @@ window.onload = function () {
     }
 
     // Load feather icons
-    if ('feather' in window) {
+    if (window.hasOwnProperty('feather')) {
         // @ts-ignore
         feather.replace();
     }

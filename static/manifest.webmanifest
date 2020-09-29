@@ -1,0 +1,42 @@
+{
+   "name": "Developar",
+   "short_name": "Developar",
+   "description": "A company which offers many services including web & app develpoment with affordable maintenance schemes",
+   "orientation": "portrait-primary",
+   "display": "minimal-ui",
+   "start_url": "/",
+   "background_color": "#FFFFFF",
+   "theme_color": "#527DFF",
+   "icons": [
+      {
+         "src": "https://developarcdn.vercel.app/logo/dark/16x16.png",
+         "type": "image/png",
+         "sizes": "16x16"
+      },
+      {
+         "src": "https://developarcdn.vercel.app/logo/dark/96x96.png",
+         "type": "image/png",
+         "sizes": "96x96"
+      },
+      {
+         "src": "https://developarcdn.vercel.app/logo/dark/128x128.png",
+         "type": "image/png",
+         "sizes": "128x128"
+      },
+      {
+         "src": "https://developarcdn.vercel.app/logo/dark/144x144.png",
+         "type": "image/png",
+         "sizes": "144x144"
+      },
+      {
+         "src": "https://developarcdn.vercel.app/logo/dark/192x192.png",
+         "type": "image/png",
+         "sizes": "192x192"
+      },
+      {
+         "src": "https://developarcdn.vercel.app/logo/dark/512x512.png",
+         "type": "image/png",
+         "sizes": "512x512"
+      }
+   ]
+}
