@@ -34,6 +34,13 @@
 %>
 
 <style>
+   main section#services .content {
+      width: 65%;
+   }
+   main section#services .content header p {
+      padding-left: 12px;
+      padding-right: 12px;
+   }
    main section#services .content .container {
       display: flex;
       padding: 2em 0;
@@ -43,8 +50,9 @@
    }
 
    main section#services .content .container .service {
+      flex: 1;
       padding: 10px;
-      max-width: 24em;
+      max-width: 25em;
       border-radius: 12px;
       border-width: 1px;
       border-style: solid;
@@ -71,8 +79,16 @@
    }
 
    @media screen and (max-width: 767px) {
+      main section#services .content {
+         width: auto;
+      }
+      main section#services .content .container {
+         flex-direction: row;
+         justify-content: center;
+      }
       main section#services .content .container .service {
          padding: 1.2em 4px;
+         max-width: 22em;
       }
 
       @media (orientation: landscape) {
