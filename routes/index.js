@@ -16,10 +16,12 @@ router.use('/order', OrderRouter.routes(), OrderRouter.allowedMethods());
  */
 router.get('/', async ctx => {
    const PAGE_NAME = 'Home';
+   const PAGE_KEYWORDS = ['Home', 'Get started'];
 
    return await ctx.render('index', { 
       PAGE_NAME, 
-      PAGE_ROUTE: ctx.url
+      PAGE_ROUTE: ctx.url,
+      PAGE_KEYWORDS
    })
 })
 

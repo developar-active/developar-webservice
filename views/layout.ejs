@@ -1,18 +1,53 @@
+<% 
+
+   /**
+    * Check string type existance
+    * @param {string} property - Property name
+    * @returns {boolean}
+    */
+   function existsStringValue (property) {
+      return (typeof locals[property] === 'string' && locals[property].length > 0);
+   }
+
+   /**
+    * Check array type existance
+    * @param {string} property - Property name
+    * @returns {boolean}
+    */
+   function existsArrayValue (property) {
+      return (typeof locals[property] === 'object' && Array.isArray(locals[property]));
+   }
+
+   let keywords = '';
+   let hasCustomDescription = existsStringValue('PAGE_DESCRIPTION');
+
+   if (existsArrayValue('PAGE_KEYWORDS')) {
+      keywords = ', '.concat(PAGE_KEYWORDS.join(', '));
+   }
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
    <% if (PAGE_ROUTE === '/') { %>
-   <title>Developar - A progressive web development company</title>
+      <title>Developar - A progressive web development company</title>
    <% } else { %>
-   <title><%= PAGE_NAME %> • Developar</title>
+      <title><%= PAGE_NAME %> • Developar</title>
    <% } %>
+
    <meta charset="UTF-8" />
    <meta name="keywords" content="Web development, Web development company, Web development near me, Webite development company, Website development, Web design, Responsive website, 
-         Digital marketing, Digital marketing near me, Software development, Software development company, 
-         Mobile app development, Mobile app development company, Mobile application development, Mobile application development company, 
-         iOS development, Android development, Developar, Web development service" />
-   <meta name="description" content="Developar is a company which focusing on web technologies for producing high quality apps and building such tools for helping developers, responsive website, developing cross platform mobile apps by using modern frameworks and provide intuitive marketing facility to grow your business or individual." />
+   Digital marketing, Digital marketing near me, Software development, Software development company, 
+   Mobile app development, Mobile app development company, Mobile application development, Mobile application development company, 
+   iOS development, Android development, Developar, Web development service<%= keywords %>" />
+
+   <% if (hasCustomDescription) { %>
+      <meta name="description" content="<%= PAGE_DESCRIPTION %>" />
+   <% } else { %>
+      <meta name="description" content="Developar is a company which focusing on web technologies for producing high quality apps and building such tools for helping developers, responsive website, developing cross platform mobile apps by using modern frameworks and provide intuitive marketing facility to grow your business or individual." />
+   <% } %>
+
    <meta name = "author" content = "Developar Team" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
