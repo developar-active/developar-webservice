@@ -486,7 +486,7 @@ a.no-effect {
 
 /* Hero area utility */
 .hero {
-    /* width: 100%; */
+    width: 100%;
 }
 .hero.note {
     display: flex;
@@ -520,7 +520,7 @@ a.no-effect {
 .hero.full-image {
     position: relative;
 }
-.hero.full-image .image img {
+.hero.full-image .image img:not([width]) {
     width: 100%;
 }
 .hero.full-image .detail {
@@ -536,7 +536,7 @@ a.no-effect {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.hero.dual-module .image img {
+.hero.dual-module .image img:not([width]) {
     width: 100%;
 }
 .hero.dual-module .detail {
