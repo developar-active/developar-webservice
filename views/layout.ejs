@@ -2,7 +2,18 @@
 <html lang="en">
 
 <head>
+   <% if (PAGE_ROUTE === '/') { %>
+   <title>Developar - A progressive web development company</title>
+   <% } else { %>
+   <title><%= PAGE_NAME %> • Developar</title>
+   <% } %>
    <meta charset="UTF-8" />
+   <meta name="keywords" content="Web development, Web development company, Web development near me, Webite development company, Website development, Web design, Responsive website, 
+         Digital marketing, Digital marketing near me, Software development, Software development company, 
+         Mobile app development, Mobile app development company, Mobile application development, Mobile application development company, 
+         iOS development, Android development, Developar, Web development service" />
+   <meta name="description" content="Developar is a company which focusing on web technologies for producing high quality apps and building such tools for helping developers, responsive website, developing cross platform mobile apps by using modern frameworks and provide intuitive marketing facility to grow your business or individual." />
+   <meta name = "author" content = "Developar Team" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +53,9 @@
    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css" />
    <script defer type="application/javascript" src="https://unpkg.com/aos@next/dist/aos.js"></script>
    <script async type="application/javascript" src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179260420-1"></script>
+   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-179260420-1');</script>
 
    <style type="text/css">
       /*--- Load Questrial fonts ---*/
@@ -686,12 +700,6 @@
    </style>
    <link rel="stylesheet" type="text/css" href="/master.css" crossorigin="anonymous" />
    <script defer type="application/javascript" src="/app.mjs" crossorigin="anonymous"></script>
-
-   <% if (PAGE_ROUTE === '/') { %>
-   <title>Developar - A web development company</title>
-   <% } else { %>
-   <title><%= PAGE_NAME %> • Developar</title>
-   <% } %>
 </head>
 
 <body>
