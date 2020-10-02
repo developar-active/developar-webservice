@@ -1,5 +1,5 @@
 <style type="text/css">
-   main section#init-step {
+   main #init-step {
       display: flex;
       height: 60vh;
       flex-direction: column;
@@ -8,56 +8,56 @@
       z-index: 15;
    }
 
-   main section#init-step .wrapper.content {
+   main #init-step .wrapper.content {
       max-width: 30em;
    }
 
-   main section#init-step .wrapper.content .actions {
+   main #init-step .wrapper.content .actions {
       display: flex;
       padding: 1em 0;
       justify-content: center;
    }
 
-   main section#init-step .wrapper.content h1,
-   main section#init-step .wrapper.content p {
+   main #init-step .wrapper.content h1,
+   main #init-step .wrapper.content p {
       color: #FFF;
    }
 
-   main section#init-step .wrapper.content h1 {
+   main #init-step .wrapper.content h1 {
       font-size: 3.4rem;
    }
 
    /* For tablets */
    @media screen and (max-width: 1024px) {
-      main section#init-step {
+      main #init-step {
          height: 35vh;
          flex-direction: column;
       }
 
-      main section#init-step .wrapper.content {
+      main #init-step .wrapper.content {
          max-width: auto;
          padding: 1em 2em;
       }
 
-      main section#init-step .wrapper.content h1 {
+      main #init-step .wrapper.content h1 {
          font-size: 2.4em;
       }
    }
 
    @media screen and (min-width: 768px) and (max-width: 1023px) {
-      main section#init-step {
+      main #init-step {
          height: 50vh;
       }
    }
 
    @media screen and (max-width: 767px) {
-      main section#init-step {
+      main #init-step {
          height: 70vh;
       }
    }
 
 
-   main section#get-started {
+   main #get-started {
       display: flex;
       margin-top: 14em;
       height: 60vh;
@@ -66,61 +66,61 @@
       align-items: center;
    }
 
-   main section#get-started .wrapper.image {
+   main #get-started .wrapper.image {
       display: flex;
       justify-content: center;
    }
 
-   main section#get-started .wrapper.image img {
+   main #get-started .wrapper.image img {
       width: 26em;
    }
 
-   main section#get-started .wrapper.content {
+   main #get-started .wrapper.content {
       max-width: 30em;
       padding: 2em 3em;
    }
 
-   main section#get-started .wrapper.content h1 {
+   main #get-started .wrapper.content h1 {
       font-size: 3.4rem;
    }
 
    @media screen and (max-width: 1024px) {
-      main section#get-started {
+      main #get-started {
          height: 40vh;
       }
-      main section#get-started .wrapper.content {
+      main #get-started .wrapper.content {
          padding: 1em;
       }
    }
 
    /* For smartphones */
    @media screen and (max-width: 767px) {
-      main section#get-started {
+      main #get-started {
          height: 90vh;
          flex-direction: column;
       }
 
-      main section#get-started .wrapper.image img {
+      main #get-started .wrapper.image img {
          width: 16em;
          height: auto;
       }
 
-      main section#get-started .wrapper.content {
+      main #get-started .wrapper.content {
          max-width: auto;
          padding: 1em;
       }
 
-      main section#get-started .wrapper.content h1 {
+      main #get-started .wrapper.content h1 {
          font-size: 2.4rem;
       }
    }
    @media screen and (max-width: 400px) {
-      main section#get-started {
+      main #get-started {
          height: auto;
       }
    }
 
-   main section#third-step {
+   main #third-step {
       display: flex;
       height: 60vh;
       flex-direction: row-reverse;
@@ -129,64 +129,110 @@
       background-color: #EEE;
    }
 
-   main section#third-step .wrapper.image {
+   main #third-step .wrapper.image {
       display: flex;
       justify-content: center;
    }
 
-   main section#third-step .wrapper.image img {
+   main #third-step .wrapper.image img {
       width: 26em;
    }
 
-   main section#third-step .wrapper.content {
+   main #third-step .wrapper.content {
       max-width: 30em;
       padding: 2em 3em;
    }
 
-   main section#third-step .wrapper.content h1 {
+   main #third-step .wrapper.content h1 {
       font-size: 3.4rem;
    }
 
    @media screen and (max-width: 1024px) {
-      main section#third-step {
+      main #third-step {
          height: 35vh;
       }
-      main section#third-step .wrapper.content {
+      main #third-step .wrapper.content {
          padding: 1em;
       }
    }
 
    /* For smartphones */
    @media screen and (max-width: 767px) {
-      main section#third-step {
+      main #third-step {
          height: 80vh;
          flex-direction: column;
       }
 
-      main section#third-step .wrapper.image img {
+      main #third-step .wrapper.image img {
          width: 16em;
          height: auto;
       }
 
-      main section#third-step .wrapper.content {
+      main #third-step .wrapper.content {
          max-width: auto;
          padding: 1em;
       }
 
-      main section#third-step .wrapper.content h1 {
+      main #third-step .wrapper.content h1 {
          font-size: 2.4rem;
       }
 
       @media (orientation: landscape) {
-         main section#get-started {
+         main #get-started {
             height: 120vh;
          }
 
-         main section#third-step {
+         main #third-step {
             height: 100vh;
          }
       }
    }
+
+   main #developing-process {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 360px;
+      background-image: linear-gradient(to right, var(--pcolor), var(--pcolor-dark));
+      color: var(--pcolor-fr);
+   }
+   main #developing-process header {
+      text-align: center;
+   }
+   main #developing-process .process-steps {
+      padding-top: 2em;
+      padding-bottom: 1em;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-left: auto;
+      margin-right: auto;
+   }
+   main #developing-process .process-steps .step {
+      padding: 12px 1em;
+      border-radius: 8px;
+      text-align: center;
+   }
+   main #developing-process .process-steps .thumb {
+      padding: 1em;
+      text-align: center;
+   }
+   main #developing-process .process-steps .thumb svg {
+      width: 3em;
+      height: 3em;
+   }
+
+   @media screen and (max-width: 1024px) {
+      main #developing-process {
+         height: auto;
+      }
+      main #developing-process header {
+         padding-top: 2em;
+      }
+      main #developing-process .process-steps {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+
 </style>
 
 <%- include('partials/_header', { raised: false }) %>
@@ -195,18 +241,18 @@
 
 <main>
    <!-- Initial section -->
-   <section id="init-step">
+   <div id="init-step">
       <div class="wrapper content" data-aos="zoom-in">
          <h1>We make more<br /><span>discoverable</span> web</h1>
          <p>The Clients of DevelopAR have liked the services very much if you also want to take advantage of it,
             Develop your product now</p>
          <div class="actions">
-            <a tabindex="7" type="button" class="icon white" href="#get-started"><i data-feather="chevron-down"></i></a>
+            <a type="button" class="icon white" href="#get-started"><i data-feather="chevron-down"></i></a>
          </div>
       </div>
-   </section>
+   </div>
 
-   <section id="get-started">
+   <div id="get-started">
       <div class="wrapper image" data-aos="fade-up" data-aos-delay="60">
          <img src="https://developarcdn.vercel.app/images/emails-600x600-61kb.png" height="auto" alt="" />
       </div>
@@ -221,9 +267,9 @@
             </a>
          </div>
       </div>
-   </section>
+   </div>
 
-   <section id="third-step" data-aos="fade-up">
+   <div id="third-step" data-aos="fade-up">
       <div class="wrapper image">
          <img src="https://developarcdn.vercel.app/images/workflow-627x585-24kb.png" height="auto" alt="" />
       </div>
@@ -231,8 +277,61 @@
          <h1>Experts in marketing</h1>
          <p>We extend your product's boundary that people can easily reach out to your service.</p>
       </div>
-   </section>
+   </div>
 
+   <div id="developing-process" data-aos="fade-up">
+      <header>
+         <h6>FOLLOWING LESS, PRODUCING MORE</h6>
+         <h2>Developing Process</h2>
+      </header>
+      <div class="process-steps">
+         <div class="step">
+            <div class="step-name">
+               <div class="thumb">
+                  <i data-feather="check-circle"></i>
+               </div>
+               <h5>1. Getting requirements</h5>
+            </div>
+         </div>
+
+         <div class="step">
+            <div class="step-name">
+               <div class="thumb">
+                  <i data-feather="search"></i>
+               </div>
+               <h5>2. Analyze problem</h5>
+            </div>
+         </div>
+
+         <div class="step">
+            <div class="step-name">
+               <div class="thumb">
+                  <i data-feather="code"></i>
+               </div>
+               <h5>3. Writing code</h5>
+            </div>
+         </div>
+
+         <div class="step">
+            <div class="step-name">
+               <div class="thumb">
+                  <i data-feather="activity"></i>
+               </div>
+               <h5>4. Testing</h5>
+            </div>
+         </div>
+
+         <div class="step">
+            <div class="step-name">
+               <div class="thumb">
+                  <i data-feather="upload-cloud"></i>
+               </div>
+               <h5>5. Deploy</h5>
+            </div>
+         </div>
+      </div>
+
+   </div>
 </main>
 
 <%- include('partials/_footer') %>
