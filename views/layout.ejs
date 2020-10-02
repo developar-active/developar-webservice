@@ -1,4 +1,9 @@
 <% 
+   /** 
+    * For entire site
+    * @type {Array<string>}
+    */
+   const GLOBAL_KEYWORDS = ['Developar', 'Developar Company'];
 
    /**
     * Check string type existance
@@ -22,7 +27,9 @@
    let hasCustomDescription = existsStringValue('PAGE_DESCRIPTION');
 
    if (existsArrayValue('PAGE_KEYWORDS')) {
-      keywords = ', '.concat(PAGE_KEYWORDS.join(', '));
+      const customKeywords = GLOBAL_KEYWORDS.concat(PAGE_KEYWORDS || []);
+
+      keywords = customKeywords.join(', ');
    }
 %>
 
@@ -37,18 +44,15 @@
    <% } %>
 
    <meta charset="UTF-8" />
-   <meta name="keywords" content="Web development, Web development company, Web development near me, Webite development company, Website development, Web design, Responsive website, 
-   Digital marketing, Digital marketing near me, Software development, Software development company, 
-   Mobile app development, Mobile app development company, Mobile application development, Mobile application development company, 
-   iOS development, Android development, Developar, Web development service<%= keywords %>" />
+   <meta name="keywords" content="<%- keywords %>" />
 
    <% if (hasCustomDescription) { %>
-      <meta name="description" content="<%= PAGE_DESCRIPTION %>" />
+      <meta name="description" content="<%- PAGE_DESCRIPTION %>" />
    <% } else { %>
       <meta name="description" content="Developar is a company which focusing on web technologies for producing high quality apps and building such tools for helping developers, responsive website, developing cross platform mobile apps by using modern frameworks and provide intuitive marketing facility to grow your business or individual." />
    <% } %>
 
-   <meta name = "author" content = "Developar Team" />
+   <meta name="author" content="Developar Team" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
