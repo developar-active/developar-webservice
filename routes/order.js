@@ -13,7 +13,7 @@ router.get('/success', async ctx => {
 		PAGE_NAME,
 		PAGE_ROUTE: ctx.url
 	});
-})
+});
 
 /**
  * Order Page
@@ -56,7 +56,7 @@ router.get('/:planId', async ctx => {
       PAGE_NAME,
       PAGE_ROUTE: ctx.url,
       plan
-   })
-})
+   });
+});
 
 module.exports = router;

@@ -16,14 +16,12 @@ router.use('/order', OrderRouter.routes(), OrderRouter.allowedMethods());
  */
 router.get('/', async ctx => {
    const PAGE_NAME = 'Home';
-   const PAGE_KEYWORDS = ['Home', 'Get started'];
 
    return await ctx.render('index', { 
       PAGE_NAME, 
-      PAGE_ROUTE: ctx.url,
-      PAGE_KEYWORDS
-   })
-})
+      PAGE_ROUTE: ctx.url
+   });
+});
 
 /**
  * Services page 
@@ -31,12 +29,13 @@ router.get('/', async ctx => {
  */
 router.get('/services', async ctx => {
    const PAGE_NAME = 'Services';
+   
 
    return await ctx.render('services', { 
       PAGE_NAME, 
       PAGE_ROUTE: ctx.url
-   })
-})
+   });
+});
 
 router.get('/pricing', async ctx => {
    const PAGE_NAME = 'Pricing';
@@ -51,8 +50,8 @@ router.get('/pricing', async ctx => {
       PAGE_NAME, 
       PAGE_ROUTE: ctx.url,
       plans
-   })
-})
+   });
+});
 
 /**
  * Contact page
@@ -64,8 +63,8 @@ router.get('/contact', async ctx => {
    return await ctx.render('contact', { 
       PAGE_NAME, 
       PAGE_ROUTE: ctx.url
-   })
-})
+   });
+});
 
 /**
  * About page
@@ -77,8 +76,8 @@ router.get('/about', async ctx => {
    return await ctx.render('about', {
       PAGE_NAME, 
       PAGE_ROUTE: ctx.url
-   })
-})
+   });
+});
 
 /**
  * Team page
@@ -112,8 +111,8 @@ router.get('/team/:role?', async ctx => {
       PAGE_NAME, 
       PAGE_ROUTE: ctx.url,
       collection
-   })
-})
+   });
+});
 
 /**
  * Privacy page
@@ -126,19 +125,19 @@ router.get('/privacy', async ctx => {
       PAGE_NAME,
       PAGE_ROUTE: ctx.url
    });
-})
+});
 
 /**
  * Terms page
  * @route GET /terms
  */
 router.get('/terms', async ctx => {
-   const PAGE_NAME = 'Terms';
+   const PAGE_NAME = 'Terms of Service';
 
    return await ctx.render('terms', {
       PAGE_NAME,
       PAGE_ROUTE: ctx.url
    });
-})
+});
 
 module.exports = router;

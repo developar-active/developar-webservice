@@ -7,13 +7,13 @@ const router = new KoaRouter();
  * @route GET /career
  */
 router.get('/', async ctx => {
-   const PAGE_NAME = 'Career';
+   const PAGE_NAME = 'Careers';
 
    return await ctx.render('career', { 
       PAGE_NAME, 
       PAGE_ROUTE: ctx.url
-   })
-})
+   });
+});
 
 /**
  * Jobs page
@@ -27,8 +27,8 @@ router.get('/jobs', async ctx => {
       PAGE_NAME, 
       PAGE_ROUTE: ctx.url,
       jobs
-   })
-})
+   });
+});
 
 router.get('/jobs/success', async ctx => {
    const PAGE_NAME = 'Thanks for apply';
@@ -36,8 +36,8 @@ router.get('/jobs/success', async ctx => {
    return ctx.render('jobs/success', {
       PAGE_NAME,
       PAGE_ROUTE: ctx.url
-   })
-})
+   });
+});
 
 /**
  * Job's post detail
@@ -62,7 +62,7 @@ router.get('/jobs/:postId', async ctx => {
       PAGE_NAME,
       PAGE_ROUTE: ctx.url,
       post
-   })
-})
+   });
+});
 
 module.exports = router;
