@@ -128,8 +128,10 @@
  
        <div class="secondary-area">
           <%- include('_footer_contact_info'); %>
- 
-          <%- include('_newsletter'); %>
+
+          <% if (locals.DISABLE_NEWSLETTER == undefined) { %>
+            <%- include('_newsletter'); %>
+          <% } %>
        </div>
  
     </div>
