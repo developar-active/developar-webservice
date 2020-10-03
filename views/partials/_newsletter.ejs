@@ -12,9 +12,11 @@
 </style>
 
 <div class="newsletter">
-   <header class="scalable-y">
-      <h6 class="text-blur">Subscribe for newsletter</h6>
-   </header>
+   <% if (locals.NO_LABEL == undefined) { %>
+      <header class="scalable-y">
+         <h6 class="text-blur">Subscribe for newsletter</h6>
+      </header>
+   <% } %>
 
    <form name="newsletter-form">
       <div class="combo-input">
