@@ -258,6 +258,41 @@
       }
    }
 
+   main #suggest-subscribe {
+      display: flex;
+      flex-direction: column;
+      height: 280px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+   }
+   
+   main #suggest-subscribe header {
+      padding-left: 2em;
+      padding-right: 2em;
+   }
+
+   main #suggest-subscribe .form-container {
+      padding-top: 1.2em;
+      padding-bottom: 1.2em;
+   }
+   
+   @media screen and (max-width: 767px) {
+      main #suggest-subscribe {
+         height: auto;
+      }
+      main #suggest-subscribe header {
+         padding-top: 2em;
+      }
+   }
+
+   @media screen and (max-width: 400px) {
+      /* Make scallable */
+      main #suggest-subscribe .form-container input.controller {
+         min-width: 9em;
+      }
+   }
+
 </style>
 
 <%- include('partials/_header', { raised: false }) %>
@@ -357,6 +392,16 @@
       </div>
 
    </div>
+
+   <div id="suggest-subscribe" data-aos="fade-up">
+      <header>
+         <h2>Stay up to date with our news</h2>
+         <p>Subscribe your email below to keep updated.</p>
+      </header>
+      <div class="form-container" data-aos="fade-up">
+         <%- include('partials/_newsletter', { NO_LABEL: true }); %>
+      </div>
+   </div>
 </main>
 
-<%- include('partials/_footer') %>
+<%- include('partials/_footer', { DISABLE_NEWSLETTER: true }) %>
