@@ -203,6 +203,96 @@ function Toast(message, options = {}, duration = 3500) {
     }, duration);
 }
 
+const progressbar = {
+    /** 
+     * Container of progress bar
+     * @type {HTMLElement} 
+     */
+    root: null,
+
+    /**
+     * Content element
+     * @type {HTMLElement}
+     */
+    get contentElement () {
+        return document.querySelector('main') || null;
+    },
+
+    /**
+     * Mount state
+     * @type {boolean}
+     */
+    get isMounted () {
+        return typeof this.root === 'object' && this.root instanceof HTMLElement;
+    },
+
+    /**
+     * Mount container 
+     * @param {boolean} [disableContent] - Disable content
+     * @param {string} [color] - Progress bar color
+     * @returns {boolean}
+     */
+    show (disableContent = false, color = 'primary') {
+        if (this.isMounted) {
+            return false;
+        }
+
+        // Progress bar container
+        const container = document.createElement('div');
+        container.classList.add('progress-bar-container');
+
+        // Progress bar element
+        const progressBarElement = document.createElement('div');
+        progressBarElement.classList.add('progress-bar', color);
+
+        // Progress indeterminate element
+        const progressElement = document.createElement('div');
+        progressElement.classList.add('indeterminate');
+
+        // Append progress element
+        progressBarElement.appendChild(progressElement);
+
+        // Append progress bar element
+        container.appendChild(progressBarElement);
+
+        document.body.insertBefore(container, document.body.firstChild);
+
+        // Assign root
+        this.root = container;
+
+        // Insert 'blur' class name
+        if (disableContent === true) {
+            const contentElement = this.contentElement;
+
+            if (contentElement instanceof HTMLElement) {
+                this.contentElement.classList.add('blur');
+            }
+        }
+
+        return true;
+    },
+
+    /**
+     * Unmount progress container
+     * @returns {boolean}
+     */
+    hide () {
+        if (this.isMounted) {
+            this.root.remove();
+            this.root = null;
+
+            // Remove blur effect
+            const contentElement = this.contentElement;
+            if (contentElement && contentElement instanceof HTMLElement && contentElement.classList.contains('blur')) {
+                contentElement.classList.remove('blur');
+            }
+
+            return true;
+        }
+        return false;
+    }
+};
+
 window.onload = function () {
 
     autoScrollToInternalHashTarget();
