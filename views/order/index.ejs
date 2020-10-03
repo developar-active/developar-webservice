@@ -84,25 +84,26 @@
    <section id="order" class="detailed-form">
       <div class="container order-detail">
          <header>
-            <h1><a href="/pricing" class="text-blur" title="See pricing lists"><small>Plans</small></a>&nbsp;/&nbsp;<%= plan.name %></h1>
+            <h1><a href="/pricing" class="text-blur"
+                  title="See pricing lists"><small>Plans</small></a>&nbsp;/&nbsp;<%= plan.name %></h1>
             <p><%- plan.about %></p>
 
             <% if (plan.min_price) { %>
-               <div class="chip primary">₹<span data-bind="price"><%= plan.min_price %></span>&nbsp;Onwards</div>
+            <div class="chip primary">₹<span data-bind="price"><%= plan.min_price %></span>&nbsp;Onwards</div>
             <% } %>
          </header>
 
          <br />
 
          <% if (plan.facilities.length > 0) { %>
-            <div id="terms">
-               <h4>Terms</h4>
-               <ul class="terms">
-                  <% for (const term of plan.facilities) { %>
-                     <li><%= term %></li>
-                  <% } %>
-               </ul>
-            </div>
+         <div id="terms">
+            <h4>Terms</h4>
+            <ul class="terms">
+               <% for (const term of plan.facilities) { %>
+               <li><%= term %></li>
+               <% } %>
+            </ul>
+         </div>
          <% } %>
 
          <!-- <hr /> -->
@@ -113,54 +114,26 @@
             <form name="order-form" role="form" id="form">
                <p>
                   <label for="name">Name</label>
-                  <input 
-                     type="text" 
-                     name="name" 
-                     id="name" 
-                     placeholder="John Doe" 
-                     title="Your Full name" 
-                     tabindex="1"
-                     autocomplete="name" 
-                     required />
+                  <input type="text" name="name" id="name" placeholder="John Doe" title="Your Full name" tabindex="1"
+                     autocomplete="name" required />
                </p>
 
                <p>
                   <label for="email">Email address <span class="text-blur">(optional)</span></label>
-                  <input 
-                     type="email" 
-                     name="email" 
-                     id="email" 
-                     placeholder="john@example.com" 
-                     title="Your Email address"
-                     tabindex="2" 
-                     autocomplete="email" />
+                  <input type="email" name="email" id="email" placeholder="john@example.com" title="Your Email address"
+                     tabindex="2" autocomplete="email" />
                </p>
 
                <p>
                   <label for="phone">Phone</label>
-                  <input 
-                     type="tel" 
-                     name="phone" 
-                     id="phone" 
-                     placeholder="+1 12345 67890" 
-                     title="Your Phone number"
-                     tabindex="3" 
-                     autocomplete="tel" 
-                     required />
+                  <input type="tel" name="phone" id="phone" placeholder="+1 12345 67890" title="Your Phone number"
+                     tabindex="3" autocomplete="tel" required />
                </p>
 
                <p>
                   <label for="category">Category</label>
-                  <input 
-                     type="text" 
-                     name="category" 
-                     id="category" 
-                     list="order-category" 
-                     placeholder="Architecture"
-                     title="Category of your service" 
-                     tabindex="4" 
-                     autocomplete="off" 
-                     required />
+                  <input type="text" name="category" id="category" list="order-category" placeholder="Architecture"
+                     title="Category of your service" tabindex="4" autocomplete="off" required />
 
                   <datalist id="order-category">
                      <option value="Architectural Designer">Architectural Designer</option>
@@ -223,44 +196,33 @@
                   <label for="plan">Plan</label>
                   <select name="plan" id="plan" tabindex="5">
                      <% if (plan.featured && plan.featured.length > 0) { %>
-                        <% for (const fplan of plan.featured) { %>
-                           <option 
-                              data-price-value="<%= fplan.min_price%>" 
-                              data-plan-value="<%= fplan.name %>"
-                              value="<%= fplan.name %>">
-                              <%= fplan.name %> (₹<%= fplan.min_price %> onwards)
-                           </option>
-                        <% } %>
+                     <% for (const fplan of plan.featured) { %>
+                     <option data-price-value="<%= fplan.min_price%>" data-plan-value="<%= fplan.name %>"
+                        value="<%= fplan.name %>">
+                        <%= fplan.name %> (₹<%= fplan.min_price %> onwards)
+                     </option>
+                     <% } %>
                      <% } else if (plan.min_price) { %>
-                        <option value="Basic">Basic (₹<%= plan.min_price %> onwards)</option>
+                     <option value="Basic">Basic (₹<%= plan.min_price %> onwards)</option>
                      <% } else { %>
-                        <option value="Basic">Basic</option>
+                     <option value="Basic">Basic</option>
                      <% } %>
                   </select>
 
                   <% if (plan.featured && plan.featured.length > 0 ) { %>
-                     <p><small><a class="hoverable focused" href="#featured-plans" tabindex="6">See featured plans</a></small></p>
-                  <% } %>
+               <p><small><a class="hoverable focused" href="#featured-plans" tabindex="6">See featured plans</a></small>
+               </p>
+               <% } %>
                </p>
 
                <p>
                   <label for="desc">Describe</label>
-                  <textarea 
-                     name="message" 
-                     id="message" 
-                     rows="7" 
-                     placeholder="I need website for my shop"
-                     title="Describe your perspective" 
-                     tabindex="7" 
-                     required></textarea>
+                  <textarea name="message" id="message" rows="7" placeholder="I need website for my shop"
+                     title="Describe your perspective" tabindex="7" required></textarea>
                </p>
 
                <p>
-                  <input 
-                     type="checkbox" 
-                     id="agree-terms" 
-                     title="Agree our terms and conditions" 
-                     tabindex="8"
+                  <input type="checkbox" id="agree-terms" title="Agree our terms and conditions" tabindex="8"
                      required />
                   <label class="inline" for="agree-terms">
                      <small>Agree to our <a href="/terms" target="_blank" tabindex="9">Terms and conditions</a></small>
@@ -276,105 +238,111 @@
 
          <% if (plan.thumb) { %>
          <div class="landing-bar-image">
-            <img 
-               src="<%= plan.thumb.source %>" 
-               alt="<%= plan.name %>" 
-               width="<%= plan.thumb.width %>" />
+            <img src="<%= plan.thumb.source %>" alt="<%= plan.name %>" width="<%= plan.thumb.width %>" />
          </div>
          <% } %>
 
       </div>
 
       <% if (plan.featured && plan.featured.length > 0) { %>
-         <div class="featured-plans" id="featured-plans">
-            <header>
-               <h1>Featured <span class="text-blur">plans</span></h1>
-            </header>
+      <div class="featured-plans" id="featured-plans">
+         <header>
+            <h1>Featured <span class="text-blur">plans</span></h1>
+         </header>
 
-            <div class="plans">
-               <% for (const fetPlan of plan.featured) { %>
-                  <div class="plan">
-                     <header>
-                        <h3 class="text-bold"><%= fetPlan.name %></h3>
-                     </header>
+         <div class="plans">
+            <% for (const fetPlan of plan.featured) { %>
+            <div class="plan">
+               <header>
+                  <h3 class="text-bold"><%= fetPlan.name %></h3>
+               </header>
 
-                     <ul class="features">
-                        <% for (const feature of fetPlan.features) { %>
-                           <li class="feature"><%= feature %></li>
-                        <% } %>
-                     </ul>
+               <ul class="features">
+                  <% for (const feature of fetPlan.features) { %>
+                  <li class="feature"><%= feature %></li>
+                  <% } %>
+               </ul>
 
-                     <div class="price">
-                        <h5>₹<%= fetPlan.min_price %> Onwards</h5>
-                     </div>
-                  </div>
-               <% } %>
+               <div class="price">
+                  <h5>₹<%= fetPlan.min_price %> Onwards</h5>
+               </div>
             </div>
+            <% } %>
          </div>
+      </div>
       <% } %>
    </section>
 </main>
 
 <script type="application/javascript">
-   document.forms['order-form'].addEventListener('submit', function (event) {
-      event.preventDefault();
-      const form = event.target;
-      let payload;
+   (function () {
+      document.forms['order-form'].addEventListener('submit', function (event) {
+         event.preventDefault();
+         const form = event.target;
+         let payload;
 
-      const name = form.name.value;
-      const email = form.email.value;
-      const phone = form.phone.value;
-      const category = form.category.value;
-      const service = form.service.value;
-      const indexName = form.indexName.value;
-      const plan = form.plan.value;
-      const message = form.message.value;
+         const name = form.name.value;
+         const email = form.email.value;
+         const phone = form.phone.value;
+         const category = form.category.value;
+         const service = form.service.value;
+         const indexName = form.indexName.value;
+         const plan = form.plan.value;
+         const message = form.message.value;
 
-      payload = {
-         name,
-         email,
-         phone,
-         category,
-         service,
-         indexName,
-         plan,
-         message
-      };
+         payload = {
+            name,
+            email,
+            phone,
+            category,
+            service,
+            indexName,
+            plan,
+            message
+         };
 
-      submitPayload('/order', payload)
-      .then(function() {
-         form.reset();
-         localStorage.setItem('ORDER_COMPLETE', 'true');
-         window.location.href = '/order/success';
+         // Initiate progress bar
+         progressbar.show(true);
+
+         submitPayload('/order', payload)
+            .then(function () {
+               form.reset();
+               localStorage.setItem('ORDER_COMPLETE', 'true');
+               window.location.href = '/order/success';
+            })
+            .finally(function () {
+               // Remove progress bar
+               progressbar.hide();
+            })
+      });
+
+      document.getElementById('plan').addEventListener('change', function (ev) {
+         const target = ev.target;
+         const key = ev.target.value;
+         let newPrice;
+         let optionTarget;
+
+         // Finding selected option element
+         for (const option of target.children) {
+            const price = option.dataset.priceValue;
+            const name = option.dataset.planValue;
+
+            // Compare selected key 
+            if (name === key) {
+               optionTarget = option;
+               newPrice = optionTarget.dataset.priceValue;
+               break;
+            }
+         }
+
+         if (optionTarget) {
+            // Bind selected price
+            const bindingNodes = document.querySelectorAll(`[data-bind='price']`);
+
+            if (bindingNodes.length > 0 && newPrice != undefined) {
+               bindingNodes.forEach(node => node.textContent = newPrice);
+            }
+         }
       })
-   });
-
-   document.getElementById('plan').addEventListener('change', function (ev) {
-      const target = ev.target;
-      const key = ev.target.value;
-      let newPrice;
-      let optionTarget;
-
-      // Finding selected option element
-      for (const option of target.children) {
-         const price = option.dataset.priceValue;
-         const name = option.dataset.planValue;
-
-         // Compare selected key 
-         if (name === key) {
-            optionTarget = option;
-            newPrice = optionTarget.dataset.priceValue;
-            break;
-         }
-      }
-
-      if (optionTarget) {
-         // Bind selected price
-         const bindingNodes = document.querySelectorAll(`[data-bind='price']`);
-
-         if (bindingNodes.length > 0 && newPrice != undefined) {
-            bindingNodes.forEach(node => node.textContent = newPrice);
-         }
-      }
-   })
+   }());
 </script>

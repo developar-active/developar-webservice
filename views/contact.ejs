@@ -125,25 +125,34 @@
 </main>
 
 <script type="application/javascript">
-   document.forms['contact-form'].addEventListener('submit', function(event) {
-      event.preventDefault();
-      const form = event.target;
-
-      const name = form.name.value;
-      const email = form.email.value;
-      const message = (form.message.value || '').trim();
-
-      const payload = {
-         name,
-         email,
-         message
-      };
-
-      submitPayload('/contact', payload)
-      .then (function() {
-         form.reset();
+   (function () {
+      document.forms['contact-form'].addEventListener('submit', function(event) {
+         event.preventDefault();
+         const form = event.target;
+   
+         const name = form.name.value;
+         const email = form.email.value;
+         const message = (form.message.value || '').trim();
+   
+         const payload = {
+            name,
+            email,
+            message
+         };
+   
+         // Initiate progress bar
+         progressbar.show(false, 'white');
+   
+         submitPayload('/contact', payload)
+         .then (function () {
+            form.reset();
+         })
+         .finally(function () {
+            // Unmount progress bar
+            progressbar.hide();
+         })
       });
-   });
+   }());
 </script>
 
 <%- include('partials/_footer') %>

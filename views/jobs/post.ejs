@@ -57,268 +57,239 @@
    <section id="job-post" class="detailed-form">
       <div class="container job-detail">
          <header>
-            <h1><a href="/career/jobs" class="text-blur" title="See available jobs"><small>Jobs</small></a>&nbsp;/&nbsp;<%= post.name %></h1>
+            <h1><a href="/career/jobs" class="text-blur"
+                  title="See available jobs"><small>Jobs</small></a>&nbsp;/&nbsp;<%= post.name %></h1>
             <p>Choose a job you love, and you will never have to work a day in your life.</p>
          </header>
 
          <br />
 
          <% if (post.qualification.length > 0) { %>
-            <div class="qualifications">
-               <h4>Qualifications</h4>
-   
-               <ul class="qualification-list">
-                  <% for (const term of post.qualification) { %>
-                  <li><%= term %></li>
-                  <% } %>
-               </ul>
-            </div>
+         <div class="qualifications">
+            <h4>Qualifications</h4>
+
+            <ul class="qualification-list">
+               <% for (const term of post.qualification) { %>
+               <li><%= term %></li>
+               <% } %>
+            </ul>
+         </div>
          <% } %>
 
-            <div class="form-wrapper">
-               <h5>Tell us bit about you</h5>
-   
-               <form name="candidate-form" role="form" id="form">
-                  <p>
-                     <label for="apply-email">Email</label>
-                     <input 
-                        type="email" 
-                        name="email" 
-                        id="apply-email" 
-                        placeholder="john@example.com" 
-                        title="Your Email address" 
-                        tabindex="1"
-                        autocomplete="email" 
-                        required />
-                  </p>
-   
-                  <p>
-                     <label for="apply-phone">Phone <span class="text-blur">(optional)</span></label>
-                     <input 
-                        type="tel"
-                        name="phone"
-                        id="apply-phone"
-                        placeholder="+1 12345 67890"
-                        title="Your Phone no"
-                        tabindex="2"
-                        autocomplete="tel" />
-                  </p>
+         <div class="form-wrapper">
+            <h5>Tell us bit about you</h5>
 
-                  <p hidden>
-                     <label for="name">Name</label>
-                     <input 
-                        type="text" 
-                        name="name" 
-                        id="name" 
-                        placeholder="John Doe"
-                        readonly />
-                  </p>
+            <form name="candidate-form" role="form" id="form">
+               <p>
+                  <label for="apply-email">Email</label>
+                  <input type="email" name="email" id="apply-email" placeholder="john@example.com"
+                     title="Your Email address" tabindex="1" autocomplete="email" required />
+               </p>
 
-                  <p hidden>
-                     <label for="picture_url">Picture URL</label>
-                     <input 
-                        type="url"
-                        name="picture_url"
-                        id="picture_url"
-                        placeholder="http://example.com/profile.jpg"
-                        readonly />
-                  </p>
+               <p>
+                  <label for="apply-phone">Phone <span class="text-blur">(optional)</span></label>
+                  <input type="tel" name="phone" id="apply-phone" placeholder="+1 12345 67890" title="Your Phone no"
+                     tabindex="2" autocomplete="tel" />
+               </p>
 
-                  <p hidden>
-                     <label for="indexName">Job ID</label>
-                     <input 
-                        type="text"
-                        name="indexName"
-                        id="indexName"
-                        placeholder="Job ID"
-                        value="<%= post.id %>"
-                        readonly />
-                  </p>
+               <p hidden>
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" placeholder="John Doe" readonly />
+               </p>
 
-                  <p hidden>
-                     <label for="job">Job Name</label>
-                     <input 
-                        type="text"
-                        name="job"
-                        id="job"
-                        placeholder="Job name"
-                        value="<%= post.name %>"
-                        readonly />
-                  </p>
-   
-                  <p>
-                     <label for="apply-github-username">Github username</label>
-   
-                     <input 
-                        type="text"
-                        name="githubUsername"
-                        id="apply-github-username"
-                        placeholder="john_dev"
-                        title="Your Github username"
-                        tabindex="3"
-                        autocomplete="username"
-                        required />
-   
-                     <div id="github-profile-unavail-error" hidden>
-                        <p class="text-red">Can't find your profile</p>
-                     </div>
-   
-                     <div id="apply-github-loader" hidden>
-                        <%- include('../partials/loader'); %>
-                     </div>
-   
-                     <div id="github-profile-preview" hidden>
-                        <a href="#" class="profile-preview" target="_blank" id="github-profile-url" tabindex="4">
-                           <div class="avatar"><img src="https://avatars1.githubusercontent.com/u/50054554?v=4" id="github-profile-avatar" alt="" /></div>
-                           <div class="name" id="github-profile-name">John Doe</div>
-                        </a>
-                     </div>
-                  </p>
-   
-                  <p>
-                     <label for="apply-message">Message <span class="text-blur">(optional)</span></label>
-                     
-                     <textarea name="message" id="apply-message" rows="3" placeholder="I'm market expert" tabindex="5"></textarea>
-                  </p>
-   
-                  <p>
-                     <button type="submit" disabled class="primary" tabindex="4" id="apply-form-trigger">Apply</button>
-                  </p>
-               </form>
-            </div>
+               <p hidden>
+                  <label for="picture_url">Picture URL</label>
+                  <input type="url" name="picture_url" id="picture_url" placeholder="http://example.com/profile.jpg"
+                     readonly />
+               </p>
 
-            <div class="landing-bar-image">
-               <img 
-                  src="https://developarcdn.vercel.app/images/career-1474x1537-100kb.png" 
-                  alt="Developar workshop" 
-                  width="100%" />
-            </div>
+               <p hidden>
+                  <label for="indexName">Job ID</label>
+                  <input type="text" name="indexName" id="indexName" placeholder="Job ID" value="<%= post.id %>"
+                     readonly />
+               </p>
+
+               <p hidden>
+                  <label for="job">Job Name</label>
+                  <input type="text" name="job" id="job" placeholder="Job name" value="<%= post.name %>" readonly />
+               </p>
+
+               <p>
+                  <label for="apply-github-username">Github username</label>
+
+                  <input type="text" name="githubUsername" id="apply-github-username" placeholder="john_dev"
+                     title="Your Github username" tabindex="3" autocomplete="username" required />
+
+               <div id="github-profile-unavail-error" hidden>
+                  <p class="text-red">Can't find your profile</p>
+               </div>
+
+               <div id="apply-github-loader" hidden>
+                  <%- include('../partials/loader'); %>
+               </div>
+
+               <div id="github-profile-preview" hidden>
+                  <a href="#" class="profile-preview" target="_blank" id="github-profile-url" tabindex="4">
+                     <div class="avatar"><img src="https://avatars1.githubusercontent.com/u/50054554?v=4"
+                           id="github-profile-avatar" alt="" /></div>
+                     <div class="name" id="github-profile-name">John Doe</div>
+                  </a>
+               </div>
+               </p>
+
+               <p>
+                  <label for="apply-message">Message <span class="text-blur">(optional)</span></label>
+
+                  <textarea name="message" id="apply-message" rows="3" placeholder="I'm market expert"
+                     tabindex="5"></textarea>
+               </p>
+
+               <p>
+                  <button type="submit" disabled class="primary" tabindex="4" id="apply-form-trigger">Apply</button>
+               </p>
+            </form>
+         </div>
+
+         <div class="landing-bar-image">
+            <img src="https://developarcdn.vercel.app/images/career-1474x1537-100kb.png" alt="Developar workshop"
+               width="100%" />
+         </div>
       </div>
    </section>
 </main>
 
 <script type="application/javascript">
 
-function allowFormSubmission (state = true) {
-   const button = document.getElementById('apply-form-trigger');
-   if (state == true) {
-      button.removeAttribute('disabled');
-   } 
-   else {
-      button.setAttribute('disabled', '');
-   }
-}
+   (function () {
 
-document.forms['candidate-form'].addEventListener('submit', function (event) {
-   event.preventDefault();
-   const form = event.target;
-   let payload;
-
-   const job = form.job.value;
-   const indexName = form.indexName.value;
-   const name = form.name.value;
-   const pictureURL = form.picture_url.value;
-   const email = form.email.value;
-   const phone = form.phone.value;
-   const githubUsername = form.githubUsername.value;
-   const message = form.message.value;
-
-   payload = {
-      job,
-      indexName,
-      name,
-      pictureURL,
-      email,
-      phone,
-      githubUsername,
-      message
-   };
-
-   submitPayload('/candidate', payload)
-   .then(function() {
-      form.reset();
-      localStorage.setItem('JOB_SUBMISSION', 'true');
-      window.location.href = '/career/jobs/success';
-   })
-});
-
-document.getElementById('apply-github-username').addEventListener('change', function(ev) {
-   const value = ev.target.value;
-   const errorMessage = document.getElementById('github-profile-unavail-error');
-   const preview = document.getElementById('github-profile-preview');
-   const nameInput = document.querySelector("input[name='name']");
-   const pictureURLInput = document.querySelector("input[name='picture_url']");
-
-   function hideAll () {
-      if (!errorMessage.hasAttribute('hidden')) {
-         errorMessage.setAttribute('hidden', '');
-      }
-
-      if (!preview.hasAttribute('hidden')) {
-         preview.setAttribute('hidden', '');
-      }
-
-      nameInput.value = '';
-      pictureURLInput.value = '';
-
-      allowFormSubmission(false);
-   }
-   
-   if (value && value.length > 0) {
-      const request = new XMLHttpRequest();
-      const loader = document.getElementById('apply-github-loader');
-
-      request.onreadystatechange = function() {
-         if (this.readyState == 4) {
-            const status = this.status;
-            let profile;
-
-            try {
-               profile = JSON.parse(this.responseText);
-            } catch (err) {
-               new Toast("Something went wrong", { theme: 'red' });
-            }
-
-            switch (status) {
-               case 200:
-                  const name = profile.name || profile.login;
-                  const avatarURL = profile.avatar_url;
-                  const avatar = preview.querySelector('#github-profile-avatar');
-
-                  preview.title = `@github/${profile.login}`;
-
-                  avatar.alt = profile.name;
-                  avatar.src = avatarURL;
-                  preview.querySelector('#github-profile-name').textContent = name;
-                  preview.querySelector('#github-profile-url').href = profile.html_url;
-                  preview.removeAttribute('hidden');
-
-                  nameInput.value = name;
-                  pictureURLInput.value = avatarURL;
-                  allowFormSubmission(true);
-                  break;
-
-               case 404:
-                  errorMessage.removeAttribute('hidden');
-                  break;
-            }
+      function allowFormSubmission(state = true) {
+         const button = document.getElementById('apply-form-trigger');
+         if (state == true) {
+            button.removeAttribute('disabled');
+         }
+         else {
+            button.setAttribute('disabled', '');
          }
       }
 
-      request.onloadstart = function () {
-         loader.removeAttribute('hidden');
-         hideAll();
-      }
-      request.onloadend = function () {
-         loader.setAttribute('hidden', '');
-      }
-      request.open('GET', 'https://api.github.com/users/' + value, true);
-      request.send();
-   } 
-   else {
-      hideAll();
-   }
-})
+      document.forms['candidate-form'].addEventListener('submit', function (event) {
+         event.preventDefault();
+         const form = event.target;
+         let payload;
+
+         const job = form.job.value;
+         const indexName = form.indexName.value;
+         const name = form.name.value;
+         const pictureURL = form.picture_url.value;
+         const email = form.email.value;
+         const phone = form.phone.value;
+         const githubUsername = form.githubUsername.value;
+         const message = form.message.value;
+
+         payload = {
+            job,
+            indexName,
+            name,
+            pictureURL,
+            email,
+            phone,
+            githubUsername,
+            message
+         };
+
+         // Initiate progress bar
+         progressbar.show(true);
+
+         submitPayload('/candidate', payload)
+            .then(function () {
+               form.reset();
+               localStorage.setItem('JOB_SUBMISSION', 'true');
+               window.location.href = '/career/jobs/success';
+            })
+            .finally(function () {
+               // Unmount progress bar
+               progressbar.hide();
+            })
+      });
+
+      document.getElementById('apply-github-username').addEventListener('change', function (ev) {
+         const value = ev.target.value;
+         const errorMessage = document.getElementById('github-profile-unavail-error');
+         const preview = document.getElementById('github-profile-preview');
+         const nameInput = document.querySelector("input[name='name']");
+         const pictureURLInput = document.querySelector("input[name='picture_url']");
+
+         function hideAll() {
+            if (!errorMessage.hasAttribute('hidden')) {
+               errorMessage.setAttribute('hidden', '');
+            }
+
+            if (!preview.hasAttribute('hidden')) {
+               preview.setAttribute('hidden', '');
+            }
+
+            nameInput.value = '';
+            pictureURLInput.value = '';
+
+            allowFormSubmission(false);
+         }
+
+         if (value && value.length > 0) {
+            const request = new XMLHttpRequest();
+            const loader = document.getElementById('apply-github-loader');
+
+            request.onreadystatechange = function () {
+               if (this.readyState == 4) {
+                  const status = this.status;
+                  let profile;
+
+                  try {
+                     profile = JSON.parse(this.responseText);
+                  } catch (err) {
+                     new Toast("Something went wrong", { theme: 'red' });
+                  }
+
+                  switch (status) {
+                     case 200:
+                        const name = profile.name || profile.login;
+                        const avatarURL = profile.avatar_url;
+                        const avatar = preview.querySelector('#github-profile-avatar');
+
+                        preview.title = `@github/${profile.login}`;
+
+                        avatar.alt = profile.name;
+                        avatar.src = avatarURL;
+                        preview.querySelector('#github-profile-name').textContent = name;
+                        preview.querySelector('#github-profile-url').href = profile.html_url;
+                        preview.removeAttribute('hidden');
+
+                        nameInput.value = name;
+                        pictureURLInput.value = avatarURL;
+                        allowFormSubmission(true);
+                        break;
+
+                     case 404:
+                        errorMessage.removeAttribute('hidden');
+                        break;
+                  }
+               }
+            }
+
+            request.onloadstart = function () {
+               loader.removeAttribute('hidden');
+               hideAll();
+            }
+            request.onloadend = function () {
+               loader.setAttribute('hidden', '');
+            }
+            request.open('GET', 'https://api.github.com/users/' + value, true);
+            request.send();
+         }
+         else {
+            hideAll();
+         }
+      })
+   }());
 </script>
 
 <%- include('../partials/_footer') %>
