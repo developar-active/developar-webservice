@@ -3,9 +3,6 @@
       padding-top: 12px;
       padding-bottom: 12px;
    }
-   footer .newsletter .combo-input .controller {
-      min-width: 12em;
-   }
    
    @media screen and (max-width: 400px) {
       footer .newsletter .combo-input .controller {
@@ -28,20 +25,34 @@
             class="controller" 
             placeholder="developar@example.com"
             autocomplete="email"
+            autocapitalize="false"
+            spellcheck="false"
             required />
          <button class="primary trigger" type="submit">Subscribe</button>
       </div>
    </form>
+
+   <div id="newsletter-process-loader" hidden>
+      <%- include('loader.ejs'); %>
+   </div>
 </div>
 
 <script type="application/javascript">
-   document.forms['newsletter-form'].addEventListener('submit', function(event) {
-      event.preventDefault();
-      const email = event.target.email.value;
+   (function () {
+      document.forms['newsletter-form'].addEventListener('submit', function(event) {
+         event.preventDefault();
+         const email = event.target.email.value;
+         const loaderElement = document.getElementById('newsletter-process-loader');
 
-      submitPayload('/subscribe', { email })
-      .then(function () {
-         event.target.reset();
+         loaderElement.removeAttribute('hidden');
+
+         submitPayload('/subscribe', { email })
+         .then(function () {
+            event.target.reset();
+         })
+         .finally(function () {
+            loaderElement.setAttribute('hidden', '');
+         })
       });
-   });
+   }());
 </script>
