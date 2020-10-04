@@ -46,6 +46,18 @@ render(app, {  // EJS Template rendering
    debug: false
 })
 
+// Handle unknown route
+app.use(async ctx => {
+   ctx.status = 404;
+
+   return ctx.render('codes/404', {
+      PAGE_NAME: 'Page not found',
+      PAGE_ROUTE: ctx.url
+   });
+});
+
+
+
 // Start listening
 app.listen(PORT, function () {
 
