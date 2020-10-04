@@ -4,6 +4,29 @@ const OrderRouter = require('./order');
 
 const router = new KoaRouter();
 
+// Subdomain proxy
+router.use(async (ctx, next) => {
+   const [ prefix ] = ctx.subdomains;
+   
+   switch (prefix) {
+
+      /**
+       * @host about.developar.in
+       */
+      case 'about': {
+         const PAGE_NAME = 'About - Our Background, Our Mission';
+
+         return await ctx.render('about', {
+            PAGE_NAME, 
+            PAGE_ROUTE: ctx.url
+         });
+      }
+   }
+
+   return next();
+});
+
+
 // Use /career route
 router.use('/career', CareerRouter.routes(), CareerRouter.allowedMethods());
 
@@ -61,19 +84,6 @@ router.get('/contact', async ctx => {
    const PAGE_NAME = 'Contact';
 
    return await ctx.render('contact', { 
-      PAGE_NAME, 
-      PAGE_ROUTE: ctx.url
-   });
-});
-
-/**
- * About page
- * @route GET /about
- */
-router.get('/about', async ctx => {
-   const PAGE_NAME = 'About - Our Background, Our Mission';
-
-   return await ctx.render('about', {
       PAGE_NAME, 
       PAGE_ROUTE: ctx.url
    });
