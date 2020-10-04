@@ -64,14 +64,6 @@
             ]
          },
          {
-            "name": "Deepmala Gidhwani",
-            "role": "Web developer",
-            "avatar": "https://developarcdn.vercel.app/images/team/deepmala-gidhwani.jpg",
-            "social": [
-               { "name": "@instagram/cute__deepu", "url": "https://www.instagram.com/cute__deepu", "icon": "instagram" }
-            ]
-         },
-         {
             "name": "Aakash Sisodiya",
             "role": "Web & App developer",
             "avatar": "https://developarcdn.vercel.app/images/team/aakash-sisodiya.jpg",
@@ -104,14 +96,6 @@
             "avatar": "https://developarcdn.vercel.app/images/team/bhavin-chauhan.jpg",
             "social": [
                { "name": "@instagram/01bhavin", "url": "https://www.instagram.com/01bhavin", "icon": "instagram" }
-            ]
-         },
-         {
-            "name": "Deepmala Gidhwani",
-            "role": "Graphic & UX / UI Designer",
-            "avatar": "https://developarcdn.vercel.app/images/team/deepmala-gidhwani.jpg",
-            "social": [
-               { "name": "@instagram/cute__deepu", "url": "https://www.instagram.com/cute__deepu", "icon": "instagram" }
             ]
          },
          {
