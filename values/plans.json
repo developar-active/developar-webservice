@@ -6,7 +6,7 @@
       "anim_duration": 200,
       "thumb": {
          "width": "100%",
-         "source": "https://developarcdn.vercel.app/images/building-website-898x884-46kb.png"
+         "source": "https://static.developar.in/images/building-website-898x884-46kb.png"
       },
       "featured": [
          {
@@ -47,15 +47,15 @@
       "techstack": [
          {
             "name": "HTML",
-            "source": "https://developarcdn.vercel.app/images/icons/html-logo.png"
+            "source": "https://static.developar.in/images/icons/html-logo.png"
          },
          {
             "name": "JavaScript",
-            "source": "https://developarcdn.vercel.app/images/icons/js-logo.png"
+            "source": "https://static.developar.in/images/icons/js-logo.png"
          },
          {
             "name": "Wordpress",
-            "source": "https://developarcdn.vercel.app/images/icons/wordpress-logo.png"
+            "source": "https://static.developar.in/images/icons/wordpress-logo.png"
          }
       ],
       "facilities": [
@@ -72,7 +72,7 @@
       "about": "Always deliver more than expected.",
       "thumb": {
          "width": "140%",
-         "source": "https://developarcdn.vercel.app/images/smart-echnology-service-1932x900-30kb.png"
+         "source": "https://static.developar.in/images/smart-echnology-service-1932x900-30kb.png"
       },
       "featured": [
          {
@@ -119,15 +119,15 @@
       "techstack": [
          {
             "name": "php",
-            "source": "https://developarcdn.vercel.app/images/icons/php-logo.png"
+            "source": "https://static.developar.in/images/icons/php-logo.png"
          },
          {
             "name": "VueJS",
-            "source": "https://developarcdn.vercel.app/images/icons/vue-logo.png"
+            "source": "https://static.developar.in/images/icons/vue-logo.png"
          },
          {
             "name": "Firebase",
-            "source": "https://developarcdn.vercel.app/images/icons/firebase-logo.png"
+            "source": "https://static.developar.in/images/icons/firebase-logo.png"
          }
       ],
       "facilities": [
@@ -144,7 +144,7 @@
       "anim_duration": 400,
       "thumb": {
          "width": "100%",
-         "source": "https://developarcdn.vercel.app/images/for-easy%20maintenance-2501x2501-72kb.png"
+         "source": "https://static.developar.in/images/for-easy%20maintenance-2501x2501-72kb.png"
       },
       "min_price": 18000,
       "featured": [
@@ -192,15 +192,15 @@
       "techstack": [
          {
             "name": "React Library",
-            "source": "https://developarcdn.vercel.app/images/icons/react-logo.png"
+            "source": "https://static.developar.in/images/icons/react-logo.png"
          },
          {
             "name": "NodeJS",
-            "source": "https://developarcdn.vercel.app/images/icons/nodejs-logo.png"
+            "source": "https://static.developar.in/images/icons/nodejs-logo.png"
          },
          {
             "name": "MongoDB",
-            "source": "https://developarcdn.vercel.app/images/icons/mongodb-logo.png"
+            "source": "https://static.developar.in/images/icons/mongodb-logo.png"
          }
       ],
       "facilities": [
@@ -216,22 +216,22 @@
       "about": "In my opinion, the future of mobile is the future of everything.",
       "thumb": {
          "width": "120%",
-         "source": "https://developarcdn.vercel.app/images/user-interface-2500x2500-44kb.png"
+         "source": "https://static.developar.in/images/user-interface-2500x2500-44kb.png"
       },
       "anim_duration": 500,
       "min_price": 18000,
       "techstack": [
          {
             "name": "React Native",
-            "source": "https://developarcdn.vercel.app/images/icons/react-logo.png"
+            "source": "https://static.developar.in/images/icons/react-logo.png"
          },
          {
             "name": "Ionic Framework",
-            "source": "https://developarcdn.vercel.app/images/icons/ionic-logo.png"
+            "source": "https://static.developar.in/images/icons/ionic-logo.png"
          },
          {
             "name": "Firebase",
-            "source": "https://developarcdn.vercel.app/images/icons/firebase-logo.png"
+            "source": "https://static.developar.in/images/icons/firebase-logo.png"
          }
       ],
       "facilities": [
@@ -248,22 +248,22 @@
       "anim_duration": 600,
       "thumb": {
          "width": "130%",
-         "source": "https://developarcdn.vercel.app/images/seobilty-service-2092x2092-58kb.png"
+         "source": "https://static.developar.in/images/seobilty-service-2092x2092-58kb.png"
       },
       "min_price": 15000,
       "monthly_charge": true,
       "techstack": [
          {
             "name": "Google",
-            "source": "https://developarcdn.vercel.app/images/icons/google-logo.png"
+            "source": "https://static.developar.in/images/icons/google-logo.png"
          },
          {
             "name": "Google Ads",
-            "source": "https://developarcdn.vercel.app/images/icons/google-ad-logo.png"
+            "source": "https://static.developar.in/images/icons/google-ad-logo.png"
          },
          {
             "name": "Gmail",
-            "source": "https://developarcdn.vercel.app/images/icons/gmail-logo.png"
+            "source": "https://static.developar.in/images/icons/gmail-logo.png"
          }
       ],
       "facilities": [
@@ -279,21 +279,21 @@
       "about": "The secret of quality isn't creation...It's maintenance.",
       "thumb": {
          "width": "100%",
-         "source": "https://developarcdn.vercel.app/images/worktime-2501x2501-127kb.png"
+         "source": "https://static.developar.in/images/worktime-2501x2501-127kb.png"
       },
       "anim_duration": 700,
       "techstack": [
          {
             "name": "Git",
-            "source": "https://developarcdn.vercel.app/images/icons/git-logo.png"
+            "source": "https://static.developar.in/images/icons/git-logo.png"
          },
          {
             "name": "Bugzilla",
-            "source": "https://developarcdn.vercel.app/images/icons/bugzilla-logo.png"
+            "source": "https://static.developar.in/images/icons/bugzilla-logo.png"
          },
          {
             "name": "Jira",
-            "source": "https://developarcdn.vercel.app/images/icons/jira-logo.png"
+            "source": "https://static.developar.in/images/icons/jira-logo.png"
          }
       ],
       "facilities": [
