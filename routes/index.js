@@ -111,6 +111,9 @@ router.get('/team/:role?', async ctx => {
       case 'dm':
          index = 'designMarketing';
          break;
+      case 'analyst':
+         index = 'analyst';
+         break;
    }
 
    collection = team[index];

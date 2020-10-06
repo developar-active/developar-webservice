@@ -13,7 +13,8 @@
    const memberRoles = [
       { label: 'Pioneers', route: '/team' },
       { label: 'Developers', route: '/team/developers' },
-      { label: 'Design & Marketing', route: '/team/dm' }
+      { label: 'Design & Marketing', route: '/team/dm' },
+      { label: 'Analyst', route: '/team/analyst' }
    ];
 %>
 
@@ -67,7 +68,7 @@
 <main>
    <section id="team">
 
-      <div class="member-sector" data-member-role="pioneers">
+      <div class="member-sector">
          <header class="text-center">
             <h2><%= collection.name %></h2>
             <p><small>A good team is like a strong foundation of a house, <br />that's why even a storm or rain can't shake a house, <br />Just like that our team is the foundation for us.</small></p>
@@ -88,5 +89,5 @@
       </div>
    </section>
 </main>
-
+   
 <%- include('partials/_footer') %>
