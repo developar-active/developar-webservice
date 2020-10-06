@@ -1,3 +1,11 @@
+<%
+    let id;
+
+    if (typeof locals.PAGE_ID === 'string' && locals.PAGE_ID.length > 0) {
+        id = locals.PAGE_ID;
+    }
+%>
+
 <style type="text/css">
    header#topbar {
        position: fixed;
@@ -231,7 +239,7 @@
    <div class="links container">
       <ul>
          <% for (const link of links) { %>
-         <li class="<%= (link.route === PAGE_ROUTE)? 'active': 'no-active' %>">
+         <li class="<%= (link.ref === id)? 'active': 'no-active' %>">
             <a title="<%= link.label %>" href="<%= link.route %>">
                <%= link.label %>
             </a>
