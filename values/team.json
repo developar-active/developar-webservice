@@ -5,7 +5,7 @@
 
       "members": [
          {
-            "name": "Aakash Sisodiya",
+            "name": "Aakash",
             "role": "Founder & Managing Director",
             "about": "Aakash is the founder and owner of DevelopAR and the founder and owner of the parent company AR. A person with an ambitious and inspiring personality.",
             "avatar": "https://static.developar.in/images/team/aakash-sisodiya.jpg",
@@ -16,14 +16,24 @@
             ]
          },
          {
-            "name": "Rajat Sharma",
-            "role": "Co-founder & Managing Director",
+            "name": "Rajat",
+            "role": "CEO & Co-founder",
             "about": "Rajat is the co-founder and co-owner of DevelopAR. A person who speaks not much and gives importance to work. A man with a delightful and attractive personality.",
             "avatar": "https://static.developar.in/images/team/rajat-sharma.jpg",
             "social": [
                { "name": "@instagram/energetic.coder", "url": "https://www.instagram.com/energetic.coder", "icon": "instagram" },
                { "name": "@github/rajatprototype", "url": "https://github.com/rajatprototype", "icon": "github" },
                { "name": "@twitter/rajat04500210", "url": "https://mobile.twitter.com/rajat04500210", "icon": "twitter" }
+            ]
+         },
+         {
+            "name": "Tirthak",
+            "role": "Chief Marketing Manager",
+            "about": "A Student by profession, Entrepreneur by passion, Marketing is my fashion, Google Cloud is my web home, Communicating with newbies & Convincing others is in my nature.",
+            "avatar": "https://static.developar.in/images/team/tirthak-patel.jpg",
+            "social": [
+               { "name": "@instagram/tirthak_t_patel", "url": "https://www.instagram.com/tirthak_t_patel", "icon": "instagram" },
+               { "name": "@twitter/tirthak_patel", "url": "https://twitter.com/tirthak_patel", "icon": "twitter" }
             ]
          }
       ]
@@ -35,7 +45,7 @@
 
       "members": [
          {
-            "name": "Shreyansh Thoriya",
+            "name": "Shreyansh",
             "role": "Web & Flutter developer",
             "avatar": "https://static.developar.in/images/team/shreyansh-thoria.jpg",
             "resume": "https://static.developar.in/docs/resumes/shreyansh-thoria.pdf",
@@ -45,7 +55,7 @@
             ]
          },
          {
-            "name": "Veer Patel",
+            "name": "Veer",
             "role": "Backend technologies",
             "avatar": "https://static.developar.in/images/team/veer-patel.jpg",
             "resume": "https://static.developar.in/docs/resumes/veer-patel.pdf",
@@ -55,7 +65,7 @@
             ]
          },
          {
-            "name": "Preksha Chaudhary",
+            "name": "Preksha",
             "role": "Frontend & CMS",
             "avatar": "https://static.developar.in/images/team/preksha-chaudhary.jpg",
             "social": [
@@ -64,7 +74,7 @@
             ]
          },
          {
-            "name": "Aakash Sisodiya",
+            "name": "Aakash",
             "role": "Web & App developer",
             "avatar": "https://static.developar.in/images/team/aakash-sisodiya.jpg",
             "social": [
@@ -74,7 +84,7 @@
             ]
          },
          {
-            "name": "Rajat Sharma",
+            "name": "Rajat",
             "role": "Fullstack developer",
             "avatar": "https://static.developar.in/images/team/rajat-sharma.jpg",
             "social": [
@@ -85,13 +95,14 @@
          }
       ]
    },
+
    "designMarketing": {
       "type": "SECONDARY",
       "name": "Design & Marketing",
 
       "members": [
          {
-            "name": "Bhavin Chauhan",
+            "name": "Bhavin",
             "role": "Graphic Designer",
             "avatar": "https://static.developar.in/images/team/bhavin-chauhan.jpg",
             "social": [
@@ -99,7 +110,7 @@
             ]
          },
          {
-            "name": "Jay Thakkar",
+            "name": "Jay",
             "role": "UX / UI Designer",
             "avatar": "https://static.developar.in/images/team/jay-thakkar.jpg",
             "social": [
@@ -109,11 +120,29 @@
             ]
          },
          {
-            "name": "Anniruddhsinh Solanki",
+            "name": "Anniruddhsinh",
             "role": "Graphic Designer",
             "avatar": "https://static.developar.in/images/team/anniruddhsinh-solanki.jpg",
             "social": [
                { "name": "@instagram/_im_anni_", "url": "https://www.instagram.com/_im_anni_", "icon": "instagram" }
+            ]
+         }
+      ]
+   },
+
+   "analyst": {
+      "type": "SECONDARY",
+      "name": "Analyst",
+
+      "members": [
+         {
+            "name": "Aftab",
+            "role": "Analyst",
+            "avatar": "https://static.developar.in/images/team/aftab-sipahi.jpg",
+            "social": [
+               {  "name": "@github/sipahiaftab", "url": "https://github.com/sipahiaftab", "icon": "github" },
+               { "name": "@instagram/01bhavin", "url": "https://instagram.com/aftabthequreshi", "icon": "instagram" },
+               { "name": "@twitter/jay_thakkar88", "url": "https://twitter.com/Aftab_Sipahi", "icon": "twitter" }
             ]
          }
       ]
