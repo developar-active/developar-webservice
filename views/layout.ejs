@@ -93,8 +93,10 @@
    <script defer type="application/javascript" src="https://unpkg.com/aos@next/dist/aos.js"></script>
    <script async type="application/javascript" src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
 
-   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179260420-1"></script>
-   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-179260420-1');</script>
+   <% if (process.env.NODE_ENV === 'production') { %>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179260420-1"></script>
+      <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-179260420-1');</script>
+   <% } %>
 
    <style type="text/css">
       /*--- Load Questrial fonts ---*/
