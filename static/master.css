@@ -26,6 +26,27 @@ main.blur * {
     pointer-events: none;
 }
 
+header.hero-title {
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+   justify-content: center;
+   min-height: 220px;
+}
+header.hero-title h1 {
+   font-size: 3.5rem;
+   font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+   header.hero-title {
+      padding: 12px;
+      min-height: 140px;
+   }
+   header.hero-title h1 {
+      font-size: 2.3rem;
+   }
+}
+
 .use-red {
    --pcolor: var(--red);
    --pcolor-dark: var(--red-dark);
@@ -204,6 +225,11 @@ a.no-effect {
       opacity: 1;
       transform: scale(1);
    }
+}
+
+.form-controller-outlined {
+   background-color: transparent;
+   border: 1px solid var(--pcolor);
 }
 
 .toast {

@@ -11,117 +11,106 @@
 %>
 
 <style type="text/css">
+
    main section#contact {
-      display: flex;
-      padding-top: 2em;
-      height: 80vh;
-      justify-content: center;
+      padding-bottom: 4rem;
+      background-color: #F8F8F8;
    }
 
-   main section#contact .content {
-      padding: 1em 0;
+   main section#contact .container {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 45%;
-      height: 29em;
-      border-radius: 12px;
-      box-shadow: 0 0 8px #CCC;
+      flex-direction: row;
+      justify-content: space-evenly;
+   }
+
+   main section#contact .form-wrapper {
+      min-width: 29em;
+      padding: 22px 2em;
+      border-radius: 8px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
       background-color: #FFF;
    }
 
-   main section#contact .content form {
-      padding-top: 1.6em;
-   }
-
    @media screen and (max-width: 1024px) {
-      main section#contact .content {
-         width: 70%;
-      }
+      
    }
 
    @media screen and (max-width: 767px) {
-      main section#contact {
-         height: 100vh;
-      }
-
-      main section#contact .content {
-         padding: 0;
-         height: 70vh;
-         width: 90%;
-      }
-
-      @media (orientation: landscape) {
-         main section#contact {
-            height: 100vh;
-         }
-
-         main section#contact .content {
-            height: 100%;
-            width: 65%;
-         }
+      main section#contact .form-wrapper {
+         width: 75%;
+         min-width: unset;
       }
    }
 
    @media screen and (max-width: 400px) {
-      main section#contact .content {
-         width: 100%;
-         border-radius: 0;
-      }
+
    }
 </style>
 
-<%- include('./partials/_header', { raised: false, PAGE_ROUTE }); %>
-
-<%- include('partials/_curve_bg', { className: 'contact' }) %>
+<%- include('./partials/_header', { raised: true, PAGE_ROUTE }); %>
 
 <main>
    <section id="contact">
-      <div class="wrapper content" data-aos="fade-up">
-         <header class="text-center">
-            <h1>Contact Us</h1>
-            <p>We'd love to here from you</p>
-         </header>
 
-         <form name="contact-form">
-            <div class="control-wrapper">
-               <input 
-                  type="text" 
-                  name="name" 
-                  id="name" 
-                  placeholder="Fullname" 
-                  title="Fullname" 
-                  tabindex="1"
-                  required />
-            </div>
+      <header class="hero-title">
+         <h1>We'd love to here from you</h1>
+      </header>
 
-            <div class="control-wrapper">
-               <input 
-                  type="email" 
-                  name="email" 
-                  id="email" 
-                  placeholder="Email address" 
-                  title="Email address"
-                  tabindex="2" 
-                  required />
-            </div>
+      <div class="container">
+         <div class="form-wrapper" data-aos="fade-up">
+            <header class="text-cente">
+               <h2>Contact Us</h2>
+               <p>Need just a few</p>
+            </header>
+   
+            <br />
+            <form name="contact-form">
+               <div class="control-wrapper">
+                  <label for="name">Username</label>
+                  <input 
+                     type="text" 
+                     name="name" 
+                     id="name" 
+                     title="Fullname" 
+                     tabindex="1"
+                     class="form-controller-outlined"
+                     required />
+               </div>
+   
+               <div class="control-wrapper">
+                  <label for="email">Email address</label>
+                  <input 
+                     type="email" 
+                     name="email" 
+                     id="email" 
+                     title="Email address"
+                     tabindex="2" 
+                     required />
+               </div>
+   
+               <div class="control-wrapper">
+                  <label for="message">Your message</label>
+                  <textarea 
+                     name="message" 
+                     id="message" 
+                     title="Your message" 
+                     tabindex="3"
+                     rows="3" 
+                     required></textarea>
+               </div>
+   
+               <div class="control-wrapper text-cente">
+                  <button type="submit" class="primary" tabindex="4">Send</button>
+               </div>
 
-            <div class="control-wrapper">
-               <textarea 
-                  name="message" 
-                  id="message" 
-                  placeholder="Your message" 
-                  title="Your message" 
-                  tabindex="3"
-                  rows="3" 
-                  required></textarea>
-            </div>
+               <div>
+                  <p>
+                     <small><span class="text-blur">Read our</span>&nbsp;<a href="/privacy" target="_blank">Privacy Policy</a></small>
+                  </p>
+               </div>
+            </form>
+         </div>
 
-            <div class="control-wrapper text-center">
-               <button type="submit" class="primary" tabindex="4">Send</button>
-            </div>
-         </form>
       </div>
    </section>
 </main>
@@ -143,7 +132,7 @@
          };
    
          // Initiate progress bar
-         progressbar.show(false, 'white');
+         progressbar.show(true);
    
          submitPayload('/contact', payload)
          .then (function () {
