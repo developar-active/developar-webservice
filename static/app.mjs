@@ -119,18 +119,6 @@ function reserveHeaderReisedEvent() {
     }
 }
 
-function autoScrollToInternalHashTarget() {
-    const validPath = ['/privacy/', '/terms/'];
-
-    if (validPath.includes(window.location.pathname) && window.location.hash !== '') {
-        const targetBlock = document.getElementById(window.location.hash.substr(1));
-
-        if (targetBlock && targetBlock instanceof HTMLElement && targetBlock.classList.contains('relate-hash')) {
-            targetBlock.classList.add('scrolled-highlight');
-        }
-    }
-}
-
 function useCollapsibleDropdowns() {
     const nodelist = document.getElementsByClassName('collapsible');
 
@@ -294,8 +282,6 @@ const progressbar = {
 };
 
 window.onload = function () {
-
-    autoScrollToInternalHashTarget();
 
     reserveHeaderReisedEvent();
 
