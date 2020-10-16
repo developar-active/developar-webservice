@@ -11,10 +11,7 @@ router.use('/order', OrderRouter.routes(), OrderRouter.allowedMethods());
  * @route GET /
  */
 router.get('/', async function (ctx) {
-   const PAGE_NAME = 'Home';
-
    return await ctx.render('index', { 
-      PAGE_NAME, 
       PAGE_ROUTE: ctx.url
    });
 });

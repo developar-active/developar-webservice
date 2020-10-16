@@ -37,10 +37,10 @@
 <html lang="en">
 
 <head>
-   <% if (PAGE_ROUTE === '/') { %>
-      <title>Developar - A progressive web development company</title>
-   <% } else { %>
+   <% if (typeof locals.PAGE_NAME === 'string') { %>
       <title><%= PAGE_NAME %> • Developar</title>
+   <% } else { %>
+      <title>Developar - A progressive web development company</title>
    <% } %>
 
    <meta charset="UTF-8" />
