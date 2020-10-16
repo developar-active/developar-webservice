@@ -4,9 +4,9 @@ const router = new KoaRouter();
 
 /**
  * Career page
- * @route GET /career
+ * @route GET /
  */
-router.get('/', async ctx => {
+router.get('/', async function (ctx) {
    const PAGE_NAME = 'Careers';
 
    return await ctx.render('career', { 
@@ -17,9 +17,9 @@ router.get('/', async ctx => {
 
 /**
  * Jobs page
- * @route GET /career/jobs
+ * @route GET /jobs
  */
-router.get('/jobs', async ctx => {
+router.get('/jobs', async function (ctx) {
    const PAGE_NAME = 'Jobs';
    const jobs = require('../values/jobs.json');
 
@@ -30,7 +30,7 @@ router.get('/jobs', async ctx => {
    });
 });
 
-router.get('/jobs/success', async ctx => {
+router.get('/jobs/success', async function (ctx) {
    const PAGE_NAME = 'Thanks for apply';
 
    return ctx.render('jobs/success', {
@@ -41,19 +41,25 @@ router.get('/jobs/success', async ctx => {
 
 /**
  * Job's post detail
- * @route GET /career/jobs/:postId
+ * @route GET /jobs/[postId]
  */
-router.get('/jobs/:postId', async ctx => {
+router.get('/jobs/:postId', async function (ctx) {
    const { postId } = ctx.params;
 
    let PAGE_NAME;
    let post;
    const jobs = require('../values/jobs.json');
 
-   post = jobs.find(job => job.id === postId) || null;
+   post = jobs.find(function (job) {
+      return job.id === postId;
+   }) || undefined;
 
    if (!post) {
-      return ctx.redirect('/career/jobs');
+      ctx.response.status = 404;
+      return ctx.render('codes/404', {
+         PAGE_NAME: 'Job not found',
+         PAGE_ROUTE: ctx.url
+      });
    }
 
    PAGE_NAME = `Apply for ${post.name.toLocaleLowerCase()}`;

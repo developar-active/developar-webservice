@@ -6,7 +6,7 @@ const router = new KoaRouter();
  * Order success page
  * @route GET /order/success
  */
-router.get('/success', async ctx => {
+router.get('/success', async function (ctx) {
 	const PAGE_NAME = 'Thanks for placing order';
 
 	return await ctx.render('order/success', {
@@ -19,7 +19,7 @@ router.get('/success', async ctx => {
  * Order Page
  * @route GET /order/:planId
  */
-router.get('/:planId', async ctx => {
+router.get('/:planId', async function (ctx) {
    const { planId } = ctx.params;
    const plans = require('../values/plans.json');
    let PAGE_NAME;
