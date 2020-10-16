@@ -1,3 +1,9 @@
+<%
+	if (typeof locals.PAGE_NAME === 'undefined') {
+		locals.PAGE_NAME = "404 Page not found";
+	}
+%>
+
 <style type="text/css">
 	main {
 		display: flex;
@@ -24,7 +30,7 @@
 				alt="DevelopAR" />
 		</div>
 		<header>
-			<h2>404 Page not found</h2>
+			<h2><%= PAGE_NAME %></h2>
 		</header>
 		<p>
 			<a class="text-blur hoverable focused" href="http://developar.in" title="Goto developar.in">
