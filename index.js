@@ -15,6 +15,8 @@ const serve = require('koa-static');
 const render = require('koa-ejs');
 const path = require('path');
 
+const subdomain = new (require('koa-subdomain'));
+
  // Koa router
 const router = require('./routes');
 
@@ -28,6 +30,16 @@ let cacheTemplate = false;
 if (onProduction) {
    cacheTemplate = true;
 }
+
+// Reserve subdomains
+/** @host careers.developar.in */
+subdomain.use('careers', require('./routes/career').routes());
+
+/** @host about.developar.in */
+subdomain.use('about', require('./routes/about').routes());
+
+// Use subdomain
+app.use(subdomain.routes());
 
 // Base router
 app
