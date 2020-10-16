@@ -63,7 +63,7 @@
    }
 </style>
 
-<%- include('partials/_header_secondary', { raised: true }); %>
+<%- include('../partials/_header_secondary', { raised: true }); %>
 
 <main>
    <section id="team">
@@ -82,12 +82,12 @@
          </div>
 
          <% if (collection.type === 'PRIMARY') { %>
-            <%- include('partials/_render_primary_team_members', { members: collection.members }); %>
+            <%- include('../partials/_render_primary_team_members', { members: collection.members }); %>
          <% } else { %>
-            <%- include('partials/_render_secondary_team_members', { members: collection.members }); %>
+            <%- include('../partials/_render_secondary_team_members', { members: collection.members }); %>
          <% } %>
       </div>
    </section>
 </main>
    
-<%- include('partials/_footer') %>
+<%- include('../partials/_footer') %>
