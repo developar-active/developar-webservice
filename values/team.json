@@ -8,7 +8,7 @@
             "name": "Aakash",
             "role": "Founder & Managing Director",
             "about": "Aakash is the founder and owner of DevelopAR and the founder and owner of the parent company AR. A person with an ambitious and inspiring personality.",
-            "avatar": "https://static.developar.in/images/team/aakash-sisodiya.jpg",
+            "avatar": "https://static.developar.in/images/team/aakash.jpg",
             "social": [
                { "name": "@instagram/sakam_vyom", "url": "https://instagram.com/sakam_vyom", "icon": "instagram" },
                { "name": "@github/SisodiyaAakash", "url": "https://github.com/SisodiyaAakash", "icon": "github" },
@@ -19,7 +19,7 @@
             "name": "Rajat",
             "role": "CEO & Co-founder",
             "about": "Rajat is the co-founder and co-owner of DevelopAR. A person who speaks not much and gives importance to work. A man with a delightful and attractive personality.",
-            "avatar": "https://static.developar.in/images/team/rajat-sharma.jpg",
+            "avatar": "https://static.developar.in/images/team/rajat.jpg",
             "social": [
                { "name": "@instagram/energetic.coder", "url": "https://www.instagram.com/energetic.coder", "icon": "instagram" },
                { "name": "@github/rajatprototype", "url": "https://github.com/rajatprototype", "icon": "github" },
@@ -30,7 +30,7 @@
             "name": "Tirthak",
             "role": "Chief Marketing Manager",
             "about": "A Student by profession, Entrepreneur by passion, Marketing is my fashion, Google Cloud is my web home, Communicating with newbies & Convincing others is in my nature.",
-            "avatar": "https://static.developar.in/images/team/tirthak-patel.jpg",
+            "avatar": "https://static.developar.in/images/team/tirthak.jpg",
             "social": [
                { "name": "@instagram/tirthak_t_patel", "url": "https://www.instagram.com/tirthak_t_patel", "icon": "instagram" },
                { "name": "@twitter/tirthak_patel", "url": "https://twitter.com/tirthak_patel", "icon": "twitter" }
@@ -47,7 +47,7 @@
          {
             "name": "Shreyansh",
             "role": "Web & Flutter developer",
-            "avatar": "https://static.developar.in/images/team/shreyansh-thoria.jpg",
+            "avatar": "https://static.developar.in/images/team/shreyansh.jpg",
             "resume": "https://static.developar.in/docs/resumes/shreyansh-thoria.pdf",
             "social": [
                { "name": "@instagram/_shreyansh027_", "url": "https://www.instagram.com/_shreyansh027_", "icon": "instagram" },
@@ -57,7 +57,7 @@
          {
             "name": "Veer",
             "role": "Backend technologies",
-            "avatar": "https://static.developar.in/images/team/veer-patel.jpg",
+            "avatar": "https://static.developar.in/images/team/veer.jpg",
             "resume": "https://static.developar.in/docs/resumes/veer-patel.pdf",
             "social": [
                { "name": "@instagram/mr_error4221", "url": "https://www.instagram.com/mr_error4221", "icon": "instagram" },
@@ -67,7 +67,7 @@
          {
             "name": "Preksha",
             "role": "Frontend & CMS",
-            "avatar": "https://static.developar.in/images/team/preksha-chaudhary.jpg",
+            "avatar": "https://static.developar.in/images/team/preksha.jpg",
             "social": [
                { "name": "@instagram/prek__shaa", "url": "https://www.instagram.com/prek__shaa", "icon": "instagram" },
                { "name": "@twitter/PrekshaChaudha", "url": "https://twitter.com/PrekshaChaudha", "icon": "twitter" }
@@ -76,7 +76,7 @@
          {
             "name": "Aakash",
             "role": "Web & App developer",
-            "avatar": "https://static.developar.in/images/team/aakash-sisodiya.jpg",
+            "avatar": "https://static.developar.in/images/team/aakash.jpg",
             "social": [
                { "name": "@instagram/sakam_vyom", "url": "https://www.instagram.com/sakam_vyom", "icon": "instagram" },
                { "name": "@github/SisodiyaAakash", "url": "https://github.com/SisodiyaAakash", "icon": "github" },
@@ -86,7 +86,7 @@
          {
             "name": "Rajat",
             "role": "Fullstack developer",
-            "avatar": "https://static.developar.in/images/team/rajat-sharma.jpg",
+            "avatar": "https://static.developar.in/images/team/rajat.jpg",
             "social": [
                { "name": "@instagram/energetic.coder", "url": "https://www.instagram.com/energetic.coder", "icon": "instagram" },
                { "name": "@github/rajatprototype", "url": "https://github.com/rajatprototype", "icon": "github" },
@@ -104,7 +104,7 @@
          {
             "name": "Bhavin",
             "role": "Graphic Designer",
-            "avatar": "https://static.developar.in/images/team/bhavin-chauhan.jpg",
+            "avatar": "https://static.developar.in/images/team/bhavin.jpg",
             "social": [
                { "name": "@instagram/01bhavin", "url": "https://www.instagram.com/01bhavin", "icon": "instagram" }
             ]
@@ -112,7 +112,7 @@
          {
             "name": "Jay",
             "role": "UX / UI Designer",
-            "avatar": "https://static.developar.in/images/team/jay-thakkar.jpg",
+            "avatar": "https://static.developar.in/images/team/jay.jpg",
             "social": [
                { "name": "@instagram/hot_poison_", "url": "https://www.instagram.com/hot_poison_", "icon": "instagram" },
                { "name": "@facebook/jay.thakkar.3726", "url": "https://www.facebook.com/jay.thakkar.3726", "icon": "facebook" },
@@ -122,7 +122,7 @@
          {
             "name": "Anniruddhsinh",
             "role": "Graphic Designer",
-            "avatar": "https://static.developar.in/images/team/anniruddhsinh-solanki.jpg",
+            "avatar": "https://static.developar.in/images/team/anniruddhsinh.jpg",
             "social": [
                { "name": "@instagram/_im_anni_", "url": "https://www.instagram.com/_im_anni_", "icon": "instagram" }
             ]
@@ -138,7 +138,7 @@
          {
             "name": "Aftab",
             "role": "Analyst",
-            "avatar": "https://static.developar.in/images/team/aftab-sipahi.jpg",
+            "avatar": "https://static.developar.in/images/team/aftab.jpg",
             "social": [
                {  "name": "@github/sipahiaftab", "url": "https://github.com/sipahiaftab", "icon": "github" },
                { "name": "@instagram/01bhavin", "url": "https://instagram.com/aftabthequreshi", "icon": "instagram" },
