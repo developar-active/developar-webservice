@@ -110,6 +110,15 @@
             ]
          },
          {
+            "name": "Parth",
+            "role": "Media Management",
+            "avatar": "https://static.developar.in/images/team/parth.jpg",
+            "social": [
+               { "name" : "@instagram/parth_chaudhary22", "url": "https://instagram.com/parth_chaudhary22", "icon": "instagram" },
+               { "name": "@twitter/AlphaDynoo", "url": "https://twitter.com/AlphaDynoo", "icon": "twitter" }
+            ]
+         },
+         {
             "name": "Jay",
             "role": "UX / UI Designer",
             "avatar": "https://static.developar.in/images/team/jay.jpg",
