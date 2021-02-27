@@ -27,9 +27,9 @@
        --pcolor: #FFF;
    }
 
-   header#topbar .title h2 {
+   header#topbar .title .brand-title {
        color: #FFF;
-       font-size: 2.5em;
+       font-size: 2rem;
        transition: font-size 0.2s ease, color 0.1s linear;
    }
 
@@ -74,7 +74,7 @@
        border-bottom: 1px solid #EEE;
    }
 
-   header#topbar.raised:not([area-expanded]) .title h2 {
+   header#topbar.raised:not([area-expanded]) .title .brand-title {
        color: #333;
        font-size: 2em;
    }
@@ -225,11 +225,11 @@
 
 <header id="topbar" class="<%= (raised)? 'raised': 'no-raised' %>">
    <div class="title container">
-      <h2>
+      <h1 class="brand-title">
          <a href="http://developar.in" class="no-effect" title="developar.in">
             <span>Develop</span><span class="text-primary">ar</span>
          </a>
-      </h2>
+      </h1>
       <div class="menu-toggle">
          <button title="Expand menu" class="icon block" onclick="toggleHeaderNavigation()">
             <i data-feather="chevron-down"></i>
