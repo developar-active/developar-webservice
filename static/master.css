@@ -669,7 +669,9 @@ a.no-effect {
       align-items: flex-start;
    }
    .hero.note .content {
-      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
    }
 }
 @media screen and (max-width: 400px) {
