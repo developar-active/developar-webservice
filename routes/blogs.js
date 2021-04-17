@@ -1,6 +1,7 @@
 const KoaRouter = require('koa-router');
 
 const router = new KoaRouter();
+const blogs = require('../values/blogs.json');
 
 /**
  * Blog page
@@ -11,7 +12,8 @@ const router = new KoaRouter();
 
 	return await ctx.render('blogs/index', {
 		PAGE_NAME,
-		PAGE_ROUTE: ctx.url
+		PAGE_ROUTE: ctx.url,
+		blogs
 	});
 });
 

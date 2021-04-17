@@ -1,0 +1,77 @@
+<style>
+   .blog {
+       display: flex;
+       width: inherit;
+       padding: 12px;
+       margin-top: 1rem;
+       margin-bottom: 1rem;
+       border-radius: 12px;
+       flex-direction: column;
+       border-width: 1px;
+       border-style: solid;
+       border-color: transparent;
+       transition: box-shadow 120ms ease;
+   }
+
+   .blog:hover {
+       box-shadow: 0 30px 60px #DDD;
+       border-color: #F0F0F0;
+   }
+
+   .blog:hover .thumbnail-wrapper img {
+       filter: brightness(0.8);
+       transform: scale(0.98);
+   }
+
+   .blog .thumbnail-wrapper {
+       width: 100%;
+   }
+
+   .blog .thumbnail-wrapper img {
+       width: 100%;
+       height: auto;
+       transition: 120ms;
+   }
+
+   .blog .blog-title {
+       color: #333;
+   }
+
+   @media screen and (max-width: 767px) {
+       .blog {
+           padding-left: 1rem;
+           padding-right: 1rem;
+       }
+       
+       .blog:hover {
+           box-shadow: none;
+       }
+   }
+</style>
+
+<a 
+   href="<%= blog.url %>" 
+   data-blog-url="<%= blog.url %>"
+   data-blog-id="<%= blog.id %>"
+   target="_blank" 
+   class="blog"
+   data-aos="fade-up"
+   data-aos-delay="120" 
+   data-aos-duration="4500">
+
+   <div class="thumbnail-wrapper">
+      <img 
+           src="<%= blog.thumbnail %>" 
+           alt="<%= blog.title %>" />
+   </div>
+
+   <h2 class="blog-title"><%= blog.title %></h2>
+
+   <p class="blog-publish-date"><small><%= blog.publishDate %></small></p>
+
+   <div class="summary">
+       <% for (const note of blog.summary) { %>
+           <p><%= note %></p>
+       <% } %>
+   </div>
+</a>

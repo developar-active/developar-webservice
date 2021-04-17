@@ -12,11 +12,46 @@
 
 <%- include('../partials/_header', { raised: true, PAGE_ROUTE }); %>
 
+<style type="text/css">
+   main section#blogs {
+      padding-bottom: 4rem;
+   }
+
+   main section#blogs .container .blogs-wrapper {
+      margin-left: auto;
+      margin-right: auto;
+      width: 52vw;
+   }
+
+   @media screen and (max-width: 1024px) {
+      main section#blogs .container .blogs-wrapper {
+         width: 60vw;
+      }
+   }
+
+   @media screen and (max-width: 767px) {
+      main section#blogs .container .blogs-wrapper {
+         width: auto;
+         margin-left: unset;
+         margin-right: unset;
+      }
+   }
+</style>
 
 <main>
    <section id="blogs">
-      <header class="hero-title">
+      <header class="hero-title" data-aos="zoom-in-down">
          <h1>All stories</h1>
       </header>
+
+      <div class="container">
+         <div class="blogs-wrapper">
+            <% for (const blog of blogs) { %>
+               <%- include("./_post", { blog }) %>
+            <% } %>
+         </div>
+      </div>
    </section>
 </main>
+
+<%- include('../partials/_footer') %>
