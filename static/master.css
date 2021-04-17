@@ -938,3 +938,12 @@ a.no-effect {
       display: none !important;
    }
 }
+
+@keyframes fade-in {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
