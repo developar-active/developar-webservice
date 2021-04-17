@@ -23,6 +23,11 @@
       width: 52vw;
    }
 
+   main section#blogs .blog-header-title {
+      animation-name: fade-in;
+      animation-duration: 2s;
+   }
+
    @media screen and (max-width: 1024px) {
       main section#blogs .container .blogs-wrapper {
          width: 60vw;
@@ -40,7 +45,7 @@
 
 <main>
    <section id="blogs">
-      <header class="hero-title" data-aos="zoom-in-down">
+      <header class="hero-title blog-header-title">
          <h1>All stories</h1>
       </header>
 
