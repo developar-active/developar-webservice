@@ -38,6 +38,9 @@ subdomain.use('careers', require('./routes/career').routes());
 /** @host about.developar.in */
 subdomain.use('about', require('./routes/about').routes());
 
+/** @host blogs.developar.in */
+subdomain.use('blogs', require('./routes/blogs').routes());
+
 // Use subdomain
 app.use(subdomain.routes());
 
