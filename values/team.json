@@ -6,7 +6,7 @@
       "members": [
          {
             "name": "Aakash",
-            "role": "Founder & Managing Director",
+            "role": "Co-founder",
             "about": "Aakash is the founder and owner of Developar and the founder and owner of the parent company AR. A person with an ambitious and inspiring personality.",
             "avatar": "https://static.developar.in/images/team/aakash.jpg",
             "social": [
@@ -17,13 +17,13 @@
          },
          {
             "name": "Rajat",
-            "role": "CEO & Co-founder",
+            "role": "Co-founder",
             "about": "Rajat is the co-founder and co-owner of Developar. A person who speaks not much and gives importance to work. A man with a delightful and attractive personality.",
             "avatar": "https://static.developar.in/images/team/rajat.jpg",
             "social": [
-               { "name": "@instagram/energetic.coder", "url": "https://www.instagram.com/energetic.coder", "icon": "instagram" },
-               { "name": "@github/rajatprototype", "url": "https://github.com/rajatprototype", "icon": "github" },
-               { "name": "@twitter/rajat04500210", "url": "https://mobile.twitter.com/rajat04500210", "icon": "twitter" }
+               { "name": "@instagram/_rajat_me", "url": "https://www.instagram.com/_rajat_me", "icon": "instagram" },
+               { "name": "@github/rajatxs", "url": "https://github.com/rajatxs", "icon": "github" },
+               { "name": "@twitter/rajatxt", "url": "https://mobile.twitter.com/rajatxt", "icon": "twitter" }
             ]
          },
          {
@@ -65,15 +65,6 @@
             ]
          },
          {
-            "name": "Preksha",
-            "role": "Frontend & CMS",
-            "avatar": "https://static.developar.in/images/team/preksha.jpg",
-            "social": [
-               { "name": "@instagram/prek__shaa", "url": "https://www.instagram.com/prek__shaa", "icon": "instagram" },
-               { "name": "@twitter/PrekshaChaudha", "url": "https://twitter.com/PrekshaChaudha", "icon": "twitter" }
-            ]
-         },
-         {
             "name": "Aakash",
             "role": "Web & App developer",
             "avatar": "https://static.developar.in/images/team/aakash.jpg",
@@ -88,9 +79,9 @@
             "role": "Fullstack developer",
             "avatar": "https://static.developar.in/images/team/rajat.jpg",
             "social": [
-               { "name": "@instagram/energetic.coder", "url": "https://www.instagram.com/energetic.coder", "icon": "instagram" },
-               { "name": "@github/rajatprototype", "url": "https://github.com/rajatprototype", "icon": "github" },
-               { "name": "@twitter/rajat04500210", "url": "https://mobile.twitter.com/rajat04500210", "icon": "twitter" }
+               { "name": "@instagram/_rajat_me", "url": "https://www.instagram.com/_rajat_me", "icon": "instagram" },
+               { "name": "@github/rajatxs", "url": "https://github.com/rajatxs", "icon": "github" },
+               { "name": "@twitter/rajatxt", "url": "https://mobile.twitter.com/rajatxt", "icon": "twitter" }
             ]
          }
       ]
@@ -111,7 +102,7 @@
          },
          {
             "name": "Parth",
-            "role": "Media Management",
+            "role": "Media Manager",
             "avatar": "https://static.developar.in/images/team/parth.jpg",
             "social": [
                { "name" : "@instagram/parth_chaudhary22", "url": "https://instagram.com/parth_chaudhary22", "icon": "instagram" },
@@ -120,7 +111,7 @@
          },
          {
             "name": "Jay",
-            "role": "UX / UI Designer",
+            "role": "Graphic Designer",
             "avatar": "https://static.developar.in/images/team/jay.jpg",
             "social": [
                { "name": "@instagram/hot_poison_", "url": "https://www.instagram.com/hot_poison_", "icon": "instagram" },
